@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr-FR"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<![endif]-->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+<!-- Theme Favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="https://artmur.com/wp-content/uploads/favicon-16x16-1.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://artmur.com/wp-content/uploads/favicon-32x32-1.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://artmur.com/wp-content/uploads/apple-touch-icon.png" />
+<link rel="manifest" href="https://artmur.com/wp-content/uploads/strikingr/manifest.json">
+<meta name="msapplication-config" content="none"/>
+<!-- Feeds and Pingback -->
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="alternate" type="application/rss+xml" title="Art Mur RSS2 Feed" href="https://artmur.com/feed/" /> 
+<link rel="pingback" href="https://artmur.com/xmlrpc.php" />
+<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.1.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Page not found | Art Mur</title>
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:title" content="Page not found | Art Mur" />
+	<meta property="og:site_name" content="Art Mur" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://artmur.com/#website","url":"https://artmur.com/","name":"Art Mûr","description":"","publisher":{"@id":"https://artmur.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://artmur.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https://artmur.com/#organization","name":"Art Mûr","url":"https://artmur.com/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https://artmur.com/#/schema/logo/image/","url":"https://artmur.com/wp-content/uploads/logo@2x.png","contentUrl":"https://artmur.com/wp-content/uploads/logo@2x.png","width":100,"height":91,"caption":"Art Mûr"},"image":{"@id":"https://artmur.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/galerie.art.mur/","https://x.com/ArtMur","https://www.instagram.com/artmur"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Art Mur &raquo; Flux" href="https://artmur.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Art Mur &raquo; Flux des commentaires" href="https://artmur.com/comments/feed/" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://artmur.com/wp-includes/css/dist/block-library/style.min.css?ver=6.9.1' type='text/css' media='all' />
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://artmur.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-legacy-dropdown-0-css' href='https://artmur.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min.css?ver=1' type='text/css' media='all' />
+<style id='wpml-legacy-dropdown-0-inline-css' type='text/css'>
+.wpml-ls-statics-shortcode_actions, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu, .wpml-ls-statics-shortcode_actions a {border-color:#cdcdcd;}.wpml-ls-statics-shortcode_actions a, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link, .wpml-ls-statics-shortcode_actions li:not(.wpml-ls-current-language) .wpml-ls-link, .wpml-ls-statics-shortcode_actions li:not(.wpml-ls-current-language) .wpml-ls-link:link {color:#666666;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:hover,.wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:focus, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link:hover, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu a:link:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language > a {color:#666666;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+/*# sourceURL=wpml-legacy-dropdown-0-inline-css */
+</style>
+<link rel='stylesheet' id='wpml-menu-item-0-css' href='https://artmur.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-themeicons-style-css' href='https://artmur.com/wp-content/themes/striking_r/icons/themeicons/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css' href='https://artmur.com/wp-content/themes/striking_r/css/screen.min.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-icons-awesome-css' href='https://artmur.com/wp-content/themes/striking_r/icons/awesome/css/font-awesome.min.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-responsive-css' href='https://artmur.com/wp-content/themes/striking_r/css/responsive.min.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-skin-css' href='https://artmur.com/wp-content/uploads/strikingr/skin.css?ver=1.765.763.754' type='text/css' media='all' />
+<script type="text/javascript" src="https://artmur.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min.js?ver=1" id="wpml-legacy-dropdown-0-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-content/themes/striking_r/js/jquery.fancybox.min.js?ver=2.1.5" id="jquery-fancybox-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-content/themes/striking_r/js/custom.combine.js?ver=6.9.1" id="custom-js-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-content/themes/striking_r/js/jquery-sticker.min.js?ver=0.6.5" id="jquery-sticker-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-content/themes/striking_r/js/jquery.stickyfooter.min.js?ver=1.0" id="jquery-stickyfooter-js"></script>
+
+<!-- Extrait de code de la balise Google (gtag.js) ajouté par Site Kit -->
+<!-- Extrait Google Analytics ajouté par Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-YZ7K5JKHK6" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["artmur.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-YZ7K5JKHK6");
+//# sourceURL=google_gtagjs-js-after
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://artmur.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://artmur.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<meta name="generator" content="WPML ver:4.8.6 stt:1,4;" />
+<meta name="generator" content="Site Kit by Google 1.173.0" /><meta name="generator" content="Striking Multiflex Framework Extension Plugin v2.4.7 - Build : 03 december 2025" />
+<script type="text/javascript">var theme_url='https://artmur.com/wp-content/themes/striking_r';
+var image_url='https://artmur.com/wp-content/themes/striking_r/images';
+var responsve_image_resize=true;
+var responsive_image_upsize_only=true;
+var images_have_resized_once=false;
+var fancybox_options = {
+	skin:'theme',
+	title_type:'float',
+	width:800,
+	height:600,
+	autoSize:true,
+	autoWidth:false,
+	autoHeight:false,
+	fitToView:false,
+	aspectRatio:false,
+	arrows:true,
+	closeBtn:true,
+	closeClick:false,
+	nextClick:false,
+	autoPlay:false,
+	playSpeed:3000,
+	preload:3,
+	loop:true,
+	thumbnail:true,
+	thumbnail_width:50,
+	thumbnail_height:50,
+	thumbnail_position:'bottom'
+};
+var pie_progress_bar_color = "#313131",
+	pie_progress_track_color = "#e5e5e5";
+var gallery_loading_speed = 100;
+var nav2select_indentString = "–";
+var nav2select_defaultText = "Navigate to...";
+var responsive_menu_location = "manual";
+var responsive_menu_position = "";
+var sticky_footer_target = "768";
+var theme_retina_multiplier="2x";
+var theme_global_post_id=0;</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28704294-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><meta name="generator" content="Powered by Slider Revolution 6.7.39 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+<link rel='stylesheet' id='rs-plugin-settings-css' href='//artmur.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.39' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+
+</head>
+<body data-rsssl=1 class="error404 wp-theme-striking_r responsive no-shadow no-gradient current-language-french">
+<div class="body-wrapper">
+<header id="header">
+	<div class="inner">
+		<div id="logo" class="theme_logo_img logo-has-mobile" itemscope="itemscope" itemtype="https://schema.org/Organisation" ><a href="https://artmur.com/" itemprop="url" ><img class="site-logo ie_png" width="79" height="72" src="https://artmur.com/wp-content/uploads/2013/07/logo.gif" title="Art Mur" alt="" itemprop="logo" /><img class="mobile-logo ie_png" width="100" height="91" src="https://artmur.com/wp-content/uploads/logo@2x.png" title="Art Mur" alt="" itemprop="logo" /></a></div><div id="top_area"></div>		<nav id="navigation" class="jqueryslidemenu"><ul id="menu-main-navigation" class="menu"><li id="menu-item-16577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16577"><a href="https://artmur.com/artistes/">Artistes</a></li>
+<li id="menu-item-9662" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9662 has-children"><a>Expositions</a>
+<ul class="sub-menu">
+	<li id="menu-item-34017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34017"><a href="https://artmur.com/expositions/expositions-en-cours/">Expositions en cours</a></li>
+	<li id="menu-item-61249" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61249"><a href="https://artmur.com/expositions/expositions-a-venir/">Expositions à venir</a></li>
+	<li id="menu-item-81133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-81133 has-children"><a href="https://artmur.com/">Expositions passées</a>
+	<ul class="sub-menu">
+		<li id="menu-item-87059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87059"><a href="https://artmur.com/expositions/2026-expositions/">2026 – Expositions</a></li>
+		<li id="menu-item-85194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85194"><a href="https://artmur.com/expositions/2025-expositions/">2025 – Expositions</a></li>
+		<li id="menu-item-83114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83114"><a href="https://artmur.com/expositions/2024-expositions/">2024 – Expositions</a></li>
+		<li id="menu-item-79617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79617"><a href="https://artmur.com/expositions/2023-expositions/">2023 – Expositions</a></li>
+		<li id="menu-item-74960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74960"><a href="https://artmur.com/expositions/2022-expositions/">2022 – Expositions</a></li>
+		<li id="menu-item-69869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69869"><a href="https://artmur.com/expositions/2021-expositions/">2021 – Expositions</a></li>
+		<li id="menu-item-65118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65118"><a href="https://artmur.com/expositions/2020-expositions/">2020 – Expositions</a></li>
+		<li id="menu-item-59639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59639"><a href="https://artmur.com/expositions/2019-expositions/">2019 – Expositions</a></li>
+		<li id="menu-item-39024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39024"><a href="https://artmur.com/expositions/2018-expositions/">2018 – Expositions</a></li>
+		<li id="menu-item-36294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36294"><a href="https://artmur.com/expositions/2017-expositions/">2017 – Expositions</a></li>
+		<li id="menu-item-32654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32654"><a href="https://artmur.com/expositions/2016-expositions/">2016 – expositions</a></li>
+		<li id="menu-item-39043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39043"><a href="https://artmur.com/expositions/2015-expositions/">2015 – Expositions</a></li>
+		<li id="menu-item-26446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26446"><a href="https://artmur.com/expositions/2014-expositions/">2014 –  Expositions</a></li>
+		<li id="menu-item-15400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15400"><a href="https://artmur.com/expositions/2013-expositions/">2013 – Expositions</a></li>
+		<li id="menu-item-9559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9559"><a href="https://artmur.com/expositions/2012-expositions/">2012 – Expositions</a></li>
+		<li id="menu-item-9560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9560"><a href="https://artmur.com/expositions/2011-expositions/">2011 – Expositions</a></li>
+		<li id="menu-item-9563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9563"><a href="https://artmur.com/expositions/2010-expositions/">2010 – Expositions</a></li>
+		<li id="menu-item-10224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10224"><a href="https://artmur.com/?page_id=2804">2009 – Expositions</a></li>
+		<li id="menu-item-10585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10585"><a href="https://artmur.com/expositions/2008-expositions/">2008 – Expositions</a></li>
+		<li id="menu-item-13883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883"><a href="https://artmur.com/expositions/2007-expositions/">2007 – Expositions</a></li>
+		<li id="menu-item-13884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13884"><a href="https://artmur.com/expositions/2006-expositions/">2006 – Expositions</a></li>
+		<li id="menu-item-13885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13885"><a href="https://artmur.com/expositions/2005-expositions/">2005 – Expositions</a></li>
+		<li id="menu-item-13886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13886"><a href="https://artmur.com/expositions/2004-expositions/">2004 – Expositions</a></li>
+		<li id="menu-item-13882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13882"><a href="https://artmur.com/expositions/2003-expositions/">2003 – Expositions</a></li>
+		<li id="menu-item-13887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13887"><a href="https://artmur.com/expositions/2002-expositions/">2002 – Expositions</a></li>
+		<li id="menu-item-13888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13888"><a href="https://artmur.com/expositions/2001-expositions/">2001 – Expositions</a></li>
+		<li id="menu-item-13889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13889"><a href="https://artmur.com/expositions/2000-expositions/">2000 – Expositions</a></li>
+		<li id="menu-item-13890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13890"><a href="https://artmur.com/expositions/1999-expositions/">1999 – Expositions</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-76018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76018"><a href="https://artmur.com/nouvelles/">Nouvelles</a></li>
+<li id="menu-item-9664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9664 has-children"><a href="https://artmur.com/">Publications</a>
+<ul class="sub-menu">
+	<li id="menu-item-9729" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9729 has-children"><a href="https://artmur.com/">Catalogues</a>
+	<ul class="sub-menu">
+		<li id="menu-item-34736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34736"><a href="https://artmur.com/les-editions/holly-king-edging-towards-the-mysterious/">Holly King: Edging Towards the Mysterious</a></li>
+		<li id="menu-item-26644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26644"><a href="https://artmur.com/les-editions/derriere-la-facade/">Derrière la façade</a></li>
+		<li id="menu-item-9732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9732"><a href="https://artmur.com/les-editions/shayne-dark-into-the-blue/">Shayne Dark : Into the Blue</a></li>
+		<li id="menu-item-9730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9730"><a href="https://artmur.com/les-editions/cal-lane-sweet-crude/">Cal Lane : Sweet Crude</a></li>
+	</ul>
+</li>
+	<li id="menu-item-9570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9570"><a href="https://artmur.com/les-editions/opuscules/">Opuscules (PDF)</a></li>
+</ul>
+</li>
+<li id="menu-item-9666" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9666 has-children"><a href="https://artmur.com/">Informations</a>
+<ul class="sub-menu">
+	<li id="menu-item-85386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85386"><a href="https://artmur.com/infolettre/">Infolettre</a></li>
+	<li id="menu-item-78538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78538"><a href="https://artmur.com/heures-douverture/">Heures d’ouverture</a></li>
+	<li id="menu-item-78536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78536"><a href="https://artmur.com/historique/">Historique</a></li>
+	<li id="menu-item-78537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78537"><a href="https://artmur.com/equipe/">Équipe</a></li>
+	<li id="menu-item-9665" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9665 has-children"><a href="https://artmur.com/">Services</a>
+	<ul class="sub-menu">
+		<li id="menu-item-9565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9565"><a href="https://artmur.com/services-specialises/encadrements/">Encadrements</a></li>
+		<li id="menu-item-9564" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9564"><a href="https://artmur.com/services-specialises/accrochage/">Accrochage</a></li>
+		<li id="menu-item-9571" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9571"><a href="https://artmur.com/services-specialises/service-conseil/">Service conseil</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-81998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81998"><a href="https://artmur.com/partenaires/">Partenaires</a></li>
+<li id="menu-item-9555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9555"><a href="https://artmur.com/contact/">Contact</a></li>
+<li id="menu-item-wpml-ls-10-fr" class="menu-item-language menu-item-language-current menu-item wpml-ls-slot-10 wpml-ls-item wpml-ls-item-fr wpml-ls-current-language wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-has-children menu-item-wpml-ls-10-fr has-children"><a href="https://artmur.com/" role="menuitem"><span class="wpml-ls-native" lang="fr">Français</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-wpml-ls-10-en" class="menu-item-language menu-item wpml-ls-slot-10 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-10-en"><a href="https://artmur.com/en/" title="Passer à Anglais(English)" aria-label="Passer à Anglais(English)" role="menuitem"><span class="wpml-ls-native" lang="en">English</span><span class="wpml-ls-display"><span class="wpml-ls-bracket"> (</span>Anglais<span class="wpml-ls-bracket">)</span></span></a></li>
+</ul>
+</li>
+</ul></nav>	</div>
+</header>
+<div id="feature"><div class="top_shadow"></div><div class="inner"><h1 class="entry-title">404 - Not Found</h1><div class="feature-introduce" id="introduce">Looks like the page you're looking for isn't here anymore. Try using the search box or sitemap below.</div></div><div class="bottom_shadow"></div></div><div id="page">
+	<div class="inner right_sidebar">
+		<div id="main">
+			<div class="content">
+
+<h2>Pages</h2><ul id="menu-main-navigation-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16577"><a href="https://artmur.com/artistes/">Artistes</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9662"><a>Expositions</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34017"><a href="https://artmur.com/expositions/expositions-en-cours/">Expositions en cours</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61249"><a href="https://artmur.com/expositions/expositions-a-venir/">Expositions à venir</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-81133"><a href="https://artmur.com/">Expositions passées</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87059"><a href="https://artmur.com/expositions/2026-expositions/">2026 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85194"><a href="https://artmur.com/expositions/2025-expositions/">2025 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83114"><a href="https://artmur.com/expositions/2024-expositions/">2024 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79617"><a href="https://artmur.com/expositions/2023-expositions/">2023 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74960"><a href="https://artmur.com/expositions/2022-expositions/">2022 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69869"><a href="https://artmur.com/expositions/2021-expositions/">2021 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65118"><a href="https://artmur.com/expositions/2020-expositions/">2020 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59639"><a href="https://artmur.com/expositions/2019-expositions/">2019 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39024"><a href="https://artmur.com/expositions/2018-expositions/">2018 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36294"><a href="https://artmur.com/expositions/2017-expositions/">2017 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32654"><a href="https://artmur.com/expositions/2016-expositions/">2016 – expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39043"><a href="https://artmur.com/expositions/2015-expositions/">2015 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26446"><a href="https://artmur.com/expositions/2014-expositions/">2014 –  Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15400"><a href="https://artmur.com/expositions/2013-expositions/">2013 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9559"><a href="https://artmur.com/expositions/2012-expositions/">2012 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9560"><a href="https://artmur.com/expositions/2011-expositions/">2011 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9563"><a href="https://artmur.com/expositions/2010-expositions/">2010 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10224"><a href="https://artmur.com/?page_id=2804">2009 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10585"><a href="https://artmur.com/expositions/2008-expositions/">2008 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13883"><a href="https://artmur.com/expositions/2007-expositions/">2007 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13884"><a href="https://artmur.com/expositions/2006-expositions/">2006 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13885"><a href="https://artmur.com/expositions/2005-expositions/">2005 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13886"><a href="https://artmur.com/expositions/2004-expositions/">2004 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13882"><a href="https://artmur.com/expositions/2003-expositions/">2003 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13887"><a href="https://artmur.com/expositions/2002-expositions/">2002 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13888"><a href="https://artmur.com/expositions/2001-expositions/">2001 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13889"><a href="https://artmur.com/expositions/2000-expositions/">2000 – Expositions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13890"><a href="https://artmur.com/expositions/1999-expositions/">1999 – Expositions</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76018"><a href="https://artmur.com/nouvelles/">Nouvelles</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9664"><a href="https://artmur.com/">Publications</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9729"><a href="https://artmur.com/">Catalogues</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34736"><a href="https://artmur.com/les-editions/holly-king-edging-towards-the-mysterious/">Holly King: Edging Towards the Mysterious</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26644"><a href="https://artmur.com/les-editions/derriere-la-facade/">Derrière la façade</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9732"><a href="https://artmur.com/les-editions/shayne-dark-into-the-blue/">Shayne Dark : Into the Blue</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9730"><a href="https://artmur.com/les-editions/cal-lane-sweet-crude/">Cal Lane : Sweet Crude</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9570"><a href="https://artmur.com/les-editions/opuscules/">Opuscules (PDF)</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9666"><a href="https://artmur.com/">Informations</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85386"><a href="https://artmur.com/infolettre/">Infolettre</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78538"><a href="https://artmur.com/heures-douverture/">Heures d’ouverture</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78536"><a href="https://artmur.com/historique/">Historique</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78537"><a href="https://artmur.com/equipe/">Équipe</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-9665"><a href="https://artmur.com/">Services</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9565"><a href="https://artmur.com/services-specialises/encadrements/">Encadrements</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9564"><a href="https://artmur.com/services-specialises/accrochage/">Accrochage</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9571"><a href="https://artmur.com/services-specialises/service-conseil/">Service conseil</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81998"><a href="https://artmur.com/partenaires/">Partenaires</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9555"><a href="https://artmur.com/contact/">Contact</a></li>
+<li class="menu-item-language menu-item-language-current menu-item wpml-ls-slot-10 wpml-ls-item wpml-ls-item-fr wpml-ls-current-language wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-has-children menu-item-wpml-ls-10-fr"><a href="https://artmur.com/" role="menuitem"><span class="wpml-ls-native" lang="fr">Français</span></a>
+<ul class="sub-menu">
+	<li class="menu-item-language menu-item wpml-ls-slot-10 wpml-ls-item wpml-ls-item-en wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-10-en"><a href="https://artmur.com/en/" title="Passer à Anglais(English)" aria-label="Passer à Anglais(English)" role="menuitem"><span class="wpml-ls-native" lang="en">English</span><span class="wpml-ls-display"><span class="wpml-ls-bracket"> (</span>Anglais<span class="wpml-ls-bracket">)</span></span></a></li>
+</ul>
+</li>
+</ul><div class="divider top"><a href="#">Haut</a></div><h2>Catégories des Archives</h2><ul><li class="cat-item-none">Aucune catégorie</li></ul><div class="divider top"><a href="#">Haut</a></div><h2>Articles de Blog</h2><ul></ul>				<div class="divider top"><a href="#">Haut</a></div>
+			</div>
+		</div>
+						<aside id="sidebar">
+					<div id="sidebar_content"><form method="get"  class="" id="searchform" action="https://artmur.com">
+	<input type="text" class="text_input" value="Rechercher.." name="s" id="s" onfocus="if(this.value == 'Rechercher..') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Rechercher..';}" />
+	<button type="submit" class="button gray"><span>Recherche</span></button>
+</form>
+</div>
+				</aside>
+		<div class="clearboth"></div>
+	</div>
+</div>
+<footer id="footer">
+<div id="footer-widget-area" class="footer-widget-area">
+	<div id="footer_shadow"></div>
+	<div class="inner">
+			<div id="footer_widget_area_one" class="one_third"><section id="text-3" class="widget widget_text"><h3 class="widgettitle">Adresse</h3>			<div class="textwidget"><p>Art Mûr<br />
+5826, rue St-Hubert<br />
+Montréal, (Québec) Canada, H2S 2L7<br />
+Métro : Rosemont</p>
+</div>
+		</section><section id="social-3" class="widget widget_social">		<div class="social_wrap social_animation_bounce komodomedia_32">
+			<a href="https://www.facebook.com/galerie.art.mur" rel="nofollow" target="_blank" class="custom_social_icon_1"><img src="https://artmur.com/wp-content/themes/striking_r/images/social/komodomedia_32/facebook_32.png" alt="Follow Us on Facebook" title="Follow Us on Facebook"/></a><a href="https://www.instagram.com/artmur/" rel="nofollow" target="_blank" class="custom_social_icon_2"><img src="https://artmur.com/wp-content/themes/striking_r/images/social/komodomedia_32/instagram_32.png" alt="Follow Us on Instagram" title="Follow Us on Instagram"/></a><a href="https://www.youtube.com/channel/UC9Te145wOatbsD1blOD4M3w" rel="nofollow" target="_blank" class="custom_social_icon_3"><img src="https://artmur.com/wp-content/themes/striking_r/images/social/komodomedia_32/youtube_32.png" alt="Follow Us on Youtube" title="Follow Us on Youtube"/></a><a href="https://www.linkedin.com/company/artmur/" rel="nofollow" target="_blank" class="custom_social_icon_4"><img src="https://artmur.com/wp-content/themes/striking_r/images/social/komodomedia_32/linkedin_32.png" alt="Follow Us on Linkedin" title="Follow Us on Linkedin"/></a>		</div>
+		</section></div>
+			<div id="footer_widget_area_two" class="one_third"><section id="text-4" class="widget widget_text"><h3 class="widgettitle">Heures d’ouverture</h3>			<div class="textwidget"><p>Lundi : fermé<br />
+Mardi et mercredi : 10 h – 18 h<br />
+Jeudi et vendredi : 11 h – 19 h<br />
+Samedi : 12 h – 17 h<br />
+Dimanche : fermé</p>
+</div>
+		</section></div>
+			<div id="footer_widget_area_three" class="one_third last"><section id="theme_search-13" class="widget widget_search"><h3 class="widgettitle">Recherche</h3>		<form method="get" id="searchform" class="search_with_icon" action="https://artmur.com">
+			<input type="text" class="text_input" value="Rechercher.." name="s" id="s" onfocus="if(this.value == 'Rechercher..') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Rechercher..';}" />
+			<button type="submit"><span>Recherche</span></button>
+		</form>
+		</section></div>
+		<div class="clearboth"></div>
+	</div>
+</div>
+</footer>
+
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/striking_r/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://artmur.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://artmur.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.5" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-02-06 12:02:14+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"fr"},"This contact form is placed in the wrong place.":["Ce formulaire de contact est plac\u00e9 dans un mauvais endroit."],"Error:":["Erreur\u00a0:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+/* ]]> */
+</script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/artmur.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://artmur.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.5" id="contact-form-7-js"></script>
+<script type="text/javascript" src="//artmur.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.39" defer async id="tp-tools-js"></script>
+<script type="text/javascript" src="//artmur.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.39" defer async id="revmin-js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Lct7YIUAAAAAAdze9DtnWJlGezUxEJP9dq8lbMV&amp;ver=3.0" id="google-recaptcha-js"></script>
+<script type="text/javascript" src="https://artmur.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-before">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {
+    "sitekey": "6Lct7YIUAAAAAAdze9DtnWJlGezUxEJP9dq8lbMV",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://artmur.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1.5" id="wpcf7-recaptcha-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://artmur.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://artmur.com/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+</div>
+</body>
+</html>

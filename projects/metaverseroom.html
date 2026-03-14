@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OASIS — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .oasis-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .oasis-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.8);
+  }
+  .oasis-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .oasis-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .oasis-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .oasis-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .oasis-hero { height: 60vh; }
+    .oasis-hero .hero-title h1 { font-size: 1.8rem; }
+    .oasis-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Isometric view — the full digital garden erupting from a rectangular platform -->
+<div class="oasis-hero" id="img-0">
+  <img src="../img/projects/metaverseroom/metaverseroom-08.jpg" alt="OASIS — a digital garden of green and teal organic forms erupting from a rectangular platform, isometric view with strip lighting">
+  <div class="hero-title">
+    <div class="project-meta">VR Sculpture &middot; 2018</div>
+    <h1>OASIS <em>A digital garden prototype</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A contemplative room inspired by vegetation and lush nature. The materiality of floor, walls, and ceiling deconstructs into a new type of matter only possible in virtual space.</p>
+
+  <p>OASIS (originally titled Metaverse Room) is a digital garden prototype that explores what happens when the conventions of architectural space dissolve into organic growth. The room begins as a simple rectangular volume (floor, walls, ceiling), but its surfaces are progressively consumed by hand-sculpted vegetation: grasses, flows, tendrils, and bulbous forms that erupt through the boundaries of the room and spill into the surrounding void.</p>
+
+  <p>The piece was shown at the Museum of Other Realities and later presented at Art Toronto 2019 by Galerie ELLEPHANT. By placing the majority of the sculpture&rsquo;s detail on the ground plane, the work encourages visitors to crouch, sit, and inhabit the space at the level of the grass, a disarming posture that many visitors embraced, especially when being observed in a crowd.</p>
+</div>
+
+<!-- FULL-BLEED: Corner view showing the garden erupting from the room -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/metaverseroom/metaverseroom-01.jpg" alt="OASIS — corner view of the digital garden, teal and green organic forms erupting from a rectangular room with strip lighting on walls">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: The deconstruction of the room -->
+<div class="split">
+  <div class="split-text">
+    <h2>Deconstructing the Room</h2>
+    <p>Metaverse architecture reflects the possibilities afforded by the internet and 3D digital technology. In VR and AR, the materiality of the floor, walls, and ceiling can be deconstructed into a new type of matter, one that would have been impossible to experience as a lived space before the advent of these technologies.</p>
+    <p>The garden mixes thoughts of water, grasses, flowers, and flows. Each stroke of the VR controller adds another blade, another tendril, another gesture of growth. The accumulation produces a surface quality that is simultaneously digital and deeply organic. A landscape that reads as living despite being entirely hand-made.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2018</div>
+        <div class="label">Created</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">Art Toronto</div>
+        <div class="label">2019 &middot; ELLEPHANT</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/metaverseroom/metaverseroom-05.jpg" alt="OASIS — detail view showing teal spiral forms rising above the dense green groundcover, with strip lighting visible on the wall">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>By placing the majority of the detail on the ground, visitors experience the environment as if sitting in the grass. Disarming for many, especially when being observed in a crowd.</blockquote>
+</div>
+
+<!-- DUO: Top-down plan + grass texture detail -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/metaverseroom/metaverseroom-07.jpg" alt="OASIS — top-down plan view showing the garden overflowing the rectangular floor, organic forms spilling past the room boundaries">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/metaverseroom/metaverseroom-06.jpg" alt="OASIS — overhead close-up of the hand-sculpted grass texture, swirling green and teal strokes reminiscent of Van Gogh">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">From Metaverse to Museum</h2>
+  <p>OASIS was first exhibited at the Museum of Other Realities, the social VR platform whose architecture Samuel was simultaneously designing. The piece later travelled to Art Toronto 2019, where it was presented by Galerie ELLEPHANT, one of the first times a hand-sculpted VR environment was shown at a major Canadian art fair.</p>
+  <p>The project represents a transitional moment in Samuel&rsquo;s practice: the shift from designing architectural containers for art (the Museum of Other Realities, the VR Church) to creating the art itself. The sculptural language developed here, filling architecture with organic growth, would be refined across subsequent projects.</p>
+</div>
+
+<!-- FULL-BLEED: Another corner angle for closing -->
+<div class="full-bleed" id="img-5">
+  <img src="../img/projects/metaverseroom/metaverseroom-03.jpg" alt="OASIS — close corner view showing the garden texture in detail, green and teal forms pressing against the room walls">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="vrchurch.html" class="back-link">VR Church &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/metaverseroom/metaverseroom-08.jpg',
+  '../img/projects/metaverseroom/metaverseroom-01.jpg',
+  '../img/projects/metaverseroom/metaverseroom-05.jpg',
+  '../img/projects/metaverseroom/metaverseroom-07.jpg',
+  '../img/projects/metaverseroom/metaverseroom-06.jpg',
+  '../img/projects/metaverseroom/metaverseroom-03.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

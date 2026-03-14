@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gloam / Entre chien et loup — Samuel Arsenault-Brassard</title>
+<meta name="description" content="Gloam (Entre chien et loup) — a monumental VR installation simulating a full cycle of natural light across hand-sculpted cave architecture using ~16,000 lightmaps at 8K resolution.">
+<meta property="og:title" content="Gloam / Entre chien et loup — Samuel Arsenault-Brassard">
+<meta property="og:description" content="A monumental VR installation. ~16,000 lightmaps simulate a full solar cycle inside hand-sculpted virtual architecture.">
+<meta property="og:image" content="../img/gloam/gloam-3.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* Page-specific editorial layout */
+  .gloam-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .gloam-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.7);
+  }
+  .gloam-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .gloam-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .gloam-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .gloam-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.6em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  /* Intro text block */
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Full-bleed image */
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  /* Side-by-side images */
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Text + image side-by-side */
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  /* Quote / pull-quote */
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+  .pull-quote .attribution {
+    margin-top: 1.5rem;
+    font-size: 0.75rem; color: var(--dim); letter-spacing: 0.12em;
+    text-transform: uppercase; font-style: normal;
+  }
+
+  /* Triple grid */
+  .triple {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  }
+  .triple .triple-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .triple .triple-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .triple .triple-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Footer nav */
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .gloam-hero { height: 60vh; }
+    .gloam-hero .hero-title h1 { font-size: 1.8rem; }
+    .gloam-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .triple { grid-template-columns: 1fr 1fr; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html" class="active">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Full-bleed image with title overlay -->
+<div class="gloam-hero" id="img-0">
+  <img src="../img/gloam/gloam-6.jpg" alt="Gloam — light bursting through hand-sculpted organic cave architecture">
+  <div class="hero-title">
+    <div class="project-meta">Immersive VR Installation &middot; 2019&ndash;present</div>
+    <h1>Gloam <em>Entre chien et loup</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A vast hand-sculpted cave, inhabited at the scale of the body. Inside, a complete cycle of natural light unfolds from morning to night to morning again. The visitor walks freely through the space with nothing to hold, nothing to press. No interface. Just the body, the architecture, and the changing light.</p>
+
+  <p>Dawn spills through apertures in the cave walls. Midday sun floods the interior. Twilight pulls long purple shadows across folded, sculptural surfaces, then darkness takes the space completely. A brief night. Then slowly, from somewhere deep in the stone, morning returns.</p>
+
+  <p>Every surface was shaped by hand, a process closer to clay sculpture than to digital modeling. The space has the weight and presence of a physical place, given form through the slow, irreversible passage of light.</p>
+</div>
+
+<!-- FULL-WIDTH: The tunnel shot — cinematic, draws you in -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/gloam/gloam-3.jpg" alt="Gloam — light emerging through a sculpted tunnel opening">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: The technical story -->
+<div class="split">
+  <div class="split-text">
+    <h2>The Architecture of Light</h2>
+    <p>The lighting in Gloam is not simulated in real time. Every moment of the day was computed in advance at a fidelity that no live system can match, then played back seamlessly inside the headset. The result is light that behaves the way it does in the physical world: soft, indirect, accumulating in folds and crevices, shifting the entire atmosphere of the space as the hours pass.</p>
+    <p>This gives the cave something that virtual spaces almost never have: the quality of a real place. Light defines the architecture the way it does in the work of Louis Kahn or James Turrell, accumulating slowly, shaping the space as much as the stone does.</p>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/gloam/gloam-elektra-2.jpg" alt="Gloam — purple cavern with oval apertures and blue light accent">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>We're made for the light of a cave and for twilight. Twilight is the time we see best. When we dim the light down, and the pupil opens, feeling comes out of the eye like touch.</blockquote>
+  <div class="attribution">James Turrell</div>
+</div>
+
+<!-- DUO: Two complementary cave views -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/gloam/gloam-1.jpg" alt="Gloam — looking up into the cave ceiling, scattered points of light">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/gloam/gloam-2.jpg" alt="Gloam — multiple light sources penetrating deep organic folds">
+  </div>
+</div>
+
+<!-- TEXT BLOCK: The sublime -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Digital Sublime</h2>
+  <p>The project takes its name from the French expression <em>entre chien et loup</em>, the moment between dog and wolf, when twilight makes the familiar strange. It is the threshold between the known and the unknowable, the domestic and the wild. In this liminal light, the cave becomes something more than a space: it becomes an experience of the sublime.</p>
+  <p>Edmund Burke defined the sublime as an aesthetic experience born from vastness, obscurity, and the interplay of darkness and light. Gloam is a direct translation of these ideas into spatial form. A space designed to evoke wonder through scale, through the slow revelation of form by moving light, and through the irreducible strangeness of inhabiting architecture that could not exist in the physical world.</p>
+</div>
+
+<!-- STANDALONE: The eclipse — totally different mood, needs to breathe -->
+<div style="max-width: 700px; margin: 0 auto; padding: 0 2rem 2rem;">
+  <div class="full-bleed" id="img-5" style="max-height: none; aspect-ratio: 1/1.1;">
+    <img src="../img/gloam/gloam-7.jpg" alt="Gloam — red eclipse, light bleeding around a dark organic void" style="object-fit: cover;">
+  </div>
+</div>
+
+<!-- PULL QUOTE 2 -->
+<div class="pull-quote">
+  <blockquote>We drink light.</blockquote>
+  <div class="attribution">James Turrell</div>
+</div>
+
+<!-- TEXT + IMAGE SPLIT (reversed): Process -->
+<div class="split">
+  <div class="split-img" id="img-6">
+    <img src="../img/gloam/gloam-4.jpg" alt="Gloam — ridged and folded surfaces in deep shadow, detail of hand-sculpted texture">
+  </div>
+  <div class="split-text">
+    <h2>Hand-Sculpted in VR</h2>
+    <p>Every surface in Gloam was shaped by hand using VR controllers, a process closer to clay sculpture than to digital modeling. The artist stands inside the space as it is built, working at full architectural scale with movements of the arm and wrist.</p>
+    <p>This produces a quality of surface impossible to achieve through algorithmic or parametric generation: organic, gestural, carrying the physical memory of the hand that made it. In a landscape flooding with generated imagery, Gloam is a radical assertion of craft.</p>
+  </div>
+</div>
+
+<!-- TRIPLE: Three more views showing range -->
+<div class="triple">
+  <div class="triple-item" id="img-7">
+    <img src="../img/gloam/gloam-elektra-1.jpg" alt="Gloam — deep interior, multiple light apertures">
+  </div>
+  <div class="triple-item" id="img-8">
+    <img src="../img/gloam/gloam-elektra-3.jpg" alt="Gloam — warm light flooding through cave opening">
+  </div>
+  <div class="triple-item" id="img-9">
+    <img src="../img/gloam/gloam-elektra-5.jpg" alt="Gloam — dramatic light and shadow across organic folds">
+  </div>
+</div>
+
+<!-- FINAL TEXT: Exhibition -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Exhibition Format</h2>
+  <p>In VR, the viewer inhabits the cave at full scale, walking through the space at 1:1 with no controllers, looking up into the vaulted ceiling, experiencing the light cycle from inside the architecture.</p>
+  <p>For gallery contexts, the work becomes a multi-channel synchronized video installation. Four to ten screens surround the viewer in a darkened room, each showing a different angle of the same light cycle playing in perfect sync. Because the cycle runs from full darkness to full brightness and back, the entire room plunges into black every few minutes as night falls across all screens at once. Then slowly, dawn returns. The gallery itself becomes the architecture. The audience sits inside the light.</p>
+</div>
+
+<!-- TECHNICAL SPECIFICATIONS -->
+<div class="intro-block" style="padding-top: 0;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Technical Specifications</h2>
+  <p style="font-size: 0.85rem; color: var(--dim); line-height: 1.9;">
+    <strong style="color: var(--text); font-weight: 400;">Platform:</strong> Unity 6, Meta Quest 3<br>
+    <strong style="color: var(--text); font-weight: 400;">Lighting:</strong> ~16,000 offline-rendered lightmaps at 8K resolution, played back at 90fps<br>
+    <strong style="color: var(--text); font-weight: 400;">Geometry:</strong> Hand-sculpted in VR using controllers (Oculus Medium, Adobe Medium)<br>
+    <strong style="color: var(--text); font-weight: 400;">Light cycle:</strong> Full solar simulation — sunrise through night, continuous loop
+  </p>
+  <p style="font-size: 0.85rem; color: var(--dim); line-height: 1.9; margin-top: 1.5rem;">
+    <strong style="color: var(--accent); font-weight: 400;">VR presentation:</strong> Meta Quest 3 standalone headset. Room-scale, no controllers required. Visitor walks freely through the space.<br>
+    <strong style="color: var(--accent); font-weight: 400;">Gallery presentation:</strong> Multi-channel synchronized video installation (4&ndash;10 screens/projectors). Darkened room. All channels play the same light cycle in perfect sync. The room itself becomes the architecture.
+  </p>
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+// All images in viewing order
+const allImages = [
+  '../img/gloam/gloam-6.jpg',
+  '../img/gloam/gloam-3.jpg',
+  '../img/gloam/gloam-elektra-2.jpg',
+  '../img/gloam/gloam-1.jpg',
+  '../img/gloam/gloam-2.jpg',
+  '../img/gloam/gloam-7.jpg',
+  '../img/gloam/gloam-4.jpg',
+  '../img/gloam/gloam-elektra-1.jpg',
+  '../img/gloam/gloam-elektra-3.jpg',
+  '../img/gloam/gloam-elektra-5.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+// Attach click handlers to each image element by ID
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

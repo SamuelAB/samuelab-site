@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Illusive Sympathy — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .is-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .is-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .is-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .is-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .is-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .is-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .is-hero { height: 60vh; }
+    .is-hero .hero-title h1 { font-size: 1.6rem; }
+    .is-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Visitor in orange reaching toward AR mural with moon -->
+<div class="is-hero" id="img-0">
+  <img src="../img/projects/illusive-sympathy/illusive-sympathy-03.jpg" alt="Illusive Sympathy — visitor reaching toward a colorful graffiti mural through an AR headset, crescent moon visible in the artwork">
+  <div class="hero-title">
+    <div class="project-meta">AR Art Show &middot; LiL Pocket Gallery &middot; February 2018</div>
+    <h1>Illusive Sympathy <em>How to make an AR art show on a shoestring budget</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">The 2018 iteration of LiL Pocket Gallery was a collaboration with artist Cryote (Sebastian Millar), an augmented reality art show built on ambition, a single AR headset, and a vision for what Montreal&rsquo;s art scene could become.</p>
+
+  <p>Illusive Sympathy was born from a simple conviction: just do it. In February 2018, Samuel and Sebastian Millar (Cryote) organized an AR art show at LiL Pocket Gallery with minimal resources: one AR headset, a small apartment gallery, and Cryote&rsquo;s vibrant, psychedelic graffiti murals painted directly on the walls. The AR layer added digital dimensions to the physical paintings, creating a hybrid viewing experience that existed between the physical and the virtual.</p>
+
+  <p>They set up a waiting list as visitors cycled through the single AR headset while others meandered through the gallery, viewing Cryote&rsquo;s physical artwork in the adjacent room. Despite the sometimes rowdy crowd and the precarious single headset, the night proved something fundamental: there was hunger in Montreal for this kind of work, and the XR art culture they were building had real momentum.</p>
+</div>
+
+<!-- FULL-BLEED: Energy of the opening — visitors and murals -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/illusive-sympathy/illusive-sympathy-06.jpg" alt="Illusive Sympathy — crowded gallery opening with visitors wearing AR headsets amid colorful graffiti murals">
+</div>
+
+<!-- TEXT + IMAGE SPLIT -->
+<div class="split">
+  <div class="split-text">
+    <h2>A Wild Night</h2>
+    <p>The evening was electric. A long waiting list formed as visitors queued for the single AR headset, while a shifting crowd explored the vibrant murals that covered every wall of the small gallery space. The energy was palpable. People knew they were experiencing something new, something that pointed toward a future for art in Montreal.</p>
+    <p>The headset survived the night. The conviction that Montreal was the perfect place for this new art culture solidified. That evening, Samuel and Sebastian knew they had hit a nerve, and that they could push this much further.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">Feb 2018</div>
+        <div class="label">LiL Pocket Gallery</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">Cryote</div>
+        <div class="label">Sebastian Millar</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/illusive-sympathy/illusive-sympathy-22.jpg" alt="Illusive Sympathy — woman wearing AR headset and gold chain, reaching toward the augmented mural, immersed in the hybrid experience">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>We knew that night we had hit a nerve. We could push this much further. Montreal was the perfect place for this new art culture.</blockquote>
+</div>
+
+<!-- DUO: Two visitors immersed in the AR murals -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/illusive-sympathy/illusive-sympathy-01.jpg" alt="Illusive Sympathy — visitor with AR headset examining the colorful graffiti mural, fully absorbed in the augmented layer">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/illusive-sympathy/illusive-sympathy-25.jpg" alt="Illusive Sympathy — visitor wearing AR headset, silhouetted against the gallery window, reaching toward the augmented artwork">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">A Vision for the Future</h2>
+  <p>Illusive Sympathy proved that the appetite for immersive art experiences in Montreal was real and urgent. The scrappy, one-headset show laid the groundwork for everything that followed: the Pretend Play AR fashion show later that year, the ELLEPHANT Gallery VR presentations, the twelve curated shows at Art M&ucirc;r, and the MURAL Festival AR productions.</p>
+  <p>The project would not have been possible without the programming skills of Jason Gendreau, who helped bring the AR experience to life. It remains a touchstone in Samuel&rsquo;s practice. Proof that ambition and conviction can outweigh resources when the vision is clear.</p>
+</div>
+
+<!-- CLOSING FULL-BLEED: Visitor contemplating mural through AR -->
+<div class="full-bleed" id="img-5">
+  <img src="../img/projects/illusive-sympathy/illusive-sympathy-17.jpg" alt="Illusive Sympathy — visitor standing before a large colorful mural, viewing the augmented layer through an AR headset">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="pretend-play.html" class="back-link">Pretend Play &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/illusive-sympathy/illusive-sympathy-03.jpg',
+  '../img/projects/illusive-sympathy/illusive-sympathy-06.jpg',
+  '../img/projects/illusive-sympathy/illusive-sympathy-22.jpg',
+  '../img/projects/illusive-sympathy/illusive-sympathy-01.jpg',
+  '../img/projects/illusive-sympathy/illusive-sympathy-25.jpg',
+  '../img/projects/illusive-sympathy/illusive-sympathy-17.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lignes de Fuite — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .minimal-hero { margin-top: 60px; padding: 8rem 3rem 5rem; background: var(--section-bg); text-align: center; }
+  .minimal-hero .project-meta { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+  .minimal-hero h1 { font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+  .minimal-hero h1 em { font-style: italic; text-transform: none; letter-spacing: 0.02em; font-weight: 300; font-size: 0.55em; display: block; color: var(--dim); margin-top: 0.5rem; }
+  .intro-block { max-width: 780px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+  .intro-block .lead { font-size: 1.35rem; font-weight: 300; line-height: 1.9; color: var(--text); margin-bottom: 2rem; }
+  .intro-block p { font-size: 0.95rem; line-height: 1.9; color: #bbb; margin-bottom: 1.5rem; }
+
+  .full-bleed { width: 100%; max-height: 80vh; overflow: hidden; cursor: pointer; }
+  .full-bleed img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.4s; }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .duo .duo-item { overflow: hidden; cursor: pointer; }
+  .duo .duo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .duo .duo-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+
+  .trio { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .trio .trio-item { overflow: hidden; cursor: pointer; aspect-ratio: 3/4; }
+  .trio .trio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .trio .trio-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+
+  .credits { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 2rem; }
+  .credits h2 { font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text); }
+  .credits dl { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.5rem; }
+  .credits dt { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; padding-top: 0.15rem; }
+  .credits dd { font-size: 0.9rem; color: #bbb; margin: 0; line-height: 1.6; }
+
+  .ext-link { display: inline-block; margin-top: 1.5rem; font-size: 0.8rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: border-color 0.3s; }
+  .ext-link:hover { border-bottom-color: var(--accent); }
+
+  .page-footer { padding: 4rem 2rem; text-align: center; }
+  @media (max-width: 768px) {
+    .minimal-hero { padding: 5rem 1.5rem 3rem; }
+    .minimal-hero h1 { font-size: 1.6rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .duo { grid-template-columns: 1fr; }
+    .trio { grid-template-columns: 1fr; }
+    .trio .trio-item { aspect-ratio: 4/5; }
+    .credits { padding: 2rem 1.5rem; }
+    .credits dl { grid-template-columns: 1fr; gap: 0.2rem 0; }
+    .credits dt { margin-top: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<div class="minimal-hero">
+  <div class="project-meta">3D Fashion Editorial &middot; 2022</div>
+  <h1>Lignes de Fuite <em>3D Meta Love</em></h1>
+</div>
+
+<!-- HERO: Embrace with red gloves -->
+<div class="full-bleed" id="img-0">
+  <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-01.jpg" alt="3D Meta Love — two figures embracing, 3D scanned with red gloves and distorted point cloud">
+</div>
+
+<div class="intro-block">
+  <p class="lead">A fashion editorial merging 3D body scanning with high fashion, published in Lignes de Fuite Vol.&nbsp;3.</p>
+
+  <p>3D Meta Love is a fashion editorial created in collaboration with Nima Mardaneh and Milan Tanedjikov for the third volume of Lignes de Fuite magazine. The project used photogrammetry and 3D reconstruction to capture models in designer clothing, producing ghostly, distorted figures that collapse the boundary between physical body and digital artifact.</p>
+
+  <p>Models were scanned in motion, their bodies fragmenting and multiplying through the reconstruction process. The resulting images treat fashion not as surface but as spatial data: garments by Fecal Matter, Alexander McQueen, Jean Paul Gaultier, Rick Owens, and Comme des Gar&ccedil;ons become entangled with the digital noise of the scanning process itself.</p>
+</div>
+
+<!-- DUO: Nyaluak butterfly + Kiss point cloud -->
+<div class="duo">
+  <div class="duo-item" id="img-1">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-02.jpg" alt="3D Meta Love — Nyaluak Gatluak, ethereal 3D scan with butterfly-like distortion">
+  </div>
+  <div class="duo-item" id="img-2">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-03.jpg" alt="3D Meta Love — two figures kissing, dissolving point cloud">
+  </div>
+</div>
+
+<!-- TRIO: Raya solo + Markus full body + intimate embrace -->
+<div class="trio">
+  <div class="trio-item" id="img-3">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-04.jpg" alt="3D Meta Love — Raya in Fecal Matter dress, 3D scan distortion">
+  </div>
+  <div class="trio-item" id="img-4">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-05.jpg" alt="3D Meta Love — Markus full body scan, Balenciaga sunglasses, shredded denim">
+  </div>
+  <div class="trio-item" id="img-5">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-06.jpg" alt="3D Meta Love — intimate embrace, skin and tattoo visible through scan artifacts">
+  </div>
+</div>
+
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <p>Samuel served as co-creative director, photographer, and video artist on the project. The shoot took place at WIP in Montreal, with styling by Nima Mardaneh and a cast of six models. The editorial was accompanied by a video piece with sound by DEBBIE DOE.</p>
+</div>
+
+<!-- DUO: Nyaluak ghostly + Mackenzie projected -->
+<div class="duo">
+  <div class="duo-item" id="img-6">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-07.jpg" alt="3D Meta Love — Nyaluak arms crossed, ghostly 3D reconstruction">
+  </div>
+  <div class="duo-item" id="img-7">
+    <img src="../img/projects/lignes-de-fuite/lignes-de-fuite-08.jpg" alt="3D Meta Love — Mackenzie projected against wall, dramatic scan distortion">
+  </div>
+</div>
+
+<div class="credits">
+  <h2>Credits</h2>
+  <dl>
+    <dt>Creative Direction</dt>
+    <dd>Nima Mardaneh, Samuel Arsenault-Brassard, Milan Tanedjikov</dd>
+    <dt>Styling</dt>
+    <dd>Nima Mardaneh</dd>
+    <dt>Photography</dt>
+    <dd>Samuel Arsenault-Brassard, Marie-Eve Desrochers</dd>
+    <dt>Video</dt>
+    <dd>Samuel Arsenault-Brassard</dd>
+    <dt>Sound</dt>
+    <dd>DEBBIE DOE</dd>
+    <dt>Hair &amp; Makeup</dt>
+    <dd>Dyamond</dd>
+    <dt>Models</dt>
+    <dd>Nyaluak Gatluak, Markus, Raya, Mackenzie, Kaleb, Teo</dd>
+    <dt>Layout</dt>
+    <dd>Milan Tanedjikov, Raphael Viens</dd>
+    <dt>Production</dt>
+    <dd>Milan Tanedjikov</dd>
+    <dt>Published in</dt>
+    <dd>Lignes de Fuite Vol. 3</dd>
+  </dl>
+  <a href="https://www.lignesdefuite.studio/post/3d-meta-love" target="_blank" class="ext-link">View on Lignes de Fuite &rarr;</a>
+</div>
+
+<!-- VIDEO -->
+<div style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 4rem;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/xA7-ZoJn1AQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-01.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-02.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-03.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-04.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-05.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-06.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-07.jpg',
+  '../img/projects/lignes-de-fuite/lignes-de-fuite-08.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

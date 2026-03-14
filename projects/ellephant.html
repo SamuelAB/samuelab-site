@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELLEPHANT Gallery — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .ellephant-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .ellephant-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .ellephant-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .ellephant-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .ellephant-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .ellephant-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Blueprint on light background */
+  .blueprint-view {
+    background: #1a1a1a;
+    padding: 6px;
+  }
+  .blueprint-view .blueprint-item {
+    overflow: hidden; cursor: pointer;
+    background: #f5f5f0;
+    max-height: 500px;
+  }
+  .blueprint-view .blueprint-item img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+    padding: 20px;
+    transition: transform 0.5s;
+  }
+  .blueprint-view .blueprint-item:hover img {
+    transform: scale(1.02);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .ellephant-hero { height: 60vh; }
+    .ellephant-hero .hero-title h1 { font-size: 1.8rem; }
+    .ellephant-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Two visitors experiencing VR in the gallery — dark, immersive mood -->
+<div class="ellephant-hero" id="img-0">
+  <img src="../img/projects/ellephant/ellephant-23.jpg" alt="ELLEPHANT Gallery — visitor wearing VR headset in the gallery, paintings visible on walls behind">
+  <div class="hero-title">
+    <div class="project-meta">Gallery &middot; ELEKTRA &middot; 2018&ndash;2023</div>
+    <h1>ELLEPHANT <em>Where VR art meets the gallery</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A five-year collaboration with Galerie ELLEPHANT encompassing solo presentations, group exhibitions, curated shows, an art fair, and the design of custom VR gallery furniture.</p>
+
+  <p>Samuel was represented by Galerie ELLEPHANT from 2018 to 2023. The partnership began with a solo presentation during ELEKTRA 2019, where he showed Salvo at the gallery. Over the following years, the collaboration expanded: he presented the Museum of Other Realities (for which he designed the virtual architecture), participated in the group show Floating Paper alongside artists like Skawennati and Jean-Pierre Gauthier, showed CULTVRAL Gallery as part of the gallery&rsquo;s VR program, curated two solo exhibitions of other XR artists, and presented work at Art Toronto 2019 with OASIS.</p>
+
+  <p>Alongside the exhibitions, Samuel designed the physical infrastructure needed to show VR in a gallery context and contributed to the Immersive Summer Art Exhibition in 2021. The collaboration addressed a fundamental challenge: how do you present an immersive, solitary VR experience within the social space of a gallery? The answer required not only strong virtual work but thoughtful physical design: custom furniture, curatorial frameworks, and exhibition protocols.</p>
+</div>
+
+<!-- FULL-BLEED: Visitor reaching up in VR, dramatically backlit -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/ellephant/ellephant-04.jpg" alt="ELLEPHANT Gallery — visitors gathered around VR experience during gallery opening, engaged and curious">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: Custom VR furniture -->
+<div class="split">
+  <div class="split-text">
+    <h2>Custom Gallery Infrastructure</h2>
+    <p>As part of the collaboration, Samuel designed a custom VR plinth, a minimal pedestal with a subtle door concealing a small form-factor computer, keyboard, and mouse inside. Only a single cable and the headset emerged from the top, presenting the VR equipment with the same material gravity as a sculptural object. An invitation rather than a technical setup.</p>
+    <p>The plinth served across multiple contexts: gallery shows at ELLEPHANT, the OASIS presentation at Art Toronto 2019, and opening nights where hundreds of visitors cycled through the VR experience. It became a reusable piece of exhibition infrastructure.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2018&ndash;2023</div>
+        <div class="label">Active period</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">6+</div>
+        <div class="label">Exhibitions</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">2</div>
+        <div class="label">Curated shows</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/ellephant/ellephant-27.jpg" alt="Custom VR plinth — white geometric pedestal with VR headset displayed on top, minimal gallery presentation">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>How do you present an immersive, solitary experience within the social context of a gallery? The answer required designing not just the virtual spaces, but the physical objects and protocols that bridge between them.</blockquote>
+</div>
+
+<!-- DUO: Editorial VR moments — woman in VR + older visitor by window -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/ellephant/ellephant-11.jpg" alt="ELLEPHANT Gallery — visitor immersed in VR experience, gallery context visible">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/ellephant/ellephant-20.jpg" alt="ELLEPHANT Gallery — intimate moment of visitor experiencing VR artwork">
+  </div>
+</div>
+
+<!-- Curated shows heading -->
+<div class="intro-block" style="padding-bottom: 1.5rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Presenting &amp; Curating</h2>
+  <p>Samuel also curated two solo exhibitions at ELLEPHANT, bringing international VR artists into the gallery&rsquo;s program. The curatorial work addressed both the selection of virtual pieces and the physical conditions of their display, treating the gallery setup as part of the artistic experience.</p>
+  <p>This dual role as exhibiting artist and curator at ELLEPHANT laid the groundwork for the eleven VR and AR exhibitions Samuel later curated at Galerie Art M&ucirc;r, where the same attention to the physical presentation of virtual work became a defining element of his practice.</p>
+</div>
+
+<!-- Curated show links with images -->
+<div class="duo">
+  <a href="ellephant-connor-bell.html" class="duo-item" style="position: relative; text-decoration: none;">
+    <img src="../img/ellephant-curated/connor-bell-angeline/connor-gallery-07.jpg" alt="Connor Bell: Angeline — curated by Samuel at ELLEPHANT Gallery">
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);">
+      <div style="font-size: 0.65rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.3rem;">Curated Show</div>
+      <div style="font-size: 1rem; color: #fff; font-weight: 300; letter-spacing: 0.05em;">Connor Bell: Angeline</div>
+    </div>
+  </a>
+  <a href="ellephant-vladimir-storm.html" class="duo-item" style="position: relative; text-decoration: none;">
+    <img src="../img/ellephant-curated/vladimir-storm-archangels/storm-gallery-01.jpg" alt="Vladimir Storm: Political Archangels — curated by Samuel at ELLEPHANT Gallery">
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);">
+      <div style="font-size: 0.65rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.3rem;">Curated Show</div>
+      <div style="font-size: 1rem; color: #fff; font-weight: 300; letter-spacing: 0.05em;">Vladimir Storm: Political Archangels</div>
+    </div>
+  </a>
+</div>
+
+<!-- BLUEPRINT: Technical drawings on light background -->
+<div class="blueprint-view">
+  <div class="blueprint-item" id="img-5">
+    <img src="../img/projects/ellephant/ellephant-25.jpg" alt="VR plinth design — technical drawings and blueprints showing the custom furniture design, exploded axonometric views and construction details">
+  </div>
+</div>
+
+<!-- DUO: Diverse visitors — child + person on floor -->
+<div class="duo">
+  <div class="duo-item" id="img-6">
+    <img src="../img/projects/ellephant/ellephant-06.jpg" alt="ELLEPHANT Gallery — young child wearing a VR headset, fully absorbed in the virtual experience">
+  </div>
+  <div class="duo-item" id="img-7">
+    <img src="../img/projects/ellephant/ellephant-22.jpg" alt="ELLEPHANT Gallery — visitor lying on the gallery floor while immersed in OASIS, experiencing the VR garden from ground level">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Legacy</h2>
+  <p>Over five years and more than six exhibitions, the collaboration with ELLEPHANT established a working model for how VR art could be shown, curated, and experienced in a contemporary gallery. From the ELEKTRA 2019 solo to Floating Paper to the Museum of Other Realities, the partnership demonstrated that immersive virtual work could hold its own alongside traditional media, given the right physical conditions and curatorial care.</p>
+  <p>The experience shaped Samuel&rsquo;s broader practice: the attention to exhibition design, the dual perspective of artist and curator, and the conviction that the medium deserves its own exhibition language all trace back to these years at ELLEPHANT.</p>
+</div>
+
+<!-- CLOSING FULL-BLEED: Dark silhouette in VR — dramatic closing image -->
+<div class="full-bleed" id="img-8">
+  <img src="../img/projects/ellephant/ellephant-18.jpg" alt="ELLEPHANT Gallery — dramatic silhouette of a visitor immersed in VR, holding controllers in darkness with the headset glowing">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="oasis-art-toronto.html" class="back-link">OASIS at Art Toronto &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/ellephant/ellephant-23.jpg',
+  '../img/projects/ellephant/ellephant-04.jpg',
+  '../img/projects/ellephant/ellephant-27.jpg',
+  '../img/projects/ellephant/ellephant-11.jpg',
+  '../img/projects/ellephant/ellephant-20.jpg',
+  '../img/projects/ellephant/ellephant-25.jpg',
+  '../img/projects/ellephant/ellephant-06.jpg',
+  '../img/projects/ellephant/ellephant-22.jpg',
+  '../img/projects/ellephant/ellephant-18.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

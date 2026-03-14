@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baron Lanteigne: Tangible Data — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .cur-hero {
+    position: relative; height: 85vh; min-height: 500px;
+    overflow: hidden; margin-top: 60px;
+  }
+  .cur-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+  .cur-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 5rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.9) 65%);
+  }
+  .cur-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .cur-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .cur-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+  .intro-block { max-width: 780px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+  .intro-block .lead { font-size: 1.35rem; font-weight: 300; line-height: 1.9; color: var(--text); margin-bottom: 2rem; }
+  .intro-block p { font-size: 0.95rem; line-height: 1.9; color: #bbb; margin-bottom: 1.5rem; }
+  .full-bleed { width: 100%; max-height: 80vh; overflow: hidden; cursor: pointer; }
+  .full-bleed img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.4s; }
+  .full-bleed:hover img { filter: brightness(1.08); }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .duo .duo-item { overflow: hidden; cursor: pointer; aspect-ratio: 4/3; }
+  .duo .duo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .duo .duo-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .triple { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .triple .triple-item { overflow: hidden; cursor: pointer; aspect-ratio: 1/1; }
+  .triple .triple-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .triple .triple-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .section-break { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 2rem; }
+  .section-break h2 { font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; color: var(--text); }
+  .section-break p { font-size: 0.9rem; line-height: 1.9; color: #aaa; margin-bottom: 1rem; }
+  .show-details { max-width: 780px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; gap: 3rem; flex-wrap: wrap; }
+  .show-details .detail-item .label { font-size: 0.65rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.25rem; }
+  .show-details .detail-item .value { font-size: 0.9rem; color: var(--text); font-weight: 300; }
+  .pull-quote { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
+  .pull-quote blockquote { font-size: 1.5rem; font-weight: 200; line-height: 1.8; color: var(--text); font-style: italic; border: none; margin: 0; padding: 0; }
+  .page-footer { padding: 4rem 2rem; text-align: center; }
+  @media (max-width: 768px) {
+    .cur-hero { height: 60vh; } .cur-hero .hero-title h1 { font-size: 1.6rem; }
+    .cur-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; } .intro-block .lead { font-size: 1.1rem; }
+    .duo { grid-template-columns: 1fr; } .triple { grid-template-columns: 1fr; }
+    .section-break { padding: 3rem 1.5rem 1.5rem; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+    .show-details { gap: 1.5rem; padding: 0 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<div class="cur-hero" id="img-0">
+  <img src="../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-01.jpg" alt="Tangible Data — Baron Lanteigne installation at Galerie Art Mûr, modified screens and electronic infrastructure">
+  <div class="hero-title">
+    <div class="project-meta">Curated Exhibition &middot; Art M&ucirc;r &middot; April&ndash;May 2021</div>
+    <h1>Baron Lanteigne <em>Tangible Data</em></h1>
+  </div>
+</div>
+
+<div class="show-details">
+  <div class="detail-item">
+    <div class="label">Dates</div>
+    <div class="value">April 3 &ndash; May 8, 2021</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Medium</div>
+    <div class="value">VR + Screen-Based Installation</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Venue</div>
+    <div class="value">Galerie Art M&ucirc;r, Montreal</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Curator</div>
+    <div class="value">Samuel Arsenault-Brassard</div>
+  </div>
+</div>
+
+<div class="intro-block" style="padding-top: 2rem;">
+  <p class="lead">Baron Lanteigne explores our relationship with technology and its infrastructure through installations of modified screens, cables, and electronic devices. His screen-portals straddle the real and virtual, projecting visitors into labyrinthine worlds that connect multiple digital realities.</p>
+
+  <p>Lanteigne acts as a digital chameleon. He emerges from the depths of the internet&mdash;infiltrating cyber-communities, absorbing their visual languages through virtual collaborations&mdash;and slips between mediums with the natural ease of a native. His animations are intentionally dense loops conceived for a new generation of internet-native viewers, too detailed to consume in a single viewing but saturated and surreal enough to go viral. Distributed on social media, the works accumulate viewer reactions that feed back into subsequent iterations, making the audience an active participant in their evolution. In the gallery, these loops inhabit modified consumer electronics, their housings opened and rewired to reveal the mechanisms at work, recovering their aesthetic potential.</p>
+
+  <p>The VR component extends this investigation into infinite digital space. A dichotomy of container and content lies at the heart of the work: the screen-portal is simultaneously subject and medium. Visitors are projected into an overloaded environment that reflects the awkwardness of immature interfaces, the clumsy thresholds we use to access the virtual. Lanteigne repurposes these everyday devices to test their limits, not to advance technology but to develop its symbolic image.</p>
+</div>
+
+<div class="full-bleed" id="img-1">
+  <img src="../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-02.jpg" alt="Tangible Data — installation detail, modified screens and cables forming portal between real and virtual">
+</div>
+
+<div class="section-break">
+  <h2>Digital Infrastructure as Art</h2>
+  <p>Once unidirectional, our relationship with screens has transformed; the object is more versatile than ever. Alienating at moments, this intermediary has the potential to make us forget the physical world entirely. Lanteigne takes this post-humanist premise and runs with it, diverting consumer electronics from their intended purpose and pushing them until they crack open into something new.</p>
+</div>
+
+<div class="triple">
+  <div class="triple-item" id="img-2">
+    <img src="../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-03.jpg" alt="Tangible Data — VR artwork detail, digital infrastructure rendered in virtual space">
+  </div>
+  <div class="triple-item" id="img-3">
+    <img src="../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-04.jpg" alt="Tangible Data — installation view, cables and screens reconfigured as sculptural form">
+  </div>
+  <div class="triple-item" id="img-4">
+    <img src="../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-06.jpg" alt="Tangible Data — VR world detail, dense animation loops of electronic components">
+  </div>
+</div>
+
+<!-- GALLERY: Installation photos -->
+<div class="section-break">
+  <h2>In the Gallery</h2>
+  <p>Lanteigne&rsquo;s physical installations of modified screens and cables occupied the gallery alongside the VR component, creating a dialogue between tangible infrastructure and its virtual extension.</p>
+</div>
+
+<div class="duo">
+  <div class="duo-item" id="img-5">
+    <img src="../img/artmur-curated/03-lanteigne-tangible-data/lanteigne-gallery-01.jpg" alt="Tangible Data — gallery visitor viewing the installation">
+  </div>
+  <div class="duo-item" id="img-6">
+    <img src="../img/artmur-curated/03-lanteigne-tangible-data/lanteigne-gallery-03.jpg" alt="Tangible Data — gallery installation wide view">
+  </div>
+</div>
+
+<div class="full-bleed" id="img-7">
+  <img src="../img/artmur-curated/03-lanteigne-tangible-data/lanteigne-gallery-04.jpg" alt="Tangible Data — gallery space with screens and electronic installations">
+</div>
+
+<div class="page-footer">
+  <a href="artmur-millar.html" class="back-link">&larr; Millar: Vitreus Ombre</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../digital-architecture.html" class="back-link">All Work</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="artmur-aguirre.html" class="back-link">Aguirre: A Constructive Instability &rarr;</a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-01.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-02.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-03.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-04.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/tangible-data-06.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/lanteigne-gallery-01.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/lanteigne-gallery-03.jpg',
+  '../img/artmur-curated/03-lanteigne-tangible-data/lanteigne-gallery-04.jpg'
+];
+const openLb = initLightbox(allImages);
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) { el.style.cursor = 'pointer'; el.addEventListener('click', () => openLb(i)); }
+}
+</script>
+</body>
+</html>

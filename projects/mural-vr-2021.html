@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MURAL – VR Graffiti Projection — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .mural-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .mural-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .mural-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .mural-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .mural-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .mural-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .trio {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  }
+  .trio .trio-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .trio .trio-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .trio .trio-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .mural-hero { height: 60vh; }
+    .mural-hero .hero-title h1 { font-size: 1.8rem; }
+    .mural-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 3/4; }
+    .trio { grid-template-columns: 1fr; }
+    .trio .trio-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Cryote's projected VR graffiti on building wall, people watching -->
+<div class="mural-hero" id="img-0">
+  <img src="../img/projects/mural-vr-2021/mural-vr-2021-01.jpg" alt="MURAL Festival 2021 — Cryote's VR graffiti projected onto building wall at night, audience watching">
+  <div class="hero-title">
+    <div class="project-meta">Festival &middot; MURAL &middot; 2021</div>
+    <h1>VR Graffiti Projection <em>Live painting projected onto Montreal walls</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">For the 2021 edition of MURAL Festival, Samuel coordinated a live VR graffiti program: artists spray-painting in virtual reality using Kingspray, their strokes projected in real time onto building walls along Boulevard Saint-Laurent.</p>
+
+  <p>The program brought together Montreal street artists Cryote (Sebastian Millar), azdead (Elliot Fockyer), and Zoltan alongside Samuel to paint live on a virtual canvas that was simultaneously projected as a massive mural on the side of a building. Audiences on the boulevard watched the artwork take shape stroke by stroke, bridging the intimacy of VR creation with the public spectacle of street art.</p>
+
+  <p>Samuel handled the technical coordination, VR setup, projection system, and artistic vision for the program. The live painting sessions ran across multiple evenings during the festival (August 12&ndash;22), becoming a nightly attraction that drew crowds to the projection site.</p>
+</div>
+
+<!-- FULL-BLEED: Samuel painting in VR, projection behind him -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/mural-vr-2021/mural-vr-2021-02.jpg" alt="Samuel painting in VR with Kingspray, his virtual graffiti projected on the building wall behind him">
+</div>
+
+<!-- TEXT + IMAGE SPLIT -->
+<div class="split">
+  <div class="split-text">
+    <h2>Live on the Boulevard</h2>
+    <p>Each artist took turns in a VR headset on-stage, spray-painting in Kingspray while a projector beamed their virtual canvas onto the brick wall in real time. The audience saw every gesture, every layer of color, every hesitation&mdash;the creative process made public at building scale.</p>
+    <p>The format turned VR from a solitary, enclosed experience into a shared spectacle. Where gallery VR typically involves one person at a time behind a headset, this inverted the model: one person in VR, hundreds watching from the street.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">4</div>
+        <div class="label">Artists</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">2021</div>
+        <div class="label">MURAL Festival</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">Live</div>
+        <div class="label">Real-time projection</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-03.jpg" alt="Samuel wearing VR headset with controllers, preparing to paint live at MURAL Festival">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>One person in VR, hundreds watching from the street. The live projection turned a solitary medium into public performance.</blockquote>
+</div>
+
+<!-- DUO: Cryote projection shots -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-04.jpg" alt="Cryote's VR graffiti projected on building wall, spectators silhouetted against the colorful mural">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-05.jpg" alt="Cryote's projected VR graffiti — detailed creature forms in vivid color on brick wall">
+  </div>
+</div>
+
+<!-- ARTISTS SECTION -->
+<div class="intro-block" style="padding-bottom: 1.5rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Artists</h2>
+  <p><strong style="color: var(--text);">Cryote</strong> (Sebastian Millar) &mdash; A multimedia artist whose practice merges physical and digital creation. Known for his murals and nature-inspired creatures, Cryote brought his signature organic forms into VR, sculpting elaborate characters that sprawled across the projected wall.</p>
+  <p><strong style="color: var(--text);">azdead</strong> (Elliot Fockyer) &mdash; A Montreal artist who translated his bold, graphic graffiti style into the virtual spray can. His sessions produced vivid, high-energy compositions that filled the wall with color.</p>
+  <p><strong style="color: var(--text);">Zoltan</strong> &mdash; Joined the live painting program, contributing to the collaborative energy of the nightly sessions.</p>
+</div>
+
+<!-- TRIO: azdead work -->
+<div class="trio">
+  <div class="trio-item" id="img-5">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-06.jpg" alt="azdead's VR graffiti projected onto building — abstract colorful composition">
+  </div>
+  <div class="trio-item" id="img-6">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-07.jpg" alt="azdead's projected VR graffiti visible on building wall, boulevard Saint-Laurent at night">
+  </div>
+  <div class="trio-item" id="img-7">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-08.jpg" alt="azdead posing with his projected VR graffiti at MURAL Festival">
+  </div>
+</div>
+
+<!-- DUO: Samuel dramatic shots -->
+<div class="duo" style="margin-top: 6px;">
+  <div class="duo-item" id="img-8">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-10.jpg" alt="Samuel painting live in VR at MURAL Festival, purple stage lighting">
+  </div>
+  <div class="duo-item" id="img-9">
+    <img src="../img/projects/mural-vr-2021/mural-vr-2021-11.jpg" alt="Samuel crouching while painting in VR, dramatic purple lighting at MURAL Festival">
+  </div>
+</div>
+
+<!-- CLOSING TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Press</h2>
+  <p>The VR graffiti projection was covered by La Presse and Radio-Canada, who highlighted MURAL&rsquo;s incursion into virtual public art as a defining element of the 2021 edition. The program demonstrated that VR art could work not just in galleries and headsets, but as large-scale public spectacle.</p>
+</div>
+
+<!-- CLOSING: azdead clean projection shot -->
+<div class="full-bleed" id="img-10">
+  <img src="../img/projects/mural-vr-2021/mural-vr-2021-09.jpg" alt="azdead's completed VR graffiti piece projected on building wall, MURAL Festival 2021">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="mural-ar-2021.html" class="back-link">MURAL AR 2021 &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/mural-vr-2021/mural-vr-2021-01.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-02.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-03.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-04.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-05.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-06.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-07.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-08.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-09.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-10.jpg',
+  '../img/projects/mural-vr-2021/mural-vr-2021-11.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

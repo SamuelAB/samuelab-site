@@ -1,0 +1,293 @@
+{
+  "source": "artmur.com — archived March 2026",
+  "context": "Samuel Arsenault-Brassard curated VR/AR exhibitions at Galerie Art Mûr (2021-2022), presented in collaboration with ELLEPHANT Gallery. For Art Mûr's 25th anniversary in 2021, Samuel was invited as guest curator for a year-long VR art program, selecting approximately fifteen artists with a new artwork every three to four weeks. The program continued through 2022.",
+  "exhibitions": [
+    {
+      "number": 1,
+      "artist": "Sebastian Millar (Cryote)",
+      "title": "Vitreus Ombre",
+      "dates": "February 9 – 27, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/vitreus-ombre/",
+      "medium": "VR",
+      "credits": "Text by Samuel Arsenault-Brassard and Mylène Lachance-Paquin",
+      "description": "Sebastian Millar transitioned from traditional painting/muralism to immersive digital art. The VR experience transforms his apartment and studio into a virtual gallery featuring plants, precious stones and spiritual animals under ethereal lighting. His previous show 'Illusive Sympathy' combined painted woodcuts with VR, and he devoted 2019-2020 to studying VR as a medium.",
+      "curatorial_text": "Virtual and augmented reality is currently transforming the world of visual arts. The advent of Virtual Reality (VR) and Augmented Reality (AR) reminds us of the upheavals that were brought about in the past by the arrival of photography in the visual arts.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-Vitreus-Ombre-2021.jpg",
+        "https://artmur.com/wp-content/uploads/010-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/011-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/009-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/005-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/006-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/008-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-HighresScreenshot00000-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-HighresScreenshot00001-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-HighresScreenshot00002-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-HighresScreenshot00003-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-HighresScreenshot00004-copy-1.jpg",
+        "https://artmur.com/wp-content/uploads/Sebastian-Millar-HighresScreenshot00005-copy.jpg",
+        "https://artmur.com/wp-content/uploads/001-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/002-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/017-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/019-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/023-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/028-Sebastian-Millar-Vitreus-Ombre.jpg",
+        "https://artmur.com/wp-content/uploads/031-Sebastian-Millar-Vitreus-Ombre.jpg"
+      ]
+    },
+    {
+      "number": 2,
+      "artist": "Samuel Arsenault-Brassard",
+      "title": "Flame",
+      "dates": "March 6 – 27, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/flame/",
+      "medium": "VR",
+      "credits": "Text by Samuel Arsenault-Brassard and Mylène Lachance-Paquin",
+      "note": "Samuel's own work exhibited under his artist-curator role. Part of the long-term 'Galerie Lumière' (Light Gallery) series.",
+      "description": "The second piece publicly unveiled from Samuel's long-term VR architectural project 'Galerie Lumière' featuring approximately fifteen works to be unveiled over several years. The hand-carved VR sculpture (created in 2020) aims to create a sense of grandeur, mystery and spatial sensuality through expressive complexity and acute realism. Uses simulated sunlight — soft, diffuse indirect lighting to illuminate complex, multi-sided sculptural artworks.",
+      "curatorial_text": "Digital spaces and art can now be inhabited and fully experienced rather than merely viewed externally. This architectural VR world creates a social realm from which a new and decentralized form of life emerges: the metaverse. The technologies offer artists a wealth of artistic freedom and power never before imagined.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-FlameInside-1.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame2.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame2_Denoised-beauty.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame3_Denoised-beauty.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame7_Denoised-beauty.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame8_Denoised-beauty.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame9_Denoised-beauty.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Arsenault-Brassard-Flame10_Denoised-beauty.jpg"
+      ]
+    },
+    {
+      "number": 3,
+      "artist": "Baron Lanteigne",
+      "title": "Tangible Data",
+      "dates": "April 3 – May 8, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/tangible-data/",
+      "medium": "VR + screen-based installation",
+      "credits": "Curator: Samuel Arsenault-Brassard",
+      "description": "Explores our relationship with technology and its infrastructure through installations of modified screens, cables, electronic devices and animations forming portal screens straddling the real and virtual. The exhibition was approached as a creative laboratory that begins a process of adaptation to virtual reality. Animation loops are intentionally dense — viewers discover details through repeated viewings rather than following a narrative structure.",
+      "curatorial_text": "VR allows the audience to enter and observe this world at their own pace.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/01-Baron-Lanteigne-Tangible-Data.jpg",
+        "https://artmur.com/wp-content/uploads/02-Baron-Lanteigne-Tangible-Data.jpg",
+        "https://artmur.com/wp-content/uploads/03-Baron-Lanteigne-Tangible-Data.jpg",
+        "https://artmur.com/wp-content/uploads/04-Baron-Lanteigne-Tangible-Data.jpg",
+        "https://artmur.com/wp-content/uploads/06-Baron-Lanteigne-Tangible-Data.jpg"
+      ]
+    },
+    {
+      "number": 4,
+      "artist": "Lucas Aguirre",
+      "title": "A Constructive Instability",
+      "dates": "May 15 – June 19, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/a-constructive-instability/",
+      "medium": "VR + giclee prints + NFTs",
+      "credits": "Soundscape by Franco Bellavita. Curator: Samuel Arsenault-Brassard",
+      "note": "Lucas Aguirre's first international show.",
+      "description": "A painter who transitioned his art practice into VR and digital art. Features dramatic portraiture and dense surreal explosive forces with an intimate understanding of light and shadows. Physical works are a dynamic series of horizons, merging figures filled with intricate details and dense movement. The VR component presents a boundless white void with a single spiritual entity.",
+      "curatorial_text": "Aguirre's VR worlds represent a direct evolution of his paintings with painterly qualities exploring a new hybrid language. Rather than digital chaos, viewers sense the splatter of real paint, the tracing of the pencil, mixing with the reimagined scanned bodies. The works explore the constant tension of instability — a dematerialization of matter, of reality — the moment before collapse, through a frail equilibrium, through the beauty of weakness.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/strikingr/images/71386_Lucas-Aquirre-constructive-instability-small-220x150.jpg",
+        "https://artmur.com/wp-content/uploads/strikingr/images/71389_Lucas-Aquirre-detalle-9-full-res-220x150.jpg",
+        "https://artmur.com/wp-content/uploads/strikingr/images/71392_Lucas-Aquirre-rescatarse-detalle-full-res-220x150.jpg",
+        "https://artmur.com/wp-content/uploads/strikingr/images/71395_Lucas-Aquirre-rescatarse-detalle-full-res2-220x150.jpg",
+        "https://artmur.com/wp-content/uploads/strikingr/images/71398_Lucas-Aquirre-viejos-problemas-nuevas-soluciones3-small-220x150.jpg"
+      ]
+    },
+    {
+      "number": 5,
+      "artist": "Ines Alpha",
+      "title": "Alpha Manifestations",
+      "dates": "July 17 – August 28, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/alpha-manifestations/",
+      "medium": "AR + digital",
+      "credits": "Curator: Samuel Arsenault-Brassard",
+      "description": "Explores contemporary digital aesthetics through makeup, fashion, and identity. Bodies interchangeably mix with digital matter, with facial features transforming into aquatic forms — tendrils, fins, crystals, scales. Sea creatures function as living ornaments within human forms. Spectators become the vessels and canvas of an otherworldly dream universe.",
+      "curatorial_text": "Ines Alpha's digital works explore future concepts of makeup, fashion, and identity. The artist reimagines beauty through digital cosmetics that create dreamlike spaces rather than conceal features. The work emphasizes strong digital identity that dares to shine and refuses to conform to conventional standards. These works demonstrate the necessity of affective computing — integrating human emotions into digital futures.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Ines-Alpha-3DbodyMakeup_stillface2.jpg",
+        "https://artmur.com/wp-content/uploads/Ines-Alpha-nicole_still1.jpg"
+      ]
+    },
+    {
+      "number": 6,
+      "artist": "Auriea Harvey",
+      "title": "👁 (eye emoji)",
+      "dates": "September 11 – October 30, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/auriea-harvey/",
+      "medium": "VR + 3D printed sculpture",
+      "credits": "Curator: Samuel Arsenault-Brassard",
+      "note": "Auriea Harvey is a pioneering digital artist, co-creator of Tale of Tales. She later showed at the Whitney Museum.",
+      "description": "Mythological narratives through contemporary digital art. Features sculptural works Cyclops and Ram — creatures from Ovid's Metamorphosis and Homer's Odyssey, designed to be uncanny and terrifying, invoking the strange and the divine. Through 3D scanning, Auriea integrates her physical self into the works, achieving a state of digital divinity. The physical sculptures serve as archives of digital compositions, traces of another world.",
+      "curatorial_text": "Ancient mythologies are filled with tales of drama, terror and transformations. Through her work, Auriea suggests a complex weaving of artistic narratives and philosophies. She explores ancient mythologies, interlacing it within her personal narratives and emerging technologies. The result is a personal mythology, she becomes an ancient goddess, embodies her past grandmothers, her imaginary ancestors. As she transcends, she transforms into something beyond her physical manifestation, a goddess of ancient beauty, unforgiving, frightful and eternally powerful. The spaces that initially appear empty actually holds the highest potential: access to the realm of digital spirituality.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-RAM-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-_DSC4534.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-_DSC4536.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-_DSC4606.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-_DSC4607.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-_DSC4610.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-CYCLOPS-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-cyclops-maquette1-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-cyclops-maquette2-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-cyclops-maquette3.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-cyclops-maquette5-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-cyclops-maquette8.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-poliphemau1-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-polyphemau3-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-polyphemau5-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-RAM-ANCESTOR-RED-1-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-RAM-ANCESTOR-RED-1A-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-RAM-ANCESTOR-RED-2-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-RAM-ANCESTOR-RED-3-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-RAM-ANCESTOR-RED-6-copy.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-ram-maquette.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-ram-maquette0.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-ram-maquette2.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-ram-maquette3.jpg",
+        "https://artmur.com/wp-content/uploads/Auriea-Harvey-ram-maquette4.jpg"
+      ]
+    },
+    {
+      "number": 7,
+      "artist": "Giant Swan",
+      "title": "I am not the only hatchling",
+      "dates": "November 11 – December 18, 2021",
+      "year": 2021,
+      "url": "https://artmur.com/en/exhibitions/2021-exhibitions/i-am-not-the-only-hatchling/",
+      "medium": "VR + video",
+      "credits": "Curator: Samuel Arsenault-Brassard",
+      "description": "A VR digital sculpture within a nest environment. Audience members are placed within the sculpture looking out, peering at their nest and the beings that make up the walls of their enclosure. A humanoid figure reaches toward visitors with an engaging gaze that follows them, though remaining unreachable. Explores collective mental health and feelings of dominance within constrained spaces. An accompanying video presents the external perspective, contrasting the interior VR experience.",
+      "curatorial_text": "I am not the only hatchling reveals a digital sculpture within the void of a nest, positioning audience members inside the artwork looking outward. The hand remains perpetually offered but unreachable.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Giant-Swan-2.jpg",
+        "https://artmur.com/wp-content/uploads/001-Giant-Swan-I-am-not-the-only-hatchling.jpg",
+        "https://artmur.com/wp-content/uploads/002-Giant-Swan-I-am-not-the-only-hatchling.jpg",
+        "https://artmur.com/wp-content/uploads/004-Giant-Swan-I_am-not-the-only-hatchling.jpg",
+        "https://artmur.com/wp-content/uploads/005-Giant-Swan-I_am-not-the-only-hatchling.jpg"
+      ]
+    },
+    {
+      "number": 8,
+      "artist": "Matthieu Vanier",
+      "title": "Habitats",
+      "dates": "January 15 – April 23, 2022",
+      "year": 2022,
+      "url": "https://artmur.com/en/exhibitions/2022-exhibitions/matthieu-vanier-habitats/",
+      "medium": "VR",
+      "credits": "Music by Thomas Speakman. Curator: Samuel Arsenault-Brassard",
+      "note": "Longest-running VR show of the series (over 3 months).",
+      "description": "Visitors navigate different sets of majestic, minimalist shapes — a world of post-physical pseudo-architectural assemblies. The piece evolves temporally: initially orderly, clean and controlled, then fragmenting and becoming more chaotic, moving in unpredictable ways. Emphasizes dephysicalization — transcending physical embodiment to become spirits floating through a digital mindscape.",
+      "curatorial_text": "Visitors choose their own path through different sets of majestic, minimalist shapes, a world composed of post-physical pseudo-architectural assemblies. The experience itself suggests dephysicalization, we are no longer physical bodies within a world, rather spirits floating through a digital mindscape. For these brief moments, we become light, color, sound, a landscape of ancient entities in eternal confluence. We perceive a soft cycle of creation and destruction, the pulse of a cosmic breath.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot8.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot7.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot6.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot5.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot4.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot3.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot2.jpg",
+        "https://artmur.com/wp-content/uploads/Matthieu-Vaniller-Screenshot-1.jpg"
+      ]
+    },
+    {
+      "number": 9,
+      "artist": "Sara Ludy",
+      "title": "Swimmer's Canyon",
+      "dates": "July 16 – August 27, 2022",
+      "year": 2022,
+      "url": "https://artmur.com/en/exhibitions/2022-exhibitions/swimmers-canyon/",
+      "medium": "VR",
+      "credits": "Curator: Samuel Arsenault-Brassard",
+      "description": "A VR journey through a star-filled canyon to a swimming hole. Visitors wake up in a canyon at night, drifting on a float with fireworks above, exploring surroundings and cataloging artifacts and phenomena — a portal, a pineapple, shifting sounds, something running, spatial energies. The journey progresses through time with distant lights appearing as visitors approach an unknown structure.",
+      "curatorial_text": "You wake up in a canyon at night, drifting on a float with fireworks above. You explore the surroundings and catalog various artifacts and phenomena; a portal, a pineapple, shifting sounds, something running, spatial energies. Time passes and distant lights are seen. You notice you're moving towards an unknown structure, something with a presence. The atmosphere shifts and you begin to descend…",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Sara-Ludy-Fun-float.jpg",
+        "https://artmur.com/wp-content/uploads/Sara-Ludy-Nightswing.jpg",
+        "https://artmur.com/wp-content/uploads/Sara-Ludy-Paradise-float.jpg",
+        "https://artmur.com/wp-content/uploads/Sara-Ludy-Sandstorm.jpg"
+      ]
+    },
+    {
+      "number": 10,
+      "artist": "Samuel Walker",
+      "title": "Rapture baiting",
+      "dates": "September 10 – October 29, 2022",
+      "year": 2022,
+      "url": "https://artmur.com/en/exhibitions/2022-exhibitions/samuel-walker/",
+      "medium": "VR",
+      "credits": "Curator: Samuel Arsenault-Brassard",
+      "description": "A VR work immersing viewers in a modest suburban bedroom where a bed-bound, reclined character is entangled in linen bed sheets. A dive into the character's thoughts and fantasies, with the viewer sharing an intimate perspective of a voyage into ennui. An ordinary window displays surreal, dreamlike landscapes and prophetic visions as long stretches of time elapse.",
+      "curatorial_text": "The VR work takes place inside a modest suburban bedroom, where a bed-bound, reclined character is entangled in linen bed sheets. The work involves a dive into the character's thoughts and fantasies, as the viewer shares an intimate perspective of the character's voyage into a world of ennui. An ordinary window displays surreal, dreamlike landscapes and prophetic visions in the distance, as long stretches of time elapse.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Samuel-Walker-Painting-Dirt-and-Rock.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Walker-Painting-Seed-and-Aluminum-Tread-Plate.jpg",
+        "https://artmur.com/wp-content/uploads/Samuel-Walker-Window4.jpg"
+      ]
+    },
+    {
+      "number": 11,
+      "artist": "Katerine DM",
+      "title": "Dans la scène / In the Scene",
+      "dates": "November 5 – December 17, 2022",
+      "year": 2022,
+      "url": "https://artmur.com/en/exhibitions/2022-exhibitions/in-the-scene/",
+      "medium": "VR + prints",
+      "credits": "Installation photos by Mike Patten. Curator: Samuel Arsenault-Brassard",
+      "description": "Seven worlds to observe from outside or inside. The artist created images in 3D software between 2020 and 2022. The exhibition was conceived so visitors could enter the 3D file of the prints on the wall — compared to Super Mario 64 where you choose the painting you want to go into — though the ambiance on paper may differ from the headset experience.",
+      "curatorial_text": "In the scene seven worlds to observe from outside or inside.",
+      "images": [
+        "https://artmur.com/wp-content/uploads/Katerine-DM-01-10cm02-1.jpg",
+        "https://artmur.com/wp-content/uploads/Katerine-DM-01-50cm01-1.jpg",
+        "https://artmur.com/wp-content/uploads/Katerine-DM-02-20cm-02-1.jpg",
+        "https://artmur.com/wp-content/uploads/Katerine-DM-02-40cm-01-1.jpg",
+        "https://artmur.com/wp-content/uploads/Katerine-DM-05-40cm-01-1.jpg",
+        "https://artmur.com/wp-content/uploads/Katerine-DM-06-40cm-02-1.jpg",
+        "https://artmur.com/wp-content/uploads/Katerine-DM-07-40cm-02-1.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7847-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7848-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7851-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7854-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7862-HDR-2.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7866-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7869-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7872-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7875-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7877-HDR.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7878-photo-Mike-Patten.jpg",
+        "https://artmur.com/wp-content/uploads/CL2A7883-photo-Mike-Patten.jpg"
+      ]
+    }
+  ],
+  "press": [
+    {
+      "source": "La Presse",
+      "date": "March 18, 2021",
+      "title": "Art Mûr : 25 ans et toutes ses dents!",
+      "url": "https://www.lapresse.ca/arts/arts-visuels/2021-03-18/art-mur-25-ans-et-toutes-ses-dents.php",
+      "note": "Coverage of Art Mûr's 25th anniversary. Co-founder Rhéal Olivier Lanthier compared VR's emergence to photography's establishment as its own art form."
+    },
+    {
+      "source": "Artnome",
+      "date": "May 23, 2021",
+      "title": "Constructive Instability - The Art of Lucas Aguirre",
+      "url": "https://www.artnome.com/news/2021/5/23/constructive-instability-the-art-of-lucas-aguirre",
+      "note": "Review noting Samuel invited Aguirre to exhibit as part of Art Mûr's 25th anniversary."
+    }
+  ],
+  "additional_events": [
+    {
+      "title": "NFT art for beginning collectors",
+      "date": "August 11, 2022",
+      "type": "Talk/conversation",
+      "description": "Samuel gave a talk at Art Mûr discussing the origin of NFT art, how to buy a piece, why collect digital art, the financial side, and the future of the space."
+    }
+  ]
+}

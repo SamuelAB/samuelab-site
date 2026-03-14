@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAT Hub — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .hub-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .hub-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .hub-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .hub-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .hub-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .hub-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+  .pull-quote .attribution {
+    margin-top: 1.5rem;
+    font-size: 0.75rem; color: var(--dim); letter-spacing: 0.12em;
+    text-transform: uppercase; font-style: normal;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Experimental renders — saturated, wild color */
+  .triple-exp {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  }
+  .triple-exp .exp-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .triple-exp .exp-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .triple-exp .exp-item:hover img {
+    transform: scale(1.03); filter: brightness(1.1);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .hub-hero { height: 60vh; }
+    .hub-hero .hero-title h1 { font-size: 1.8rem; }
+    .hub-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .triple-exp { grid-template-columns: 1fr; }
+    .triple-exp .exp-item { aspect-ratio: 16/10; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Sweeping purple ribbons with glowing portal — the Hub's signature view -->
+<div class="hub-hero" id="img-0">
+  <img src="../img/projects/sat-hub/sat-hub-09.jpg" alt="SAT Hub — sweeping purple architectural ribbons converging on a glowing blue-pink portal">
+  <div class="hero-title">
+    <div class="project-meta">VR Architecture &middot; 2020</div>
+    <h1>SAT Hub <em>A space beyond spatial conventions</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">Creative direction for the Soci&eacute;t&eacute; des arts technologiques virtual Hub, a social VR space where light guides visitors through architecture that defies physical convention.</p>
+
+  <p>The Satellite Hub is a social virtual environment created by the SAT in 2020, in response to the pandemic&rsquo;s disruption of cultural gathering. Samuel served as Creative Director, designing the central architectural space. Gravity is optional, walls twist into ceilings, and light becomes the primary wayfinding system.</p>
+
+  <p>Four distinct destinations radiate from a central sculptural space, each signalled by a unique quality of coloured light. There is no text, no signage, no conventional spatial cues. The light itself guides the body through the architecture.</p>
+</div>
+
+<!-- FULL-BLEED: Flowing lavender forms with pink glow — the architecture in detail -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/sat-hub/sat-hub-08.jpg" alt="SAT Hub — flowing purple-blue architectural forms with a glowing pink light source illuminating curved passages">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: Light as wayfinding -->
+<div class="split">
+  <div class="split-text">
+    <h2>Light as Interface</h2>
+    <p>In the physical world, we navigate through learned conventions: signs, corridors, doors. In virtual space, these conventions dissolve. The Hub&rsquo;s architecture replaces them with something more intuitive: light itself.</p>
+    <p>Each destination is marked by a distinct colour and intensity of illumination, visible from the central space. Visitors move toward the light that draws them. Glowing passages beckon, pools of colour spill through openings, luminous gradients suggest direction without dictating it.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">SAT</div>
+        <div class="label">Creative Direction</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">4</div>
+        <div class="label">Destinations</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/sat-hub/sat-hub-04.jpg" alt="SAT Hub — lavender and cyan architectural forms with a glowing eye-shaped portal, organic flowing surfaces">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>A great building must begin with the unmeasurable, must go through measurable means when it is being designed and in the end must be unmeasurable.</blockquote>
+  <div class="attribution">Louis Kahn</div>
+</div>
+
+<!-- DUO: Two views of the final space — different angles, same purple palette -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/sat-hub/sat-hub-02.jpg" alt="SAT Hub — dark purple organic passages with violet light glowing from deep recesses">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/sat-hub/sat-hub-11.jpg" alt="SAT Hub — soft pink-violet glow illuminating curved architectural surfaces from within">
+  </div>
+</div>
+
+<!-- TEXT BLOCK: Experimental renders -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Experimental Light Studies</h2>
+  <p>During the design process, Samuel produced a series of experimental lighting renders that pushed the space&rsquo;s colour and atmosphere far beyond what the final Hub would use. These studies treated the same geometry as a canvas for saturated, almost psychedelic light: neon greens, hot pinks, acid yellows flooding through the organic forms.</p>
+  <p>While these renders did not make it into the final space, they represent an important strand of the design process: testing how virtual architecture responds to extreme lighting conditions, and discovering that the same geometry can produce radically different spatial experiences depending solely on the quality of its light.</p>
+</div>
+
+<!-- TRIPLE: Experimental lighting renders — saturated neon colour studies -->
+<div class="triple-exp">
+  <div class="exp-item" id="img-5">
+    <img src="../img/projects/sat-hub/sat-hub-01.jpg" alt="SAT Hub experimental render — neon green and magenta organic forms, extreme colour saturation">
+  </div>
+  <div class="exp-item" id="img-6">
+    <img src="../img/projects/sat-hub/sat-hub-03.jpg" alt="SAT Hub experimental render — pink, teal and green flowing forms, psychedelic colour study">
+  </div>
+  <div class="exp-item" id="img-7">
+    <img src="../img/projects/sat-hub/sat-hub-07.jpg" alt="SAT Hub experimental render — purple and yellow-green light studies, architectural colour abstraction">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">A Platform for Gathering</h2>
+  <p>The Satellite platform was created to support cultural partners across Quebec during a period when physical gathering became impossible. It offered an accessible social environment reachable from any web browser or VR headset, a new territory for creation, diffusion, and meeting.</p>
+  <p>The Hub applies the principles of Samuel&rsquo;s broader architectural practice to a functional social context: light as material, sculptural form as spatial logic, architecture shaped by its own freedoms rather than by the constraints of the physical world.</p>
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="sat-mutek.html" class="back-link">SAT &amp; MUTEK &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/sat-hub/sat-hub-09.jpg',
+  '../img/projects/sat-hub/sat-hub-08.jpg',
+  '../img/projects/sat-hub/sat-hub-04.jpg',
+  '../img/projects/sat-hub/sat-hub-02.jpg',
+  '../img/projects/sat-hub/sat-hub-11.jpg',
+  '../img/projects/sat-hub/sat-hub-01.jpg',
+  '../img/projects/sat-hub/sat-hub-03.jpg',
+  '../img/projects/sat-hub/sat-hub-07.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

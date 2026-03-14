@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR Church — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .church-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .church-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .church-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .church-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .church-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .church-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+  .pull-quote .attribution {
+    margin-top: 1.5rem;
+    font-size: 0.75rem; color: var(--dim); letter-spacing: 0.12em;
+    text-transform: uppercase; font-style: normal;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .church-hero { height: 60vh; }
+    .church-hero .hero-title h1 { font-size: 1.8rem; }
+    .church-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Interior looking up — walls exploding gloriously toward the sky -->
+<div class="church-hero" id="img-0">
+  <img src="../img/projects/vrchurch/vrchurch-01.jpg" alt="VR Church — interior looking up through undulating walls exploding toward a dark sky, with neon light traces and green glowing elements">
+  <div class="hero-title">
+    <div class="project-meta">Speculative VR Architecture &middot; 2017</div>
+    <h1>VR Church <em>Finding peace in the digital world</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A reflection on the potential shapes of spiritual architecture. Freed from gravity, the walls explode gloriously toward the sky, lit from within by a cacophony of colour.</p>
+
+  <p>The VR Church began with a virtual reality meeting with Jeremy Nickel, a minister of the Unitarian Universalism Fellowship who conducts guided meditation sessions in VR. Rather than recreating the familiar forms of physical churches, the project asked a more fundamental question: what could spiritual architecture become when freed from gravity, material cost, and structural limitation?</p>
+
+  <p>Unitarian Universalism is a denomination that celebrates all religions, a universal spiritual space open to atheists, agnostics, and theists alike. This conceptual openness demanded an architecture equally unbounded. The result is a structure whose undulating walls surge skyward like flames or an explosion, blowing past the physical limitations that Gothic cathedrals could only mock with their soaring pinnacles.</p>
+</div>
+
+<!-- FULL-BLEED: Exterior view — the full church against twilight sky -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/vrchurch/vrchurch-04.jpg" alt="VR Church — full exterior view of the organic structure against a twilight gradient sky, forms exploding upward with internal light glowing through">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: Light from within -->
+<div class="split">
+  <div class="split-text">
+    <h2>Lit from Within</h2>
+    <p>Unlike traditional sacred architecture, which transforms light from the outside through stained glass, the VR Church inverts this relationship entirely. The structure is lit from inside, its undulating walls radiating colour outward. Inside the cave-like interior, different colours emanate from the walls, creating a cacophony of merging hues.</p>
+    <p>The facade is pierced throughout, providing the shell of a shelter while maintaining shifting visual connections between inside and outside. Light bleeds through the gaps, casting complex shadows that shift as the viewer moves through the space.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2017</div>
+        <div class="label">Designed</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">Google Blocks</div>
+        <div class="label">Modelled in VR</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/vrchurch/vrchurch-05.jpg" alt="VR Church — interior corridor looking through the pierced facade, colourful neon light traces against undulating organic walls">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>Architecture appears for the first time when the sunlight hits a wall.</blockquote>
+  <div class="attribution">Louis Kahn</div>
+</div>
+
+<!-- DUO: Full elevation + detail -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/vrchurch/vrchurch-06.jpg" alt="VR Church — full front elevation against grey sky, the organic mass of forms rising like a flaming chalice, internally illuminated">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/vrchurch/vrchurch-02.jpg" alt="VR Church — detail of colourful confetti-like elements on organic sculpted surfaces, blue and green mosaic texture">
+  </div>
+</div>
+
+<!-- TEXT BLOCK: Process & context -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Digital Spirituality</h2>
+  <p>The VR Church was modelled in VR using Google Blocks, one of Samuel&rsquo;s earliest experiments with hand-sculpting architecture directly in virtual space. The project has not been released as a VR experience due to the complexity of completing the lighting process, but it stands as an important conceptual milestone: the first time the question of what virtual architecture <em>should</em> be, rather than what it <em>could</em> simulate, became the driving force of the design.</p>
+  <p>The project also marks the beginning of a trajectory that would lead from speculative spiritual architecture to the contemplative spaces of the Light Gallery and eventually to Gloam. That virtual architecture should exploit the freedoms of its medium rather than imitate physical constraints. This conviction runs through every project that followed.</p>
+</div>
+
+<!-- FULL-BLEED: Interior looking up through neon light traces -->
+<div class="full-bleed" id="img-5">
+  <img src="../img/projects/vrchurch/vrchurch-08.jpg" alt="VR Church — interior looking up through the exploding walls, cyan and yellow neon light traces floating among the organic forms against dark sky">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="metaverseroom.html" class="back-link">Metaverse Room &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/vrchurch/vrchurch-01.jpg',
+  '../img/projects/vrchurch/vrchurch-04.jpg',
+  '../img/projects/vrchurch/vrchurch-05.jpg',
+  '../img/projects/vrchurch/vrchurch-06.jpg',
+  '../img/projects/vrchurch/vrchurch-02.jpg',
+  '../img/projects/vrchurch/vrchurch-08.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

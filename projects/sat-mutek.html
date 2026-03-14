@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAT &amp; MUTEK — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .mutek-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .mutek-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .mutek-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .mutek-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .mutek-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .mutek-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  /* Process sketches on light background */
+  .duo-sketch {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    background: #1a1a1a;
+  }
+  .duo-sketch .sketch-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+    background: #f5f5f0;
+  }
+  .duo-sketch .sketch-item img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+    padding: 12px;
+    transition: transform 0.5s;
+  }
+  .duo-sketch .sketch-item:hover img {
+    transform: scale(1.03);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .mutek-hero { height: 60vh; }
+    .mutek-hero .hero-title h1 { font-size: 1.6rem; }
+    .mutek-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo-sketch { grid-template-columns: 1fr; }
+    .duo-sketch .sketch-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Dramatic overhead angle of the rift with cyan pool and branching fissures -->
+<div class="mutek-hero" id="img-0">
+  <img src="../img/projects/sat-mutek/sat-mutek-05.jpg" alt="SAT MUTEK Conference Room — angular dark rift with glowing cyan fissures, seen from above">
+  <div class="hero-title">
+    <div class="project-meta">VR Architecture &middot; SAT &times; MUTEK &middot; 2020</div>
+    <h1>Conference Room <em>Partir dans une rivi&egrave;re, dans une falaise</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A rift in space as meeting space. Designed to host metaverse conversations during MUTEK, this angular fissure suspends participants between two geological planes.</p>
+
+  <p>The SAT &amp; MUTEK Conference Room was conceived as a virtual meeting space for the Soci&eacute;t&eacute; des arts technologiques&rsquo; Satellite platform during the MUTEK festival. Rather than recreating the conventions of a physical conference room (chairs, tables, screens), the space reimagines the meeting as a geological event: a rift torn through a dark plane, its edges glowing with cyan light, the participants standing within the fissure itself.</p>
+
+  <p>The title, <em>Partir dans une rivi&egrave;re, dans une falaise</em> (Leaving in a river, in a cliff), captures the spatial concept: the rift functions simultaneously as a river canyon and a cliff face, a space carved by forces rather than constructed by hands. Participants descend into the fissure, positioned at different elevations and vantage points, a spatial hierarchy that subverts the flat democracy of the video call grid.</p>
+</div>
+
+<!-- FULL-BLEED: Close detail of the rift's angular geometry and glowing edges -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/sat-mutek/sat-mutek-01.jpg" alt="SAT MUTEK Conference Room — close-up of angular rift geometry with cyan-teal glowing edges and dark concrete surfaces">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: The spatial concept -->
+<div class="split">
+  <div class="split-text">
+    <h2>Architecture as Landscape</h2>
+    <p>The conference room&rsquo;s design treats architecture as geology. The angular forms suggest tectonic fracture rather than construction. Plates of dark stone-like material separated by luminous fissures, creating an environment that is simultaneously intimate and vast.</p>
+    <p>Branching paths extend from the central rift, offering different spatial conditions for different modes of conversation: narrow channels for focused exchange, wider plateaus for group discussion. The glowing edges serve as both wayfinding and atmosphere, casting subtle cyan light across the dark surfaces.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">SAT</div>
+        <div class="label">Satellite platform</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">MUTEK</div>
+        <div class="label">Festival</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/sat-mutek/sat-mutek-02.jpg" alt="SAT MUTEK Conference Room — wide view of the full rift structure, geological fissure floating in dark void with cyan edge lighting">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>A rift in space as meeting space. The participants descend into the fissure, positioned at different elevations and vantage points, subverting the flat democracy of the video call.</blockquote>
+</div>
+
+<!-- DUO SKETCH: Two pencil sketches on light backgrounds -->
+<div class="duo-sketch">
+  <div class="sketch-item" id="img-3">
+    <img src="../img/projects/sat-mutek/sat-mutek-03.jpg" alt="SAT MUTEK design process — pencil sketch showing section with human figures in the rift, and plan view, titled 'Partir dans une rivière, dans une falaise'">
+  </div>
+  <div class="sketch-item" id="img-4">
+    <img src="../img/projects/sat-mutek/sat-mutek-06.jpg" alt="SAT MUTEK design process — pencil sketch showing axonometric perspective of the angular rift structure with branching fissures">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">From Sketch to Virtual Space</h2>
+  <p>The design process moved from pencil sketches, quick section studies showing human figures occupying the rift at various levels, to 3D modelling within the constraints of the Satellite platform. The sketches reveal the core spatial idea: a narrow chasm that forces participants into proximity while the landscape extends dramatically above and beyond them.</p>
+  <p>The project demonstrates a recurring theme in Samuel&rsquo;s virtual architectural work: that the most powerful virtual spaces are not simulations of physical rooms but translations of natural phenomena: rifts, caves, canyons, cliffs, translated into functional environments, compressed into the functional brief of a conference room.</p>
+</div>
+
+<!-- FULL-BLEED: Wide exterior showing the full branching structure -->
+<div class="full-bleed" id="img-5">
+  <img src="../img/projects/sat-mutek/sat-mutek-04.jpg" alt="SAT MUTEK Conference Room — wide exterior view showing the full branching rift structure with glowing paths extending into dark space">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="sat-hub.html" class="back-link">SAT Hub &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/sat-mutek/sat-mutek-05.jpg',
+  '../img/projects/sat-mutek/sat-mutek-01.jpg',
+  '../img/projects/sat-mutek/sat-mutek-02.jpg',
+  '../img/projects/sat-mutek/sat-mutek-03.jpg',
+  '../img/projects/sat-mutek/sat-mutek-06.jpg',
+  '../img/projects/sat-mutek/sat-mutek-04.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

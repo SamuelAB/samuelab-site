@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matthieu Vanier: Habitats — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .cur-hero { position: relative; height: 85vh; min-height: 500px; overflow: hidden; margin-top: 60px; }
+  .cur-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+  .cur-hero .hero-title { position: absolute; bottom: 0; left: 0; right: 0; padding: 5rem 3rem 3rem; background: linear-gradient(transparent, rgba(10,10,10,0.9) 65%); }
+  .cur-hero .hero-title .project-meta { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .cur-hero .hero-title h1 { font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+  .cur-hero .hero-title h1 em { font-style: italic; text-transform: none; letter-spacing: 0.02em; font-weight: 300; font-size: 0.55em; display: block; color: var(--dim); margin-top: 0.3rem; }
+  .intro-block { max-width: 780px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+  .intro-block .lead { font-size: 1.35rem; font-weight: 300; line-height: 1.9; color: var(--text); margin-bottom: 2rem; }
+  .intro-block p { font-size: 0.95rem; line-height: 1.9; color: #bbb; margin-bottom: 1.5rem; }
+  .full-bleed { width: 100%; max-height: 80vh; overflow: hidden; cursor: pointer; }
+  .full-bleed img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.4s; }
+  .full-bleed:hover img { filter: brightness(1.08); }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .duo .duo-item { overflow: hidden; cursor: pointer; aspect-ratio: 4/3; }
+  .duo .duo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .duo .duo-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .triple { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .triple .triple-item { overflow: hidden; cursor: pointer; aspect-ratio: 1/1; }
+  .triple .triple-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .triple .triple-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .section-break { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 2rem; }
+  .section-break h2 { font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; color: var(--text); }
+  .section-break p { font-size: 0.9rem; line-height: 1.9; color: #aaa; margin-bottom: 1rem; }
+  .show-details { max-width: 780px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; gap: 3rem; flex-wrap: wrap; }
+  .show-details .detail-item .label { font-size: 0.65rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.25rem; }
+  .show-details .detail-item .value { font-size: 0.9rem; color: var(--text); font-weight: 300; }
+  .pull-quote { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
+  .pull-quote blockquote { font-size: 1.5rem; font-weight: 200; line-height: 1.8; color: var(--text); font-style: italic; border: none; margin: 0; padding: 0; }
+  .page-footer { padding: 4rem 2rem; text-align: center; }
+  @media (max-width: 768px) {
+    .cur-hero { height: 60vh; } .cur-hero .hero-title h1 { font-size: 1.6rem; } .cur-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; } .intro-block .lead { font-size: 1.1rem; }
+    .duo { grid-template-columns: 1fr; } .triple { grid-template-columns: 1fr; }
+    .section-break { padding: 3rem 1.5rem 1.5rem; } .pull-quote blockquote { font-size: 1.15rem; }
+    .show-details { gap: 1.5rem; padding: 0 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<div class="cur-hero" id="img-0">
+  <img src="../img/artmur-curated/08-vanier-habitats/habitats-01.jpg" alt="Habitats — VR environment by Matthieu Vanier, majestic minimalist shapes in post-physical space">
+  <div class="hero-title">
+    <div class="project-meta">Curated Exhibition &middot; Art M&ucirc;r &middot; January&ndash;April 2022</div>
+    <h1>Matthieu Vanier <em>Habitats</em></h1>
+  </div>
+</div>
+
+<div class="show-details">
+  <div class="detail-item">
+    <div class="label">Dates</div>
+    <div class="value">January 15 &ndash; April 23, 2022</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Medium</div>
+    <div class="value">Virtual Reality</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Music</div>
+    <div class="value">Thomas Speakman</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Curator</div>
+    <div class="value">Samuel Arsenault-Brassard</div>
+  </div>
+</div>
+
+<div class="intro-block" style="padding-top: 2rem;">
+  <p class="lead">Visitors choose their own path through majestic, minimalist shapes, a world of floating architectural forms unbound by gravity or function. The longest-running VR exhibition of the Art M&ucirc;r program.</p>
+
+  <p><em>Habitats</em> is a VR experience that explores space, physicality and time. The piece changes throughout the exposition. At the beginning, the world is orderly, clean and controlled. As the show progresses, the world fragments, becoming more chaotic, moving in unpredictable ways. This time-based corruption creates a continuously changing landscape and a narrative that shifts chronologically.</p>
+
+  <p>The experience suggests a dephysicalization. We are no longer physical bodies within a world, rather spirits floating through a digital mindscape. For these brief moments, we become light, colour, sound, a landscape of ancient entities in eternal confluence. We perceive a soft cycle of creation and destruction, the pulse of a cosmic breath.</p>
+</div>
+
+<div class="full-bleed" id="img-1">
+  <img src="../img/artmur-curated/08-vanier-habitats/habitats-02.jpg" alt="Habitats — VR screenshot, minimalist architectural forms floating in digital void">
+</div>
+
+<div class="pull-quote">
+  <blockquote>The world begins orderly and clean. As the show progresses, it fragments, moving in unpredictable ways. Each visit reveals a different stage of entropy.</blockquote>
+</div>
+
+<div class="triple">
+  <div class="triple-item" id="img-2">
+    <img src="../img/artmur-curated/08-vanier-habitats/habitats-03.jpg" alt="Habitats — VR environment, orderly minimalist shapes in early stage of the experience">
+  </div>
+  <div class="triple-item" id="img-3">
+    <img src="../img/artmur-curated/08-vanier-habitats/habitats-04.jpg" alt="Habitats — VR environment mid-evolution, forms beginning to fragment and shift">
+  </div>
+  <div class="triple-item" id="img-4">
+    <img src="../img/artmur-curated/08-vanier-habitats/habitats-05.jpg" alt="Habitats — VR environment in late stage, chaotic fragmentation of pseudo-architectural forms">
+  </div>
+</div>
+
+<!-- GALLERY: Installation photos -->
+<div class="section-break">
+  <h2>In the Gallery</h2>
+  <p>Installation photographs from Galerie Art M&ucirc;r. <em>Habitats</em> ran for over three months, the longest exhibition of the VR program, allowing the time-based corruption of the virtual world to unfold gradually for returning visitors.</p>
+</div>
+
+<div class="duo">
+  <div class="duo-item" id="img-5">
+    <img src="../img/artmur-curated/08-vanier-habitats/vanier-gallery-01.jpg" alt="Habitats — visitor experiencing VR at Art Mûr">
+  </div>
+  <div class="duo-item" id="img-6">
+    <img src="../img/artmur-curated/08-vanier-habitats/vanier-gallery-02.jpg" alt="Habitats — gallery installation with VR headset station">
+  </div>
+</div>
+
+<div class="duo">
+  <div class="duo-item" id="img-7">
+    <img src="../img/artmur-curated/08-vanier-habitats/vanier-gallery-03.jpg" alt="Habitats — gallery opening, visitors engaging with the exhibition">
+  </div>
+  <div class="duo-item" id="img-8">
+    <img src="../img/artmur-curated/08-vanier-habitats/vanier-gallery-04.jpg" alt="Habitats — VR experience setup at Art Mûr">
+  </div>
+</div>
+
+<div class="page-footer">
+  <a href="artmur-giant-swan.html" class="back-link">&larr; Giant Swan: Hatchling</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../digital-architecture.html" class="back-link">All Work</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="artmur-ludy.html" class="back-link">Sara Ludy: Swimmer&rsquo;s Canyon &rarr;</a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/artmur-curated/08-vanier-habitats/habitats-01.jpg',
+  '../img/artmur-curated/08-vanier-habitats/habitats-02.jpg',
+  '../img/artmur-curated/08-vanier-habitats/habitats-03.jpg',
+  '../img/artmur-curated/08-vanier-habitats/habitats-04.jpg',
+  '../img/artmur-curated/08-vanier-habitats/habitats-05.jpg',
+  '../img/artmur-curated/08-vanier-habitats/vanier-gallery-01.jpg',
+  '../img/artmur-curated/08-vanier-habitats/vanier-gallery-02.jpg',
+  '../img/artmur-curated/08-vanier-habitats/vanier-gallery-03.jpg',
+  '../img/artmur-curated/08-vanier-habitats/vanier-gallery-04.jpg'
+];
+const openLb = initLightbox(allImages);
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) { el.style.cursor = 'pointer'; el.addEventListener('click', () => openLb(i)); }
+}
+</script>
+</body>
+</html>

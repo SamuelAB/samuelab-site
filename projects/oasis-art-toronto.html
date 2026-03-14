@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OASIS at Art Toronto — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .oat-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .oat-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .oat-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .oat-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .oat-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .oat-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .triple {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  }
+  .triple .triple-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .triple .triple-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .triple .triple-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .oat-hero { height: 60vh; }
+    .oat-hero .hero-title h1 { font-size: 1.6rem; }
+    .oat-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .triple { grid-template-columns: 1fr; }
+    .triple .triple-item { aspect-ratio: 3/4; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Visitor kneeling in VR, OASIS garden visible on screen behind -->
+<div class="oat-hero" id="img-0">
+  <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-02.jpg" alt="OASIS at Art Toronto — visitor kneeling on the ground while wearing a VR headset, the digital garden visible on a monitor behind them">
+  <div class="hero-title">
+    <div class="project-meta">Art Toronto &middot; ELLEPHANT Gallery &middot; October 2019</div>
+    <h1>OASIS at Art Toronto <em>The spectator becomes the show</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">One of the first times a hand-sculpted VR environment was shown at a major Canadian art fair. OASIS turned the convention floor into a meditation garden, and the visitors into performers.</p>
+
+  <p>In October 2019, Galerie ELLEPHANT presented OASIS at Art Toronto, one of Canada&rsquo;s most prominent contemporary art fairs. The piece, a digital garden prototype originally titled Metaverse Room, places the majority of its sculptural detail on the ground plane: grasses, tendrils, flows, and organic forms that erupt through the floor of a dissolving room.</p>
+
+  <p>This design decision had a remarkable social effect. Visitors who entered the VR garden instinctively crouched, sat, or even lay down on the art fair floor, lowering themselves to the level of the virtual grass. In the controlled context of a major art fair, surrounded by hundreds of observers, this became an unexpectedly intimate and disarming act. The spectator, visible to the crowd outside the headset, became the show.</p>
+</div>
+
+<!-- FULL-BLEED: Person lying on floor in VR — the most dramatic "letting go" moment -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-10.jpg" alt="OASIS at Art Toronto — visitor lying on the floor while immersed in the virtual garden, OASIS visible on the booth monitor">
+</div>
+
+<!-- TEXT + IMAGE SPLIT -->
+<div class="split">
+  <div class="split-text">
+    <h2>Sitting in the Grass</h2>
+    <p>By placing the majority of the detail on the ground, visitors experienced the environment as if sitting in grass. This posture is disarming for many people, especially when being observed in a crowd. Still, many visitors let themselves go during their visit to OASIS.</p>
+    <p>Each visitor&rsquo;s physical posture became a visible index of their engagement with the virtual space. Some sat cross-legged, some knelt, some reached toward the ground. The booth became a stage where the audience outside the headset could watch someone gradually surrender to an invisible world.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2019</div>
+        <div class="label">Art Toronto</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">ELLEPHANT</div>
+        <div class="label">Presented by</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-06.jpg" alt="OASIS at Art Toronto — visitor sitting cross-legged on the floor in VR, fully absorbed in the digital garden">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>In the controlled context of a major art fair, surrounded by hundreds of observers, crouching and sitting on the floor became an unexpectedly intimate and disarming act.</blockquote>
+</div>
+
+<!-- TRIPLE: Three visitors in different postures — the diversity of surrender -->
+<div class="triple">
+  <div class="triple-item" id="img-3">
+    <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-01.jpg" alt="OASIS at Art Toronto — visitor sitting on the floor in VR, garden visible on screen">
+  </div>
+  <div class="triple-item" id="img-4">
+    <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-09.jpg" alt="OASIS at Art Toronto — visitor kneeling in VR, art fair context visible behind the booth">
+  </div>
+  <div class="triple-item" id="img-5">
+    <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-11.jpg" alt="OASIS at Art Toronto — visitor sitting cross-legged in meditation-like posture while wearing VR headset">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">VR at the Art Fair</h2>
+  <p>The Art Toronto presentation was significant for several reasons. It demonstrated that a hand-sculpted VR environment could hold its own alongside painting, sculpture, and photography in a major art fair context. It proved that the physical act of experiencing VR, the visible surrender of a person to an invisible world, could itself become a compelling spectacle for observers. And it introduced the custom VR plinth designed for ELLEPHANT, which presented the headset with the material dignity of a gallery object.</p>
+  <p>The experience at Art Toronto reinforced a conviction that would carry through to Gloam: the most powerful VR art creates conditions for contemplation. Spaces that invite visitors to lower their guard, change their posture, and inhabit a world at a pace the physical world rarely permits.</p>
+</div>
+
+<!-- CLOSING DUO: Two more visitors letting go -->
+<div class="duo">
+  <div class="duo-item" id="img-6">
+    <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-07.jpg" alt="OASIS at Art Toronto — visitor in red coat, playfully lifting one foot while immersed in VR">
+  </div>
+  <div class="duo-item" id="img-7">
+    <img src="../img/projects/oasis-art-toronto/oasis-art-toronto-12.jpg" alt="OASIS at Art Toronto — visitor sitting relaxed on the floor, leaning back slightly while experiencing the digital garden">
+  </div>
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="ellephant.html" class="back-link">ELLEPHANT Gallery &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-02.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-10.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-06.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-01.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-09.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-11.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-07.jpg',
+  '../img/projects/oasis-art-toronto/oasis-art-toronto-12.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MURAL – VR Projection — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span>/</span>
+  <a href="../digital-architecture.html">Work</a>
+  <span>/</span>
+  <a href="#">MURAL – VR Projection</a>
+</div>
+
+<section class="project-hero">
+  <div class="project-meta">Festival &middot; 2022</div>
+  <h1>MURAL – VR Projection</h1>
+  <div class="section-divider"></div>
+</section>
+
+<div class="project-description">
+  <p>VR projection installation for MURAL Festival 2022.</p>
+</div>
+
+<section>
+  <div class="grid-uniform cols-2" id="project-grid"></div>
+  <div style="text-align:center;">
+    <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const images = [
+    {src: "../img/projects/mural-vr-2022/mural-vr-2022-01.jpg", alt: "mural vr 2022 01"}
+];
+const openLb = initLightbox(images.map(i => i.src));
+buildGrid('project-grid', images, openLb);
+</script>
+</body>
+</html>

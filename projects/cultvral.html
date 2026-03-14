@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CULTVRAL Gallery — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .cultvral-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .cultvral-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.8);
+  }
+  .cultvral-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .cultvral-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .cultvral-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .cultvral-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Documentation images — wider aspect ratio for screenshots and photos */
+  .duo-doc {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo-doc .doc-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 16/10;
+  }
+  .duo-doc .doc-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo-doc .doc-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .cultvral-hero { height: 60vh; }
+    .cultvral-hero .hero-title h1 { font-size: 1.8rem; }
+    .cultvral-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .duo-doc { grid-template-columns: 1fr; }
+    .duo-doc .doc-item { aspect-ratio: 16/10; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Gallery interior with VR art, skylight, and glowing ring on floor -->
+<div class="cultvral-hero" id="img-0">
+  <img src="../img/projects/cultvral/cultvral-01.jpg" alt="CULTVRAL Gallery — white gallery interior with VR sculptures, a glowing ring on the floor, and dramatic daylight from a rectangular skylight">
+  <div class="hero-title">
+    <div class="project-meta">VR Gallery &middot; AltspaceVR &middot; 2016</div>
+    <h1>CULTVRAL <em>The gallery that started it all</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">Born from a hackathon in New York City, CULTVRAL was one of the first platforms for spatially curating VR art shows, and the project that launched Samuel&rsquo;s decade-long practice in virtual architecture.</p>
+
+  <p>In the summer of 2016, after graduating from university, Samuel moved to New York City for a position at an architectural VR software company. Almost immediately, he joined Art-A-Hack, a multi-week art hackathon that paired artists with technologists. The goal of the team&rsquo;s project was to develop a platform enabling artists and galleries to spatially curate and manage VR art shows, with the long-term ambition of expanding to augmented reality once the hardware was ready.</p>
+
+  <p>Through the hackathon, the team created a proof-of-concept website to host and manage 3D models and a 3D interface in AltspaceVR that let them choose from uploaded models to place in the metaverse. After the hackathon, Samuel brought the project to AltspaceVR and continued developing it with a programmer, handling user interface, project management, gallery design, artist outreach, and organizing VR art shows.</p>
+</div>
+
+<!-- FULL-BLEED: Gallery corridors with dramatic diagonal light -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/cultvral/cultvral-05.jpg" alt="CULTVRAL Gallery — white corridors with dramatic diagonal light beams cutting through the space, a colorful VR sculpture visible at the end of the hall">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: Architecture meets art -->
+<div class="split">
+  <div class="split-text">
+    <h2>Architecture for Art</h2>
+    <p>The gallery was designed in Autodesk Revit and the VR art was sculpted using Tilt Brush. Even in this earliest project, the architectural impulse was clear: the gallery was a space designed to produce specific qualities of light and atmosphere.</p>
+    <p>White walls, rectangular skylights, and strip lighting created a minimalist architecture where daylight became the primary material, casting dramatic diagonal beams that shifted as the viewer moved through the space. Each corridor and room produced its own lighting condition, giving every artwork a unique spatial context.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2016</div>
+        <div class="label">Art-A-Hack NYC</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">AltspaceVR</div>
+        <div class="label">Platform</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/cultvral/cultvral-08.jpg" alt="CULTVRAL Gallery — corridor with blue VR art installations scattered along walls and ceiling, a strong beam of light cutting diagonally through the space">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>During the last twenty-four hours before the platform closed, I stayed in the gallery as long as I could, hosting a slew of metaverse visitors who were gathering for the supposed final days of AltspaceVR.</blockquote>
+</div>
+
+<!-- DUO: Two gallery corners showing different VR artworks in the space -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/cultvral/cultvral-07.jpg" alt="CULTVRAL Gallery — corner view with dark VR sculptures and a teal creature on the floor, white strip lights intersecting the walls">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/cultvral/cultvral-09.jpg" alt="CULTVRAL Gallery — corner view with teal and purple plant-like VR art growing along a glowing light strip">
+  </div>
+</div>
+
+<!-- TEXT: The dramatic closure and legacy -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Last Days of AltspaceVR</h2>
+  <p>After roughly one year of development, AltspaceVR announced that it would be abruptly shutting down. Coincidentally, Samuel was visiting his father in Gasp&eacute;sie at the time. During the platform&rsquo;s final twenty-four hours, he stayed in the gallery as long as he could, hosting waves of metaverse visitors who gathered in the virtual space for what they believed were its last days. That week was the first and final time the gallery was shown to a large online public.</p>
+  <p>AltspaceVR was eventually acquired by Microsoft and continued operating after some interruptions. But the experience of building and losing a virtual space crystallized something fundamental: the architecture of virtual worlds matters, and the communities that form within them are real. The loss of a digital space is felt as genuinely as the loss of a physical one.</p>
+</div>
+
+<!-- DUO-DOC: AltspaceVR screenshot + Samuel presenting — documentation of the era -->
+<div class="duo-doc">
+  <div class="doc-item" id="img-5">
+    <img src="../img/projects/cultvral/cultvral-06.jpg" alt="CULTVRAL Gallery as seen in AltspaceVR — dark gallery hallway with VR artworks visible, platform interface overlay">
+  </div>
+  <div class="doc-item" id="img-6">
+    <img src="../img/projects/cultvral/cultvral-10.jpg" alt="Samuel presenting CULTVRAL and his vision for metaverse art at a lecture, speaking in front of projected slides">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Beginning of Everything</h2>
+  <p>CULTVRAL was the seed from which every subsequent project grew. The experience of designing VR galleries led directly to the Museum of Other Realities commission, where Samuel would design the architecture for one of the first permanent virtual art museums. The lighting obsession born in these white corridors, the conviction that architecture should serve light, would define every project that followed.</p>
+  <p>In 2020, additional VR art pieces were added to the environment and the lighting was recalculated, a quiet update to a space that, despite its early origins, still holds the architectural DNA of everything that followed.</p>
+</div>
+
+<!-- CLOSING FULL-BLEED: VR sculpture detail — the art that filled the gallery -->
+<div class="full-bleed" id="img-7">
+  <img src="../img/projects/cultvral/cultvral-02.jpg" alt="CULTVRAL Gallery — close-up of a white organic VR sculpture fracturing and disintegrating, floating fragments catching the light">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="light-gallery.html" class="back-link">Light Gallery &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/cultvral/cultvral-01.jpg',
+  '../img/projects/cultvral/cultvral-05.jpg',
+  '../img/projects/cultvral/cultvral-08.jpg',
+  '../img/projects/cultvral/cultvral-07.jpg',
+  '../img/projects/cultvral/cultvral-09.jpg',
+  '../img/projects/cultvral/cultvral-06.jpg',
+  '../img/projects/cultvral/cultvral-10.jpg',
+  '../img/projects/cultvral/cultvral-02.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

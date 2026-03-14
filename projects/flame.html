@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flame — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* Page-specific editorial layout */
+  .flame-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .flame-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .flame-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .flame-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .flame-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .flame-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  /* Intro text block */
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Full-bleed image */
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  /* Side-by-side images */
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Text + image side-by-side */
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  /* Quote / pull-quote */
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+  .pull-quote .attribution {
+    margin-top: 1.5rem;
+    font-size: 0.75rem; color: var(--dim); letter-spacing: 0.12em;
+    text-transform: uppercase; font-style: normal;
+  }
+
+  /* Footer nav */
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .flame-hero { height: 60vh; }
+    .flame-hero .hero-title h1 { font-size: 1.8rem; }
+    .flame-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: The full sculpture beneath the circular oculus -->
+<div class="flame-hero" id="img-0">
+  <img src="../img/projects/flame/flame-02.jpg" alt="Flame — hand-sculpted VR sculpture reaching toward a glowing circular oculus">
+  <div class="hero-title">
+    <div class="project-meta">Light Gallery, Room II &middot; 2021</div>
+    <h1>Flame <em>A sculpture for light</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A hand-sculpted VR sculpture that exists to catch light. Built over one year using VR controllers, Flame is a form designed not to be seen, but to be illuminated.</p>
+
+  <p>Flame is the second room published from the Light Gallery, an ongoing underground VR museum whose architecture is designed around the behaviour of diffuse light. The central sculpture was handmade in virtual reality over a one-year period, each gestural stroke of the VR controller adding another layer to an organic, accreting form that sits beneath a vast circular oculus.</p>
+
+  <p>The form is a canvas for light. As simulated sunlight moves across the sky above, photons pour through the oculus and interact with the sculpture&rsquo;s complex topology, nesting in deep recesses, glancing off smooth bulbous surfaces, casting shadows that shift and dissolve. The sculpture is not the subject; the light is.</p>
+</div>
+
+<!-- FULL-BLEED: Dramatic silhouette looking up into the oculus -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/flame/flame-04.jpg" alt="Flame — sculpture silhouetted against the glowing oculus, looking up through dense organic forms">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: The hand-sculpted process -->
+<div class="split">
+  <div class="split-text">
+    <h2>The Language of the Hand</h2>
+    <p>The amalgamation of movements imbues the forms with emotion. Unlike parametric or algorithmic sculpture, every surface carries the trace of a physical gesture: the sweep of an arm, the turn of a wrist. The result is a form that is simultaneously digital and deeply corporeal.</p>
+    <p>The sculpture&rsquo;s complexity creates what the artist calls a &ldquo;spatial puzzle for diffuse light.&rdquo; Its topology is not arbitrary but calibrated: smooth planes to catch broad washes of illumination, dense thickets of organic tendrils to fracture light into scattered points, deep folds to hold shadow. Each surface condition produces a different quality of light.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">1 year</div>
+        <div class="label">Hand-sculpted</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">Room II</div>
+        <div class="label">Light Gallery</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/flame/flame-01.jpg" alt="Flame — close-up detail of organic teal forms, showing the gestural quality of hand-sculpted VR surfaces">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>I want to create an atmosphere that can be consciously plumbed with seeing, like the wordless thought that comes from looking in a fire.</blockquote>
+  <div class="attribution">James Turrell</div>
+</div>
+
+<!-- DUO: Two detail angles -->
+<div class="duo">
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/flame/flame-03.jpg" alt="Flame — smooth bulbous organic forms emerging from dense coral-like textures">
+  </div>
+  <div class="duo-item" id="img-4">
+    <img src="../img/projects/flame/flame-07.jpg" alt="Flame — dynamic angle showing the sculpture reaching upward toward the light source">
+  </div>
+</div>
+
+<!-- TEXT BLOCK: The Light Gallery context -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">A Machine for Photons</h2>
+  <p>The Light Gallery is an ongoing project: a virtual underground museum whose architecture pushes the limits of indirect solar lighting through the freedom of the digital realm. Freed from the constraints of gravity, material, and cost, each room explores the interaction of light, space, and sculptural form in conditions that would be impossible to achieve in physical architecture.</p>
+  <p>The room that houses Flame is part of a larger unseen architectural complex, approximately fifteen rooms designed to be released one at a time over a period of years. Each room is visually isolated from the others, which allows extraordinarily complex art pieces to coexist without affecting one another. The architecture of virtual reality begins to be shaped by its own technological constraints, just as gravity shapes physical architecture.</p>
+</div>
+
+<!-- STANDALONE: Dark moody close-up against the oculus -->
+<div style="max-width: 700px; margin: 0 auto; padding: 0 2rem 2rem;">
+  <div class="full-bleed" id="img-5" style="max-height: none; aspect-ratio: 1/1;">
+    <img src="../img/projects/flame/flame-05.jpg" alt="Flame — dense dark mass of organic forms silhouetted against the luminous oculus" style="object-fit: cover;">
+  </div>
+</div>
+
+<!-- TEXT + IMAGE SPLIT (reversed): Sound & Exhibition -->
+<div class="split">
+  <div class="split-img" id="img-6">
+    <img src="../img/projects/flame/flame-06.jpg" alt="Flame — full view of the sculpture from below, cool teal tones, the oculus glowing above">
+  </div>
+  <div class="split-text">
+    <h2>Sound & Space</h2>
+    <p>The sound was designed by artist Franco Bellavita from field recordings and instruments to create a unique mood for the space. The sound reflects the sun&rsquo;s rising and setting, the life and death cycle. Wind, but also other elements that evoke abstract creatures, spaces from distant realities, a place forever unattainable.</p>
+    <p>Flame was first presented to the public in March 2021 at Galerie ELLEPHANT, as part of ELEKTRA&rsquo;s programming. It was subsequently released as a free VR experience, allowing anyone with a powerful PC and VR headset to explore the sculpture and its light at full architectural scale.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2021</div>
+        <div class="label">First shown</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">ELLEPHANT</div>
+        <div class="label">ELEKTRA</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="light-gallery.html" class="back-link">Light Gallery &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+// All images in viewing order
+const allImages = [
+  '../img/projects/flame/flame-02.jpg',
+  '../img/projects/flame/flame-04.jpg',
+  '../img/projects/flame/flame-01.jpg',
+  '../img/projects/flame/flame-03.jpg',
+  '../img/projects/flame/flame-07.jpg',
+  '../img/projects/flame/flame-05.jpg',
+  '../img/projects/flame/flame-06.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+// Attach click handlers to each image element by ID
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

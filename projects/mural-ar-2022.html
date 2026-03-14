@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MURAL – AR Park — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .mural-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .mural-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .mural-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .mural-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .mural-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .mural-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .trio {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  }
+  .trio .trio-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .trio .trio-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .trio .trio-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .mural-hero { height: 60vh; }
+    .mural-hero .hero-title h1 { font-size: 1.8rem; }
+    .mural-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .trio { grid-template-columns: 1fr; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Melissa's characters composited in the park -->
+<div class="mural-hero" id="img-0">
+  <img src="../img/projects/mural-ar-2022/mural-ar-2022-08.jpg" alt="MURAL Festival 2022 — Melissalikesushi's colorful AR characters in Parc du Portugal">
+  <div class="hero-title">
+    <div class="project-meta">Festival &middot; MURAL &middot; 2022</div>
+    <h1>AR Park <em>Curating 3D artists for augmented reality</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">For MURAL Festival&rsquo;s 10th edition, Samuel curated and produced a new set of augmented reality installations across Parc du Portugal and Parc des Am&eacute;riques, bringing in 3D artists AlienDope and Melissalikesushi.</p>
+
+  <p>Building on the AR program he established in 2021, Samuel expanded the curatorial scope by inviting artists working in 3D modeling and character design to translate their work into site-specific AR sculptures. AlienDope contributed a family of rave-inspired characters (a flower girl, a cloud creature, and a sun) while Melissalikesushi brought a group of colorful characters placed throughout the parks.</p>
+
+  <p>Samuel handled the full production pipeline: curation, coordinating with each artist on their 3D models, optimizing geometry for mobile AR, managing placement and spatial anchoring, and integrating everything with the MURAL Festival app team. The work required translating desktop-quality 3D art into real-time mobile experiences without losing the artists&rsquo; visual identity.</p>
+</div>
+
+<!-- FULL-BLEED: AlienDope's Flower girl in park -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/mural-ar-2022/mural-ar-2022-03.jpg" alt="AlienDope's Flower girl AR character standing in Parc du Portugal at MURAL Festival 2022">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: AlienDope -->
+<div class="split">
+  <div class="split-text">
+    <h2><a href="https://instagram.com/_aliendope" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--dim);">AlienDope</a></h2>
+    <p>A Montreal-based 3D artist and motion designer whose work draws from rave culture and surrealism. For MURAL 2022, AlienDope created three AR characters: a flower girl with sunflower-petal head and blue outfit, a cloud creature (Nuage) with sunglasses and lightning bolt, and a spiky sun character.</p>
+    <p>Samuel worked closely with AlienDope to optimize the high-poly models for mobile rendering: reducing geometry, baking textures, and testing placement across the park to ensure the characters read at life-size scale against the real landscape.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2</div>
+        <div class="label">Artists curated</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">2</div>
+        <div class="label">Parks</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">2022</div>
+        <div class="label">10th edition</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/mural-ar-2022/mural-ar-2022-02.jpg" alt="AlienDope's Flower girl full-body render — sunflower-headed character in blue puffer outfit">
+  </div>
+</div>
+
+<!-- TRIO: AlienDope renders -->
+<div class="trio">
+  <div class="trio-item" id="img-3">
+    <img src="../img/projects/mural-ar-2022/mural-ar-2022-05.jpg" alt="AlienDope's Flower character — red petals with cartoon face">
+  </div>
+  <div class="trio-item" id="img-4">
+    <img src="../img/projects/mural-ar-2022/mural-ar-2022-06.jpg" alt="AlienDope's Nuage (cloud) character — teal cloud with sunglasses and lightning bolt">
+  </div>
+  <div class="trio-item" id="img-5">
+    <img src="../img/projects/mural-ar-2022/mural-ar-2022-07.jpg" alt="AlienDope's Sun character — golden sun with spikes and cartoon face">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>Translating desktop-quality 3D art into real-time mobile experiences without losing the artists&rsquo; visual identity.</blockquote>
+</div>
+
+<!-- MELISSA SECTION -->
+<div class="intro-block" style="padding-bottom: 1.5rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;"><a href="https://www.melissalikessushi.com/" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--dim);">Melissalikesushi</a></h2>
+  <p>Melissalikesushi (Melissa Mathieson) contributed a group of colorful, playful characters that were placed across the parks. Samuel coordinated the optimization of her 3D models for mobile AR, hours of work reducing polygon counts, re-baking textures, and testing scale and placement to ensure the characters felt grounded in the real park environment.</p>
+</div>
+
+<!-- CLOSING TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Two Years of AR at MURAL</h2>
+  <p>The 2021 and 2022 AR programs together established a new pillar for MURAL Festival: virtual public art embedded in real urban spaces. Across both editions, Samuel served as the bridge between artists, technology, and the festival, curating the work, producing the technical pipeline, and ensuring that augmented reality felt like a natural extension of MURAL&rsquo;s mission to democratize urban art.</p>
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="mural-ar-2021.html" class="back-link">&larr; MURAL AR 2021</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../digital-architecture.html" class="back-link">Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="mural-vr-2021.html" class="back-link">VR Graffiti 2021</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/mural-ar-2022/mural-ar-2022-08.jpg',
+  '../img/projects/mural-ar-2022/mural-ar-2022-03.jpg',
+  '../img/projects/mural-ar-2022/mural-ar-2022-02.jpg',
+  '../img/projects/mural-ar-2022/mural-ar-2022-05.jpg',
+  '../img/projects/mural-ar-2022/mural-ar-2022-06.jpg',
+  '../img/projects/mural-ar-2022/mural-ar-2022-07.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

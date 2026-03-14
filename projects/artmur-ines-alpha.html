@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ines Alpha: Alpha Manifestations — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .cur-hero { position: relative; height: 85vh; min-height: 500px; overflow: hidden; margin-top: 60px; }
+  .cur-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+  .cur-hero .hero-title { position: absolute; bottom: 0; left: 0; right: 0; padding: 5rem 3rem 3rem; background: linear-gradient(transparent, rgba(10,10,10,0.9) 65%); }
+  .cur-hero .hero-title .project-meta { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .cur-hero .hero-title h1 { font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+  .cur-hero .hero-title h1 em { font-style: italic; text-transform: none; letter-spacing: 0.02em; font-weight: 300; font-size: 0.55em; display: block; color: var(--dim); margin-top: 0.3rem; }
+  .intro-block { max-width: 780px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+  .intro-block .lead { font-size: 1.35rem; font-weight: 300; line-height: 1.9; color: var(--text); margin-bottom: 2rem; }
+  .intro-block p { font-size: 0.95rem; line-height: 1.9; color: #bbb; margin-bottom: 1.5rem; }
+  .full-bleed { width: 100%; overflow: hidden; cursor: pointer; }
+  .full-bleed img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.4s; }
+  .full-bleed:hover img { filter: brightness(1.08); }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .duo .duo-item { overflow: hidden; cursor: pointer; }
+  .duo .duo-item img { width: 100%; display: block; transition: transform 0.5s, filter 0.5s; }
+  .duo .duo-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .section-break { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 2rem; }
+  .section-break h2 { font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; color: var(--text); }
+  .section-break p { font-size: 0.9rem; line-height: 1.9; color: #aaa; margin-bottom: 1rem; }
+  .show-details { max-width: 780px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; gap: 3rem; flex-wrap: wrap; }
+  .show-details .detail-item .label { font-size: 0.65rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.25rem; }
+  .show-details .detail-item .value { font-size: 0.9rem; color: var(--text); font-weight: 300; }
+  .pull-quote { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
+  .pull-quote blockquote { font-size: 1.5rem; font-weight: 200; line-height: 1.8; color: var(--text); font-style: italic; border: none; margin: 0; padding: 0; }
+  .page-footer { padding: 4rem 2rem; text-align: center; }
+  @media (max-width: 768px) {
+    .cur-hero { height: 60vh; } .cur-hero .hero-title h1 { font-size: 1.6rem; } .cur-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; } .intro-block .lead { font-size: 1.1rem; }
+    .duo { grid-template-columns: 1fr; }
+    .section-break { padding: 3rem 1.5rem 1.5rem; } .pull-quote blockquote { font-size: 1.15rem; }
+    .show-details { gap: 1.5rem; padding: 0 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<div class="cur-hero" id="img-0">
+  <img src="../img/artmur-curated/05-ines-alpha-manifestations/alpha-01.jpg" alt="Alpha Manifestations — digital artwork by Ines Alpha, aquatic digital cosmetics transforming the human face">
+  <div class="hero-title">
+    <div class="project-meta">Curated Exhibition &middot; Art M&ucirc;r &middot; July&ndash;August 2021</div>
+    <h1>Ines Alpha <em>Alpha Manifestations</em></h1>
+  </div>
+</div>
+
+<div class="show-details">
+  <div class="detail-item">
+    <div class="label">Dates</div>
+    <div class="value">July 17 &ndash; August 28, 2021</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Medium</div>
+    <div class="value">AR + Digital</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Venue</div>
+    <div class="value">Galerie Art M&ucirc;r, Montreal</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Curator</div>
+    <div class="value">Samuel Arsenault-Brassard</div>
+  </div>
+</div>
+
+<div class="intro-block" style="padding-top: 2rem;">
+  <p class="lead">The visions of Ines Alpha explore the future of makeup, fashion, and identity&mdash;reimagining beauty through digital cosmetics that do not conceal or accentuate, but create a dream space where originality and exuberance reign. Her work pushes for a digital identity that dares to shine and refuses to conform.</p>
+
+  <p>Within these manifestations, bodies interchangeably mix with digital matter to the point of confusion. Facial features become tendrils, gills, vivacious fins. Their materiality shifts between crystals, water, jelly, scales, and skin. The most delicate sea creatures are integrated into the human body as living ornaments. The body becomes part of a complex coral, an assembly of living jewelry, merging the self to the post-physical.</p>
+</div>
+
+<div class="full-bleed" id="img-1">
+  <img src="../img/artmur-curated/05-ines-alpha-manifestations/alpha-nft-nicole.jpg" alt="Ines Alpha — digital cosmetics portrait, face adorned with crystalline aquatic AR ornaments">
+</div>
+
+<div class="pull-quote">
+  <blockquote>The body becomes part of a complex coral, an assembly of living jewelry, merging the self to the post-physical.</blockquote>
+</div>
+
+<!-- AR Filters: face pics with masks -->
+<div class="section-break">
+  <h2>Digital Cosmetics</h2>
+  <p>Through AR filters on iPads positioned throughout the gallery, visitors wore Alpha&rsquo;s digital cosmetics on their own faces in real time. Each &ldquo;look&rdquo; insinuated an entire fictional world, a mystical mythology of its own. These surreal sights remind us of the importance of integrating human emotions and dreams in the digital futures we are creating.</p>
+</div>
+
+<div class="duo">
+  <div class="duo-item" id="img-2">
+    <img src="../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-screens-ar.jpg" alt="Alpha Manifestations — iPad screens displaying visitors wearing AR digital cosmetics filters">
+  </div>
+  <div class="duo-item" id="img-3">
+    <img src="../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-ipad-ar.jpg" alt="Alpha Manifestations — visitor experiencing AR cosmetics filter on iPad, digital tendrils on face">
+  </div>
+</div>
+
+<!-- In the Gallery -->
+<div class="section-break">
+  <h2>In the Gallery</h2>
+  <p>Humans are already cyborgs of cloth and ornament&mdash;augmented by shoes, watches, tattoos, makeup. AR cosmetics are simply the next step in an ancient lineage of body augmentation. At Art M&ucirc;r, iPad stations throughout the gallery became photobooths from the future.</p>
+</div>
+
+<div class="full-bleed" id="img-4">
+  <img src="../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-gallery-walk.jpg" alt="Alpha Manifestations — visitors walking through gallery at Art Mûr, large screens displaying digital cosmetics works">
+</div>
+
+<div class="full-bleed" id="img-5">
+  <img src="../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-blue-screen.jpg" alt="Alpha Manifestations — visitor near large blue AR cosmetics screen at Art Mûr">
+</div>
+
+<div class="page-footer">
+  <a href="artmur-aguirre.html" class="back-link">&larr; Aguirre: A Constructive Instability</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../curations.html" class="back-link">All Curations</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="artmur-harvey.html" class="back-link">Auriea Harvey: &#x1F441; &rarr;</a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/artmur-curated/05-ines-alpha-manifestations/alpha-01.jpg',
+  '../img/artmur-curated/05-ines-alpha-manifestations/alpha-nft-nicole.jpg',
+  '../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-screens-ar.jpg',
+  '../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-ipad-ar.jpg',
+  '../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-gallery-walk.jpg',
+  '../img/artmur-curated/05-ines-alpha-manifestations/alpha-pxl-blue-screen.jpg'
+];
+const openLb = initLightbox(allImages);
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) { el.style.cursor = 'pointer'; el.addEventListener('click', () => openLb(i)); }
+}
+</script>
+</body>
+</html>

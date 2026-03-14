@@ -1,0 +1,13 @@
+# Backup of old Squarespace site
+img/site-backup/
+
+# Photography (hidden for now)
+photography.html
+projects/sexual-architecture.html
+projects/archetypes.html
+img/architecture/
+img/archetypes/
+
+# Build artifacts
+generate_pages.py
+__pycache__/

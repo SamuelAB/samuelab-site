@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connor Bell: Angeline — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .cur-hero { position: relative; height: 85vh; min-height: 500px; overflow: hidden; margin-top: 60px; }
+  .cur-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+  .cur-hero .hero-title { position: absolute; bottom: 0; left: 0; right: 0; padding: 5rem 3rem 3rem; background: linear-gradient(transparent, rgba(10,10,10,0.9) 65%); }
+  .cur-hero .hero-title .project-meta { color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .cur-hero .hero-title h1 { font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; line-height: 1.2; }
+  .cur-hero .hero-title h1 em { font-style: italic; text-transform: none; letter-spacing: 0.02em; font-weight: 300; font-size: 0.55em; display: block; color: var(--dim); margin-top: 0.3rem; }
+  .intro-block { max-width: 780px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+  .intro-block .lead { font-size: 1.35rem; font-weight: 300; line-height: 1.9; color: var(--text); margin-bottom: 2rem; }
+  .intro-block p { font-size: 0.95rem; line-height: 1.9; color: #bbb; margin-bottom: 1.5rem; }
+  .full-bleed { width: 100%; max-height: 80vh; overflow: hidden; cursor: pointer; }
+  .full-bleed img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.4s; }
+  .full-bleed:hover img { filter: brightness(1.08); }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .duo .duo-item { overflow: hidden; cursor: pointer; aspect-ratio: 4/3; }
+  .duo .duo-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.5s; }
+  .duo .duo-item:hover img { transform: scale(1.03); filter: brightness(1.08); }
+  .section-break { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 2rem; }
+  .section-break h2 { font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; color: var(--text); }
+  .section-break p { font-size: 0.9rem; line-height: 1.9; color: #aaa; margin-bottom: 1rem; }
+  .show-details { max-width: 780px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; gap: 3rem; flex-wrap: wrap; }
+  .show-details .detail-item .label { font-size: 0.65rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.25rem; }
+  .show-details .detail-item .value { font-size: 0.9rem; color: var(--text); font-weight: 300; }
+  .pull-quote { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; text-align: center; }
+  .pull-quote blockquote { font-size: 1.5rem; font-weight: 200; line-height: 1.8; color: var(--text); font-style: italic; border: none; margin: 0; padding: 0; }
+  .page-footer { padding: 4rem 2rem; text-align: center; }
+  @media (max-width: 768px) {
+    .cur-hero { height: 60vh; } .cur-hero .hero-title h1 { font-size: 1.6rem; } .cur-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; } .intro-block .lead { font-size: 1.1rem; }
+    .duo { grid-template-columns: 1fr; }
+    .section-break { padding: 3rem 1.5rem 1.5rem; } .pull-quote blockquote { font-size: 1.15rem; }
+    .show-details { gap: 1.5rem; padding: 0 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<div class="cur-hero" id="img-0">
+  <img src="../img/ellephant-curated/connor-bell-angeline/connor-gallery-07.jpg" alt="Angeline — visitor experiencing interactive VR fractal environment by Connor Bell at ELLEPHANT Gallery">
+  <div class="hero-title">
+    <div class="project-meta">Curated Exhibition &middot; ELLEPHANT &middot; January&ndash;February 2020</div>
+    <h1>Connor Bell <em>Angeline: A VR Space</em></h1>
+  </div>
+</div>
+
+<div class="show-details">
+  <div class="detail-item">
+    <div class="label">Dates</div>
+    <div class="value">January 18 &ndash; February 22, 2020</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Medium</div>
+    <div class="value">Interactive VR</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Venue</div>
+    <div class="value">Galerie ELLEPHANT, Montreal</div>
+  </div>
+  <div class="detail-item">
+    <div class="label">Curators</div>
+    <div class="value">Samuel Arsenault-Brassard &amp; Christine Redfern</div>
+  </div>
+</div>
+
+<div class="intro-block" style="padding-top: 2rem;">
+  <p class="lead"><a href="https://connrbell.ca" target="_blank" rel="noopener" style="color: var(--text); text-decoration: underline; text-underline-offset: 3px;">Connor Bell</a>&rsquo;s <em>Angeline</em> is an interactive VR space that immerses visitors in a calm, generative cave&mdash;organic yet rigid in form. Participants explore relationships between their movements and the procedures that transform the shape and sound of the environment.</p>
+
+  <p><em>Angeline</em> uses kaleidoscopic fractal algorithms that repeatedly draw polyhedrons while applying transformations&mdash;folding, scaling, translating, rotating&mdash;to generate an infinite lattice of tessellated structures. The surface is rendered using a custom raymarching algorithm, projecting rays into space rather than simulating light entering the eye, producing a crystalline environment of pink and purple forms that shifts in response to the visitor&rsquo;s presence.</p>
+
+  <p>The result is an experience of emergent complexity arising from simple, repetitive structures. Bell&rsquo;s generative cave occupies a space between the mathematical and the organic, the contemplative and the interactive&mdash;a digital architecture that breathes and reforms around each visitor.</p>
+</div>
+
+<div style="width: 100%; max-width: 1200px; margin: 0 auto; aspect-ratio: 16/9;">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VXqM88Vo-NM" title="Angeline: A VR Space by Connor Bell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+</div>
+
+<div class="duo">
+  <div class="duo-item" id="img-1">
+    <img src="../img/ellephant-curated/connor-bell-angeline/angeline-fractal-01.jpg" alt="Angeline — fractal cave environment, tessellated polyhedrons in pink and purple">
+  </div>
+  <div class="duo-item" id="img-2">
+    <img src="../img/ellephant-curated/connor-bell-angeline/angeline-fractal-02.jpg" alt="Angeline — fractal tunnel, crystalline structures receding into purple depth">
+  </div>
+</div>
+
+<div class="full-bleed" id="img-3">
+  <img src="../img/ellephant-curated/connor-bell-angeline/angeline-vr-01.jpg" alt="Angeline — opening night group photo at ELLEPHANT Gallery">
+</div>
+
+<div class="page-footer">
+  <a href="../curations.html" class="back-link">&larr; Back to Curations</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="ellephant-vladimir-storm.html" class="back-link">Vladimir Storm: Political Archangels &rarr;</a>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/ellephant-curated/connor-bell-angeline/connor-gallery-07.jpg',
+  '../img/ellephant-curated/connor-bell-angeline/angeline-fractal-01.jpg',
+  '../img/ellephant-curated/connor-bell-angeline/angeline-fractal-02.jpg',
+  '../img/ellephant-curated/connor-bell-angeline/angeline-vr-01.jpg'
+];
+const openLb = initLightbox(allImages);
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) { el.style.cursor = 'pointer'; el.addEventListener('click', () => openLb(i)); }
+}
+</script>
+</body>
+</html>

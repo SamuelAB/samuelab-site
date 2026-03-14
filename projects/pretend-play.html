@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pretend Play — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .pp-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .pp-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.75);
+  }
+  .pp-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .pp-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .pp-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .pp-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .triple {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+  }
+  .triple .triple-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+  }
+  .triple .triple-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .triple .triple-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .pp-hero { height: 60vh; }
+    .pp-hero .hero-title h1 { font-size: 1.6rem; }
+    .pp-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .triple { grid-template-columns: 1fr; }
+    .triple .triple-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Model against patterned backdrop — the fashion meets AR -->
+<div class="pp-hero" id="img-0">
+  <img src="../img/projects/pretend-play/pretend-play-04.jpg" alt="Pretend Play — fashion model in handmade clothing against a patterned black and white backdrop, 3D scan artifacts visible">
+  <div class="hero-title">
+    <div class="project-meta">AR Fashion Show &middot; LiL Pocket Gallery &middot; 2018</div>
+    <h1>Pretend Play <em>Stop Pretending, AR fashion show</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">An augmented reality fashion show where bodies become architecture, models appear out of thin air, and the runway exists in a dimension between the physical and the virtual.</p>
+
+  <p>Pretend Play was a collaboration with the incredible Rosalie Lemay, who created a line of unique handmade clothes over many months. The project explored how augmented reality could transform the fashion show format: rather than walking a physical runway, models were 3D scanned and placed into AR space. Models appeared out of thin air, walking on walls, shifting scale, superimposed on reality.</p>
+
+  <p>The models were scanned using both depth-sensing cameras and photogrammetry, sponsored by Eric Par&eacute; and his team at the Montreal Studio. The resulting 3D figures carry the visual artifacts of the scanning process: fragmented surfaces, floating geometry, digital noise. These artifacts became part of the aesthetic rather than flaws to be corrected. The imperfections of the technology became the texture of the work.</p>
+</div>
+
+<!-- FULL-BLEED: Gallery context with Pretend Play text -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/pretend-play/pretend-play-03.jpg" alt="Pretend Play — gallery installation view with 'Pretend Play' text on the wall, fashion model figure visible">
+</div>
+
+<!-- TEXT + IMAGE SPLIT -->
+<div class="split">
+  <div class="split-text">
+    <h2>Visions of the Future</h2>
+    <p>Augmented reality allows fashion shows to transcend the limitations of rooms and human bodies. Models appear from thin air, walk on walls, shift scale. The runway is no longer static but a series of superimposed paths. The entities come in and out from the walls. Humans, bodies become architecture.</p>
+    <p>Working with Roza and Sebastian was a creative pleasure. Their energy invigorated everything around them and they poured their souls into these creations. The combination of handmade physical garments with digital scanning technology produced something neither medium could achieve alone.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2018</div>
+        <div class="label">LiL Pocket Gallery</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">3D Scan</div>
+        <div class="label">Kinect + Photogrammetry</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/pretend-play/pretend-play-07.jpg" alt="Pretend Play — figure in the gallery space with hand-drawn illustrations on the wall behind, merging physical and digital fashion">
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>The limitations of rooms and human bodies can be transcended. Models appear out of thin air, walking on walls, shifting scale, superimposed. Humans, bodies become architecture.</blockquote>
+</div>
+
+<!-- TRIPLE: 3D scanned figures — the raw digital materiality -->
+<div class="triple">
+  <div class="triple-item" id="img-3">
+    <img src="../img/projects/pretend-play/pretend-play-01.gif" alt="Pretend Play — 3D scanned fashion model, digital artifacts visible, standing in virtual space">
+  </div>
+  <div class="triple-item" id="img-4">
+    <img src="../img/projects/pretend-play/pretend-play-05.gif" alt="Pretend Play — 3D scanned figure in motion, photogrammetry texture and fragmented geometry">
+  </div>
+  <div class="triple-item" id="img-5">
+    <img src="../img/projects/pretend-play/pretend-play-11.gif" alt="Pretend Play — 3D scanned model in elaborate costume, placed in augmented reality space">
+  </div>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Bodies as Data</h2>
+  <p>Pretend Play pushed the AR experiments of Illusive Sympathy into a new domain: fashion as a medium for exploring what bodies become when translated into digital space. The 3D scans of models wearing Rosalie&rsquo;s handmade garments captured not just the clothing but the gesture, the posture, the presence of the wearer, all rendered with the beautiful imprecision of the scanning process.</p>
+  <p>The project pointed toward a future where fashion, architecture, and digital art converge. A theme that would later echo in Lignes de Fuite and in the broader trajectory of Samuel&rsquo;s work, where the human body and virtual space continuously inform each other.</p>
+</div>
+
+<!-- VIDEO -->
+<div style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 0;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe src="https://www.youtube.com/embed/M9QkAdAUb48" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- CLOSING FULL-BLEED: Collaboration photo -->
+<div class="full-bleed" id="img-6">
+  <img src="../img/projects/pretend-play/pretend-play-18.jpg" alt="Pretend Play — fashion model against patterned backdrop with 3D scanned double visible, the physical and digital coexisting">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="illusive-sympathy.html" class="back-link">Illusive Sympathy &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/pretend-play/pretend-play-04.jpg',
+  '../img/projects/pretend-play/pretend-play-03.jpg',
+  '../img/projects/pretend-play/pretend-play-07.jpg',
+  '../img/projects/pretend-play/pretend-play-01.gif',
+  '../img/projects/pretend-play/pretend-play-05.gif',
+  '../img/projects/pretend-play/pretend-play-11.gif',
+  '../img/projects/pretend-play/pretend-play-18.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

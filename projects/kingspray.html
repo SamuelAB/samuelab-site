@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kingspray Projections — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .ks-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .ks-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.7);
+  }
+  .ks-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .ks-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .ks-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .ks-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 16/10;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .ks-hero { height: 60vh; }
+    .ks-hero .hero-title h1 { font-size: 1.6rem; }
+    .ks-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: VR graffiti artist painting live with projection -->
+<div class="ks-hero" id="img-0">
+  <img src="../img/projects/kingspray/kingspray-01.jpg" alt="Kingspray Projections — artist painting in VR with the virtual graffiti projected live on screens, warm wood-panelled venue">
+  <div class="hero-title">
+    <div class="project-meta">VR Projection &middot; MURAL &times; PHI &middot; 2020&ndash;2021</div>
+    <h1>Kingspray Projections <em>The future of XR street art</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">Samuel initiated a collaboration with artist Cryote (Sebastian Millar) and <a href="https://phi.ca" target="_blank">PHI Centre</a> to bring VR graffiti into the physical world: live painting in virtual reality, projected at architectural scale.</p>
+
+  <p>The idea was simple: an artist wearing a VR headset paints virtual graffiti using Kingspray, a VR spray-painting simulator, while the virtual canvas is projected in real time for a physical audience. The result is a hybrid performance (part street art, part live painting, part digital spectacle) where the audience watches both the physical body of the artist and the virtual artwork being created simultaneously.</p>
+
+  <p>Samuel conceived and liaised the project, bringing Cryote into PHI Centre for what would become a series of experiments in live VR projection. The PHI Centre&rsquo;s performance space provided the ideal setting: Cryote painted on stage in VR while multiple monitors and a large projection screen broadcast the virtual graffiti to the audience in real time.</p>
+</div>
+
+<!-- FULL-BLEED: Wide angle showing the full setup — artist, monitors, venue -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/kingspray/kingspray-02.jpg" alt="Kingspray Projections — wide view from behind the control desk showing VR graffiti on monitors while the artist performs on stage at PHI Centre">
+</div>
+
+<!-- BANQ FACADE PROJECTION -->
+<div class="intro-block" style="padding-bottom: 1.5rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Wall</h2>
+  <p>The collaboration extended beyond PHI Centre&rsquo;s interior. Cryote&rsquo;s VR-painted creatures were projected at monumental scale onto the facade of the Grande Biblioth&egrave;que (BAnQ). His bold, colorful forms covering the entire building in a nighttime spectacle visible from Boulevard de Maisonneuve.</p>
+</div>
+
+<div class="full-bleed" id="img-2">
+  <img src="../img/projects/kingspray/kingspray-05.jpg" alt="Cryote's VR graffiti creatures projected at massive scale onto the facade of the Grande Bibliothèque (BAnQ) at night">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="ellephant.html" class="back-link">ELLEPHANT Gallery &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/kingspray/kingspray-01.jpg',
+  '../img/projects/kingspray/kingspray-02.jpg',
+  '../img/projects/kingspray/kingspray-05.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

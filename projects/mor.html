@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum of Other Realities — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .mor-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .mor-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.7);
+  }
+  .mor-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .mor-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .mor-hero .hero-title h1 {
+    font-size: 2.6rem; font-weight: 200; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .mor-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 16/10;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Process sketches — lighter bg to show pencil on white paper */
+  .triple-process {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;
+    background: #1a1a1a;
+  }
+  .triple-process .sketch-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 3/4;
+    background: #f5f5f0;
+  }
+  .triple-process .sketch-item img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+    padding: 12px;
+    transition: transform 0.5s;
+  }
+  .triple-process .sketch-item:hover img {
+    transform: scale(1.03);
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .mor-hero { height: 60vh; }
+    .mor-hero .hero-title h1 { font-size: 1.6rem; }
+    .mor-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/9; }
+    .triple-process { grid-template-columns: 1fr; }
+    .triple-process .sketch-item { aspect-ratio: 3/4; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Grand architecture framing VR art — the museum in action -->
+<div class="mor-hero" id="img-0">
+  <img src="../img/projects/mor/mor-45.jpg" alt="Museum of Other Realities — grand swooping concrete architecture framing a VR forest artwork">
+  <div class="hero-title">
+    <div class="project-meta">VR Museum Architecture &middot; 2017&ndash;2019</div>
+    <h1>Museum of Other Realities <em>Architecture for new kinds of space</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">New realities require novel spatial solutions. A multi-year collaboration designing the architecture for one of the first permanent virtual reality art museums.</p>
+
+  <p>The Museum of Other Realities (MOR) is a social VR platform that houses artworks from VR artists around the world. Between 2017 and 2019, Samuel designed the museum&rsquo;s architectural spaces: galleries, corridors, transitional zones, and the grand entrance hall. The system is modular, designed to grow as the collection expanded.</p>
+
+  <p>The project began in 2017, when Samuel connected with the MOR founders while looking for VR artists to bring into the CULTVRAL gallery. He gave them a tour of CULTVRAL and sent them the geometry of the Light Museum to try in VR. From there, he joined the private beta events at the museum (then called &ldquo;TH-er&rdquo;), surrounded by VR artists from around the world. Over the following years, the collaboration deepened into a full architectural commission.</p>
+</div>
+
+<!-- FULL-BLEED: Pure white corridor — the architecture itself -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/mor/mor-02.jpg" alt="Museum of Other Realities — pristine white corridor with curved organic ceiling and arched doorway, dramatic daylight">
+</div>
+
+<!-- TEXT + IMAGE SPLIT: Design methodology -->
+<div class="split">
+  <div class="split-text">
+    <h2>New Ways of Designing</h2>
+    <p>The spaces were conceived through conversations, sketches, parametric models, and hand sculpture in VR, a hybrid process that merged architectural precision with sculptural expression.</p>
+    <p>Simple parametric rooms, floors, stairs, and illuminated surfaces provided the structural logic. The grand hall was then separated into two twirling masses, sculpted entirely by hand in VR. The rigour of architecture merged with the expressive freedom of sculpture.</p>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="num">2017&ndash;19</div>
+        <div class="label">Design period</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">Revit + VR</div>
+        <div class="label">Hybrid workflow</div>
+      </div>
+    </div>
+  </div>
+  <div class="split-img" id="img-2">
+    <img src="../img/projects/mor/mor-55.jpg" alt="Museum of Other Realities — 3D model showing the hybrid Revit and VR sculpture workflow, wireframe merged with solid forms">
+  </div>
+</div>
+
+<!-- TRIPLE PROCESS: Pencil sketches on light backgrounds -->
+<div class="triple-process">
+  <div class="sketch-item" id="img-3">
+    <img src="../img/projects/mor/mor-04.jpg" alt="MOR design process — pencil sketches of room sections, domes, towers, spatial studies">
+  </div>
+  <div class="sketch-item" id="img-4">
+    <img src="../img/projects/mor/mor-20.jpg" alt="MOR design process — pencil sketch showing section through domed space with human scale figure">
+  </div>
+  <div class="sketch-item" id="img-5">
+    <img src="../img/projects/mor/mor-60.jpg" alt="MOR design process — detailed annotated sketches exploring underground spaces, edge cavities, and shadow boxes">
+  </div>
+</div>
+
+<!-- TEXT: From sketch to space -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">From Sketch to Virtual Space</h2>
+  <p>In order to obtain a modular system of expandable rooms, the design process followed an unconventional order to allow for flexible modularity. First came the connections between rooms and corridors, then the rooms themselves. This provided a good arsenal of design solutions for the museum to weave spaces together as it grew, with each new gallery integrated into the existing circulation without disrupting the experience.</p>
+  <p>Each gallery room is visually isolated from the others, allowing extraordinarily complex artworks to coexist within the larger architecture. The constraints of virtual space shape form as fundamentally as gravity shapes physical buildings.</p>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>New realities require novel spatial solutions. In virtual architecture, technology shapes form as fundamentally as gravity shapes physical buildings.</blockquote>
+</div>
+
+<!-- DUO: Two dramatic architectural spaces -->
+<div class="duo">
+  <div class="duo-item" id="img-6">
+    <img src="../img/projects/mor/mor-25.jpg" alt="Museum of Other Realities — dramatic domed space with concentric rings converging on a circular oculus, light reflecting on dark floor">
+  </div>
+  <div class="duo-item" id="img-7">
+    <img src="../img/projects/mor/mor-35.jpg" alt="Museum of Other Realities — dark interior with repeating arch patterns and dramatic light and shadow">
+  </div>
+</div>
+
+<!-- SPLIT REVERSED: The Grand Hall -->
+<div class="split">
+  <div class="split-img" id="img-8">
+    <img src="../img/projects/mor/mor-10.jpg" alt="Museum of Other Realities — the grand entrance hall, a faceted white cave-like space with light breaking through angular openings">
+  </div>
+  <div class="split-text">
+    <h2>The Grand Entrance</h2>
+    <p>The grand entrance hall was the most ambitious element of the design. Samuel wanted something dramatic and sculptural, a space that would announce the museum&rsquo;s ambition from the moment of arrival.</p>
+    <p>The hall was sculpted entirely by hand in VR, then merged with the parametric floor plans and structural elements. The result is a space that feels both architectural and geological, as if the museum were carved from the earth rather than built upon it.</p>
+  </div>
+</div>
+
+<!-- FULL-BLEED: Gallery room with art installed -->
+<div class="full-bleed" id="img-9">
+  <img src="../img/projects/mor/mor-15.jpg" alt="Museum of Other Realities — gallery room with colorful VR artworks installed, curatorial text on concrete walls, blue sky through openings">
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">A Living Museum</h2>
+  <p>The Museum of Other Realities continues to operate as a social VR platform, hosting rotating exhibitions of VR art from artists around the world. The architecture functions as a curated sequence of spaces, each room producing its own quality of light, scale, and atmosphere, complementing and amplifying the art within.</p>
+  <p>The project represents a critical step in Samuel&rsquo;s practice: the moment when the constraints and possibilities of virtual space became his primary design material.</p>
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="salvo.html" class="back-link">Light Gallery &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/mor/mor-45.jpg',
+  '../img/projects/mor/mor-02.jpg',
+  '../img/projects/mor/mor-55.jpg',
+  '../img/projects/mor/mor-04.jpg',
+  '../img/projects/mor/mor-20.jpg',
+  '../img/projects/mor/mor-60.jpg',
+  '../img/projects/mor/mor-25.jpg',
+  '../img/projects/mor/mor-35.jpg',
+  '../img/projects/mor/mor-10.jpg',
+  '../img/projects/mor/mor-15.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>

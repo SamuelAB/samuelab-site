@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Gallery — Samuel Arsenault-Brassard</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .lg-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+  .lg-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: brightness(0.85);
+  }
+  .lg-hero .hero-title {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 4rem 3rem 3rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.85) 60%);
+  }
+  .lg-hero .hero-title .project-meta {
+    color: var(--accent); font-size: 0.75rem; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .lg-hero .hero-title h1 {
+    font-size: 3rem; font-weight: 200; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #fff; line-height: 1.2;
+  }
+  .lg-hero .hero-title h1 em {
+    font-style: italic; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 300; font-size: 0.55em; display: block;
+    color: var(--dim); margin-top: 0.3rem;
+  }
+
+  .intro-block {
+    max-width: 780px; margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+  }
+  .intro-block .lead {
+    font-size: 1.35rem; font-weight: 300; line-height: 1.9;
+    color: var(--text); margin-bottom: 2rem;
+  }
+  .intro-block p {
+    font-size: 0.95rem; line-height: 1.9; color: #bbb;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-bleed {
+    width: 100%; max-height: 70vh; overflow: hidden;
+    cursor: pointer;
+  }
+  .full-bleed img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: filter 0.4s;
+  }
+  .full-bleed:hover img { filter: brightness(1.08); }
+
+  .split {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    min-height: 500px;
+  }
+  .split .split-text {
+    padding: 4rem 3rem;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--section-bg);
+  }
+  .split .split-text h2 {
+    font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; margin-bottom: 1.5rem; color: var(--text);
+  }
+  .split .split-text p {
+    font-size: 0.9rem; line-height: 1.9; color: #aaa;
+    margin-bottom: 1rem;
+  }
+  .split .split-text .stat-row {
+    display: flex; gap: 2.5rem; margin-top: 1.5rem;
+  }
+  .split .split-text .stat-item .num {
+    font-size: 1.6rem; font-weight: 200; color: var(--accent);
+  }
+  .split .split-text .stat-item .label {
+    font-size: 0.65rem; color: var(--dim); text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .split .split-img {
+    overflow: hidden; cursor: pointer;
+  }
+  .split .split-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.6s;
+  }
+  .split .split-img:hover img { transform: scale(1.03); }
+
+  .pull-quote {
+    max-width: 800px; margin: 0 auto;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  .pull-quote blockquote {
+    font-size: 1.5rem; font-weight: 200; line-height: 1.8;
+    color: var(--text); font-style: italic;
+    border: none; margin: 0; padding: 0;
+  }
+  .pull-quote .attribution {
+    margin-top: 1.5rem;
+    font-size: 0.75rem; color: var(--dim); letter-spacing: 0.12em;
+    text-transform: uppercase; font-style: normal;
+  }
+
+  .duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  }
+  .duo .duo-item {
+    overflow: hidden; cursor: pointer;
+    aspect-ratio: 1/1;
+  }
+  .duo .duo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s, filter 0.5s;
+  }
+  .duo .duo-item:hover img {
+    transform: scale(1.03); filter: brightness(1.08);
+  }
+
+  /* Plan view on light background */
+  .plan-view {
+    background: #1a1a1a;
+    padding: 6px;
+  }
+  .plan-view .plan-item {
+    overflow: hidden; cursor: pointer;
+    background: #f5f5f0;
+  }
+  .plan-view .plan-item img {
+    width: 100%; height: 100%; object-fit: contain; display: block;
+    padding: 20px;
+    transition: transform 0.5s;
+  }
+  .plan-view .plan-item:hover img {
+    transform: scale(1.02);
+  }
+
+  /* Room links grid */
+  .room-links {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6px; padding: 0;
+  }
+  .room-links a {
+    position: relative; display: block;
+    overflow: hidden; aspect-ratio: 16/10;
+    text-decoration: none;
+  }
+  .room-links a img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    filter: brightness(0.6);
+    transition: filter 0.4s, transform 0.6s;
+  }
+  .room-links a:hover img {
+    filter: brightness(0.8); transform: scale(1.03);
+  }
+  .room-links a .room-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem 1.5rem 1.5rem;
+    background: linear-gradient(transparent, rgba(10,10,10,0.8) 60%);
+  }
+  .room-links a .room-label .room-num {
+    font-size: 0.65rem; color: var(--accent); text-transform: uppercase;
+    letter-spacing: 0.15em; margin-bottom: 0.3rem;
+  }
+  .room-links a .room-label h3 {
+    font-size: 1.2rem; font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #fff;
+  }
+
+  .page-footer {
+    padding: 4rem 2rem; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .lg-hero { height: 60vh; }
+    .lg-hero .hero-title h1 { font-size: 1.8rem; }
+    .lg-hero .hero-title { padding: 2rem 1.5rem; }
+    .intro-block { padding: 3rem 1.5rem 2rem; }
+    .intro-block .lead { font-size: 1.1rem; }
+    .split { grid-template-columns: 1fr; }
+    .split .split-text { padding: 2.5rem 1.5rem; }
+    .duo { grid-template-columns: 1fr; }
+    .duo .duo-item { aspect-ratio: 16/10; }
+    .room-links { grid-template-columns: 1fr; }
+    .pull-quote blockquote { font-size: 1.15rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="logo">Samuel Arsenault-Brassard</a>
+  <button class="hamburger">&#9776;</button>
+  <div class="links">
+    <a href="../projects/gloam.html">Gloam</a>
+    <a href="../digital-architecture.html">Digital Architecture</a>
+    <a href="../curations.html">Curations</a>
+    <a href="../about.html">About</a>
+  </div>
+</nav>
+
+<!-- HERO: Corridor with dramatic light beam — the architecture itself -->
+<div class="lg-hero" id="img-0">
+  <img src="../img/projects/light-gallery/light-gallery-03.jpg" alt="Light Gallery — dark corridor with a dramatic beam of light streaming from above, deep blue">
+  <div class="hero-title">
+    <div class="project-meta">VR Gallery &middot; 2018&ndash;2021</div>
+    <h1>Light Gallery <em>A machine for photons</em></h1>
+  </div>
+</div>
+
+<!-- INTRO TEXT -->
+<div class="intro-block">
+  <p class="lead">A VR art gallery designed as a machine for photons. Architecture and light in symbiosis, released one room at a time.</p>
+
+  <p>The Light Gallery is a virtual reality art gallery whose architecture actively shapes the experience of viewing art within it. Every room was built around a single obsession: the behaviour of indirect light. Walls curve, ceilings open, corridors compress and release, all in service of directing, filtering, and amplifying daylight into the gallery spaces.</p>
+
+  <p>By pre-computing all light at extreme fidelity, the architecture achieves atmospheric conditions that live rendering cannot. Light bounces, scatters, and pools with physical accuracy, producing spatial qualities closer to a Turrell installation than to a digital environment.</p>
+</div>
+
+<!-- FULL-BLEED: Curved light slit — minimal, abstract -->
+<div class="full-bleed" id="img-1">
+  <img src="../img/projects/light-gallery/light-gallery-04.jpg" alt="Light Gallery — curved light slit across dark blue space, fog, minimal and abstract">
+</div>
+
+<!-- TEXT: The philosophy -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Slow Architecture</h2>
+  <p>The Light Gallery followed a philosophy of slow release. Rather than building the entire gallery at once, each room was designed, sculpted, and lit individually, then released as a standalone experience. The gallery&rsquo;s architecture grew organically over time, each addition informed by the last.</p>
+  <p>Each gallery room is visually isolated from the others, allowing extraordinarily complex artworks to coexist within the larger architecture. The constraints of the virtual medium shaped form as fundamentally as gravity shapes physical buildings.</p>
+  <div class="stat-row" style="display: flex; gap: 2.5rem; margin-top: 1.5rem;">
+    <div class="stat-item">
+      <div class="num" style="font-size: 1.6rem; font-weight: 200; color: var(--accent);">2018&ndash;2021</div>
+      <div class="label" style="font-size: 0.65rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.1em;">Active period</div>
+    </div>
+    <div class="stat-item">
+      <div class="num" style="font-size: 1.6rem; font-weight: 200; color: var(--accent);">2</div>
+      <div class="label" style="font-size: 0.65rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.1em;">Released rooms</div>
+    </div>
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote">
+  <blockquote>Even a room which must be dark needs at least a crack of light to know how dark it is.</blockquote>
+  <div class="attribution">Louis Kahn</div>
+</div>
+
+<!-- DUO: Two empty rooms — the architecture without sculpture -->
+<div class="duo">
+  <div class="duo-item" id="img-2">
+    <img src="../img/projects/light-gallery/light-gallery-02.jpg" alt="Light Gallery — dark blue gallery room with triangular pedestal and circular floor element, indirect light from above">
+  </div>
+  <div class="duo-item" id="img-3">
+    <img src="../img/projects/light-gallery/light-gallery-07.jpg" alt="Light Gallery — dark room with circular platform and thin light slit above, deep blue ambient light">
+  </div>
+</div>
+
+<!-- TEXT: Hybrid workflow -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">A Hybrid Design Process</h2>
+  <p>The Light Gallery was designed through a hybrid process: parametric architectural modelling for the rooms, floors, and structural systems, merged with hand-sculpted forms shaped directly in VR. The grand hall, organic transitions, and ceiling forms were all sculpted by hand, then integrated with the modular framework.</p>
+  <p>This approach allowed the gallery to maintain architectural precision where it matters, modular connectivity, proportional systems, structural rhythm, while embracing expressive freedom in the moments that define each room&rsquo;s character.</p>
+</div>
+
+<!-- PLAN VIEW: Modular gallery system — Revit model on light background -->
+<div class="plan-view">
+  <div class="plan-item" id="img-4">
+    <img src="../img/projects/light-gallery/light-gallery-12.jpg" alt="Light Gallery — 3D plan view showing the modular gallery system, exploded axonometric of interconnected rooms, corridors, and domed spaces rendered in white">
+  </div>
+</div>
+
+<!-- TEXT: Released rooms -->
+<div class="intro-block">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Released Rooms</h2>
+  <p>Two rooms were released from the Light Gallery. Each functions as both a standalone VR experience and a component of the larger gallery. The rooms share the same architectural DNA: indirect light as primary material, sculptural ceilings, contemplative scale. Yet each produces a fundamentally different atmosphere through the specific geometry of its light.</p>
+</div>
+
+<!-- ROOM LINKS: Salvo + Flame — clickable cards linking to their dedicated pages -->
+<div class="room-links">
+  <a href="salvo.html">
+    <img src="../img/projects/light-gallery/light-gallery-01.jpg" alt="Salvo — Room I of the Light Gallery">
+    <div class="room-label">
+      <div class="room-num">Room I</div>
+      <h3>Salvo</h3>
+    </div>
+  </a>
+  <a href="flame.html">
+    <img src="../img/projects/light-gallery/light-gallery-08.jpg" alt="Flame — Room II of the Light Gallery">
+    <div class="room-label">
+      <div class="room-num">Room II</div>
+      <h3>Flame</h3>
+    </div>
+  </a>
+</div>
+
+<!-- FINAL TEXT -->
+<div class="intro-block" style="padding-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">From Gallery to Cave</h2>
+  <p>The Light Gallery represents a pivotal evolution in Samuel&rsquo;s practice: the moment when the design of architectural space and the creation of art within it became inseparable. The gallery was an instrument tuned to the behaviour of light, and each room a new experiment in that tuning.</p>
+  <p>Indirect light as primary material. Architectural form shaped by the physics of illumination. The contemplative power of sculpted space. These principles eventually grew beyond the gallery format entirely, expanding into the vast organic cave architecture of Gloam.</p>
+</div>
+
+<!-- CLOSING FULL-BLEED: Circular portal — depth and architecture -->
+<div class="full-bleed" id="img-5">
+  <img src="../img/projects/light-gallery/light-gallery-06.jpg" alt="Light Gallery — circular portal doorway glowing with warm light, viewed through a dark blue corridor">
+</div>
+
+<!-- BACK NAV -->
+<div class="page-footer">
+  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="mor.html" class="back-link">Museum of Other Realities &rarr;</a>
+  <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
+  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next">&rsaquo;</button>
+  <img src="" alt="">
+</div>
+
+<script src="../shared.js"></script>
+<script>
+const allImages = [
+  '../img/projects/light-gallery/light-gallery-03.jpg',
+  '../img/projects/light-gallery/light-gallery-04.jpg',
+  '../img/projects/light-gallery/light-gallery-02.jpg',
+  '../img/projects/light-gallery/light-gallery-07.jpg',
+  '../img/projects/light-gallery/light-gallery-12.jpg',
+  '../img/projects/light-gallery/light-gallery-06.jpg'
+];
+
+const openLb = initLightbox(allImages);
+
+for (let i = 0; i < allImages.length; i++) {
+  const el = document.getElementById('img-' + i);
+  if (el) {
+    el.style.cursor = 'pointer';
+    el.addEventListener('click', () => openLb(i));
+  }
+}
+</script>
+</body>
+</html>
