@@ -149,11 +149,11 @@
   color: #fff;
 }
 
-/* CURATION CROSSFADE */
-.curation-fade {
+/* TRIPTYCH CROSSFADE */
+.triptych-fade, .curation-fade {
   position: relative;
 }
-.curation-fade .fade-img {
+.triptych-fade .fade-img, .curation-fade .fade-img {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -161,9 +161,9 @@
   animation: crossfade 12s infinite;
   opacity: 0;
 }
-.curation-fade .fade-1 { animation-delay: 0s; }
-.curation-fade .fade-2 { animation-delay: 4s; }
-.curation-fade .fade-3 { animation-delay: 8s; }
+.triptych-fade .fade-1, .curation-fade .fade-1 { animation-delay: 0s; }
+.triptych-fade .fade-2, .curation-fade .fade-2 { animation-delay: 4s; }
+.triptych-fade .fade-3, .curation-fade .fade-3 { animation-delay: 8s; }
 @keyframes crossfade {
   0%   { opacity: 0; }
   8%   { opacity: 1; }
@@ -245,12 +245,16 @@
 </div>
 
 <div class="home-triptych">
-  <a href="projects/flame.html">
-    <img src="img/projects/flame/flame-02.jpg" alt="Flame — VR sculpture" loading="lazy">
+  <a href="projects/flame.html" class="triptych-fade">
+    <img src="img/projects/flame/flame-02.jpg" alt="Flame — VR sculpture" loading="lazy" class="fade-img fade-1">
+    <img src="img/projects/flame/flame-04.jpg" alt="Flame — VR sculpture" loading="lazy" class="fade-img fade-2">
+    <img src="img/projects/flame/flame-07.jpg" alt="Flame — VR sculpture" loading="lazy" class="fade-img fade-3">
     <div class="tri-overlay"><span>Flame</span></div>
   </a>
-  <a href="projects/salvo.html">
-    <img src="img/projects/salvo/salvo-10.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy">
+  <a href="projects/salvo.html" class="triptych-fade">
+    <img src="img/projects/salvo/salvo-10.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-1">
+    <img src="img/projects/salvo/salvo-11.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-2">
+    <img src="img/projects/salvo/salvo-03.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-3">
     <div class="tri-overlay"><span>Salvo</span></div>
   </a>
   <a href="curations.html" class="curation-fade">
