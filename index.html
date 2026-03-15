@@ -172,6 +172,28 @@
   100% { opacity: 0; }
 }
 
+/* 2-IMAGE CROSSFADE */
+.triptych-fade-2 {
+  position: relative;
+}
+.triptych-fade-2 .fade-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  animation: crossfade2 8s infinite;
+  opacity: 0;
+}
+.triptych-fade-2 .fade-a { animation-delay: 0s; }
+.triptych-fade-2 .fade-b { animation-delay: 4s; }
+@keyframes crossfade2 {
+  0%   { opacity: 0; }
+  12%  { opacity: 1; }
+  50%  { opacity: 1; }
+  62%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
 /* HOME CURATION */
 .home-curation {
   padding: 5rem 2rem;
@@ -251,10 +273,9 @@
     <img src="img/projects/flame/flame-07.jpg" alt="Flame — VR sculpture" loading="lazy" class="fade-img fade-3">
     <div class="tri-overlay"><span>Flame</span></div>
   </a>
-  <a href="projects/salvo.html" class="triptych-fade">
-    <img src="img/projects/salvo/salvo-10.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-1">
-    <img src="img/projects/salvo/salvo-11.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-2">
-    <img src="img/projects/salvo/salvo-03.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-3">
+  <a href="projects/salvo.html" class="triptych-fade-2">
+    <img src="img/projects/salvo/salvo-10.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-a">
+    <img src="img/projects/salvo/salvo-11.jpg" alt="Salvo — VR sculpture at ELEKTRA" loading="lazy" class="fade-img fade-b">
     <div class="tri-overlay"><span>Salvo</span></div>
   </a>
   <a href="curations.html" class="curation-fade">
