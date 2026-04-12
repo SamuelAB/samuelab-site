@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CULTVRAL Gallery — Samuel Arsenault-Brassard</title>
+<meta name="description" content="CULTVRAL Art Gallery — One of the earliest VR art galleries, founded by Samuel Arsenault-Brassard, 2015-2017.">
+<meta property="og:title" content="CULTVRAL Gallery — Samuel Arsenault-Brassard">
+<meta property="og:description" content="One of the earliest VR art galleries, founded 2015-2017.">
+<meta property="og:image" content="../img/projects/cultvral/cultvral-1.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://samuelab.com/projects/cultvral">
+<link rel="canonical" href="https://samuelab.com/projects/cultvral">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../style.css">
 <style>
@@ -16,6 +23,7 @@
   }
   .cultvral-hero img {
     width: 100%; height: 100%; object-fit: cover;
+    object-position: center 40%;
     filter: brightness(0.8);
   }
   .cultvral-hero .hero-title {
@@ -51,18 +59,17 @@
   }
 
   .full-bleed {
-    width: 100%; max-height: 70vh; overflow: hidden;
+    width: 100%; overflow: hidden;
     cursor: pointer;
   }
   .full-bleed img {
-    width: 100%; height: 100%; object-fit: cover; display: block;
+    width: 100%; display: block;
     transition: filter 0.4s;
   }
   .full-bleed:hover img { filter: brightness(1.08); }
 
   .split {
     display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-    min-height: 500px;
   }
   .split .split-text {
     padding: 4rem 3rem;
@@ -89,9 +96,11 @@
   }
   .split .split-img {
     overflow: hidden; cursor: pointer;
+    min-height: 400px;
   }
   .split .split-img img {
     width: 100%; height: 100%; object-fit: cover; display: block;
+    object-position: center 30%;
     transition: transform 0.6s;
   }
   .split .split-img:hover img { transform: scale(1.03); }
@@ -112,7 +121,7 @@
   }
   .duo .duo-item {
     overflow: hidden; cursor: pointer;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
   }
   .duo .duo-item img {
     width: 100%; height: 100%; object-fit: cover; display: block;
@@ -151,12 +160,31 @@
     .split { grid-template-columns: 1fr; }
     .split .split-text { padding: 2.5rem 1.5rem; }
     .duo { grid-template-columns: 1fr; }
-    .duo .duo-item { aspect-ratio: 16/10; }
+    .duo .duo-item { aspect-ratio: 1/1; }
     .duo-doc { grid-template-columns: 1fr; }
     .duo-doc .doc-item { aspect-ratio: 16/10; }
     .pull-quote blockquote { font-size: 1.15rem; }
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "CULTVRAL Art Gallery",
+  "description": "One of the earliest VR art galleries, founded 2015-2017.",
+  "creator": {
+    "@type": "Person",
+    "name": "Samuel Arsenault-Brassard",
+    "url": "https://samuelab.com",
+    "sameAs": ["https://instagram.com/sam___ab"]
+  },
+  "dateCreated": "2015",
+  "artMedium": "Virtual Architecture, VR Gallery",
+  "image": "https://samuelab.com/img/projects/cultvral/cultvral-1.jpg",
+  "url": "https://samuelab.com/projects/cultvral"
+}
+</script>
 </head>
 <body>
 
