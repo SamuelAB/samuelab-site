@@ -11,3 +11,7 @@ img/archetypes/
 # Build artifacts
 generate_pages.py
 __pycache__/
+
+# Internal working docs (not site content)
+LANGUAGE-PASS.md
+LAYOUT-REVIEW.md
