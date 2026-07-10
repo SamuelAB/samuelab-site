@@ -340,3 +340,23 @@ body .is-hero img     { object-position: center top; }
 body .oat-hero img    { object-position: center top; }
 body .gloam-hero img  { object-position: center 60%; }
 body .per-hero img    { object-position: center top; }
+
+/* ==========================================================================
+   BILINGUAL (EN / FR) — in-page toggle. Active language is set on <html lang>
+   by the tiny head init script + shared.js. We only HIDE the inactive language,
+   so the shown one keeps its authored display. Language-neutral content carries
+   no .x-en/.x-fr class and always shows. Nav/footer chrome is swapped in shared.js.
+   ========================================================================== */
+html[lang="en"] .x-fr,
+html[lang="fr"] .x-en { display: none; }
+
+.lang-switch { display: inline-flex; align-items: center; gap: 0.1rem; margin-left: 0.4rem; }
+.lang-switch button {
+  background: none; border: none; cursor: pointer; font: inherit;
+  color: var(--dim);
+  font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.15rem 0.3rem; transition: color 0.3s;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button.active { color: var(--accent); }
+.lang-switch .sep { color: var(--dim); opacity: 0.5; font-size: 0.68rem; }

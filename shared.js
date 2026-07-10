@@ -65,3 +65,46 @@ function buildGrid(containerId, images, openFn) {
     grid.appendChild(div);
   });
 }
+
+// ===== Bilingual toggle (EN/FR) =====
+// Page prose carries both languages inline via .x-en / .x-fr (hidden/shown by CSS).
+// Here we only handle the SHARED chrome (nav + footer labels) + the toggle control,
+// so individual pages never need their nav edited.
+(function () {
+  var FR = {
+    'Digital Architecture': 'Architecture numérique',
+    'Curations': 'Commissariat',
+    'About': 'À propos',
+    'Photography': 'Photographie',
+    'Email': 'Courriel',
+    'About & Contact': 'À propos et contact'
+  };
+  function getLang() { try { return localStorage.getItem('siteLang') || 'en'; } catch (e) { return 'en'; } }
+  function store(l) { try { localStorage.setItem('siteLang', l); } catch (e) {} }
+  function swapChrome(lang) {
+    document.querySelectorAll('nav .links a, .site-footer .footer-links a, .footer-links a').forEach(function (a) {
+      if (!a.dataset.en) a.dataset.en = a.textContent.trim();
+      var fr = FR[a.dataset.en];
+      if (fr) a.textContent = (lang === 'fr') ? fr : a.dataset.en;
+    });
+  }
+  function apply(lang) {
+    document.documentElement.lang = lang;
+    swapChrome(lang);
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.set === lang);
+    });
+  }
+  function inject() {
+    var links = document.querySelector('nav .links');
+    if (!links || links.querySelector('.lang-switch')) return;
+    var s = document.createElement('div');
+    s.className = 'lang-switch';
+    s.innerHTML = '<button data-set="en">EN</button><span class="sep">/</span><button data-set="fr">FR</button>';
+    s.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () { store(b.dataset.set); apply(b.dataset.set); });
+    });
+    links.appendChild(s);
+  }
+  document.addEventListener('DOMContentLoaded', function () { inject(); apply(getLang()); });
+})();
