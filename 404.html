@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>try{var l=localStorage.getItem('siteLang');if(l!=='en'&&l!=='fr'){l='en';var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var t=(''+L[i]).toLowerCase();if(t.indexOf('fr')===0){l='fr';break}if(t.indexOf('en')===0)break}}document.documentElement.lang=l}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page Not Found — Samuel Arsenault-Brassard</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -24,8 +25,10 @@
 <section style="padding-top: 120px; min-height: 60vh; display: flex; align-items: center; justify-content: center;">
   <div style="text-align: center;">
     <h1 style="font-size: 4rem; font-weight: 200; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 1rem;">404</h1>
-    <p style="font-size: 1rem; color: var(--dim); letter-spacing: 0.06em; margin-bottom: 2rem;">This page does not exist.</p>
-    <a href="index.html" style="font-size: 0.8rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: border-color 0.3s;">Return Home &rarr;</a>
+    <p class="x-en" style="font-size: 1rem; color: var(--dim); letter-spacing: 0.06em; margin-bottom: 2rem;">This page does not exist.</p>
+    <p class="x-fr" style="font-size: 1rem; color: var(--dim); letter-spacing: 0.06em; margin-bottom: 2rem;">Cette page n&rsquo;existe pas.</p>
+    <a class="x-en" href="index.html" style="font-size: 0.8rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: border-color 0.3s;">Return Home &rarr;</a>
+    <a class="x-fr" href="index.html" style="font-size: 0.8rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; border-bottom: 1px solid transparent; transition: border-color 0.3s;">Retour &agrave; l&rsquo;accueil &rarr;</a>
   </div>
 </section>
 

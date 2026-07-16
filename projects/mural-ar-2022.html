@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script>try{document.documentElement.lang=localStorage.getItem('siteLang')||'en'}catch(e){}</script>
+<script>try{var l=localStorage.getItem('siteLang');if(l!=='en'&&l!=='fr'){l='en';var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var t=(''+L[i]).toLowerCase();if(t.indexOf('fr')===0){l='fr';break}if(t.indexOf('en')===0)break}}document.documentElement.lang=l}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MURAL – AR Park — Samuel Arsenault-Brassard</title>
 <meta name="description" content="MURAL Festival 2022 — AR sculptures at Parc du Portugal and Parc des Ameriques, Montreal. Produced by Samuel Arsenault-Brassard.">

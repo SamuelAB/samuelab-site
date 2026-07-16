@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>try{var l=localStorage.getItem('siteLang');if(l!=='en'&&l!=='fr'){l='en';var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var t=(''+L[i]).toLowerCase();if(t.indexOf('fr')===0){l='fr';break}if(t.indexOf('en')===0)break}}document.documentElement.lang=l}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gloam — Immersive VR Architecture Installation | Samuel Arsenault-Brassard</title>
 <meta name="description" content="Gloam (Entre chien et loup) — immersive VR architecture installation. Hand-sculpted cave architecture simulating a full cycle of natural light using ~16,000 lightmaps at 8K resolution via offline global illumination. XR art at ELEKTRA 2026.">
@@ -213,18 +214,22 @@
 <div class="gloam-hero" id="img-0">
   <img src="../img/gloam/gloam-6.jpg" alt="Gloam — light bursting through hand-sculpted organic cave architecture">
   <div class="hero-title">
-    <div class="project-meta">Immersive VR Installation &middot; 2022&ndash;present</div>
+    <div class="project-meta x-en">Immersive VR Installation &middot; 2022&ndash;present</div>
+    <div class="project-meta x-fr">Installation VR immersive &middot; 2022&ndash;aujourd&rsquo;hui</div>
     <h1>Gloam <em>Entre chien et loup</em></h1>
   </div>
 </div>
 
 <!-- INTRO TEXT -->
 <div class="intro-block">
-  <p class="lead">A vast hand-sculpted cave, inhabited at the scale of the body. Inside, a complete cycle of natural light unfolds from morning to night to morning again. The visitor walks freely through the space with nothing to hold, nothing to press. No interface. Just the body, the architecture, and the changing light.</p>
+  <p class="lead x-en">A vast hand-sculpted cave, inhabited at the scale of the body. Inside, a complete cycle of natural light unfolds from morning to night to morning again. The visitor walks freely through the space with nothing to hold, nothing to press. No interface. Just the body, the architecture, and the changing light.</p>
+  <p class="lead x-fr">Une vaste caverne sculptée à la main, habitée à l&rsquo;échelle du corps. À l&rsquo;intérieur, un cycle complet de lumière naturelle se déploie du matin à la nuit, puis au matin de nouveau. Le visiteur marche librement dans l&rsquo;espace, rien à tenir, rien à presser. Aucune interface. Seulement le corps, l&rsquo;architecture et la lumière qui change.</p>
 
-  <p>Dawn spills through apertures in the cave walls. Midday sun floods the interior. Twilight pulls long purple shadows across folded, sculptural surfaces, then darkness takes the space completely. A brief night. Then slowly, from somewhere deep in the stone, morning returns.</p>
+  <p class="x-en">Dawn spills through apertures in the cave walls. Midday sun floods the interior. Twilight pulls long purple shadows across folded, sculptural surfaces, then darkness takes the space completely. A brief night. Then slowly, from somewhere deep in the stone, morning returns.</p>
+  <p class="x-fr">L&rsquo;aube se répand par les ouvertures percées dans les parois. Le soleil de midi inonde l&rsquo;intérieur. Le crépuscule étire de longues ombres violettes sur les surfaces plissées et sculptées, puis l&rsquo;obscurité s&rsquo;empare entièrement du lieu. Une brève nuit. Puis lentement, depuis quelque part au fond de la pierre, le matin revient.</p>
 
-  <p>Every surface was shaped by hand, a process closer to clay sculpture than to digital modeling. The space has the weight and presence of a physical place, given form through the slow, irreversible passage of light.</p>
+  <p class="x-en">Every surface was shaped by hand, a process closer to clay sculpture than to digital modeling. The space has the weight and presence of a physical place, given form through the slow, irreversible passage of light.</p>
+  <p class="x-fr">Chaque surface a été façonnée à la main, par un processus plus proche du modelage de l&rsquo;argile que de la modélisation numérique. Le lieu possède le poids et la présence d&rsquo;un espace physique, mis en forme par le passage lent et irréversible de la lumière.</p>
 </div>
 
 <!-- VIDEO: Gloam walkthrough (Vimeo) -->
@@ -245,9 +250,12 @@
 <!-- TEXT + IMAGE SPLIT: The technical story -->
 <div class="split">
   <div class="split-text">
-    <h2>The Architecture of Light</h2>
-    <p>Gloam treats architecture as a pinball machine for photons. Every fold, slot, and aperture is a light scooper, shaped to catch the sun and funnel it deep into the interior. The lighting is not simulated in real time: every moment of the day was computed in advance at a fidelity that no live system can match, then played back seamlessly inside the headset. The result is light that behaves the way it does in the physical world: soft, indirect, accumulating in folds and crevices, shifting the entire atmosphere of the space as the hours pass.</p>
-    <p>This gives the cave something that virtual spaces almost never have: the quality of a real place. Light defines the architecture the way it does in the work of Louis Kahn or James Turrell, accumulating slowly, shaping the space as much as the stone does.</p>
+    <h2 class="x-en">The Architecture of Light</h2>
+    <h2 class="x-fr">L&rsquo;architecture de la lumière</h2>
+    <p class="x-en">Gloam treats architecture as a pinball machine for photons. Every fold, slot, and aperture is a light scooper, shaped to catch the sun and funnel it deep into the interior. The lighting is not simulated in real time: every moment of the day was computed in advance at a fidelity that no live system can match, then played back seamlessly inside the headset. The result is light that behaves the way it does in the physical world: soft, indirect, accumulating in folds and crevices, shifting the entire atmosphere of the space as the hours pass.</p>
+    <p class="x-fr">Gloam traite l&rsquo;architecture comme une machine à pinball pour les photons. Chaque pli, chaque fente, chaque ouverture est un capteur de lumière, façonné pour attraper le soleil et le canaliser loin dans l&rsquo;intérieur. L&rsquo;éclairage n&rsquo;est pas simulé en temps réel : chaque instant de la journée a été calculé à l&rsquo;avance, à une fidélité qu&rsquo;aucun système en direct ne peut atteindre, puis restitué de façon continue dans le casque. Il en résulte une lumière qui se comporte comme dans le monde physique : douce, indirecte, s&rsquo;accumulant dans les plis et les anfractuosités, déplaçant toute l&rsquo;atmosphère du lieu à mesure que les heures passent.</p>
+    <p class="x-en">This gives the cave something that virtual spaces almost never have: the quality of a real place. Light defines the architecture the way it does in the work of Louis Kahn or James Turrell, accumulating slowly, shaping the space as much as the stone does.</p>
+    <p class="x-fr">Cela donne à la caverne ce que les espaces virtuels n&rsquo;ont presque jamais : la qualité d&rsquo;un lieu réel. La lumière y définit l&rsquo;architecture comme elle le fait dans l&rsquo;œuvre de Louis Kahn ou de James Turrell, s&rsquo;accumulant lentement, façonnant l&rsquo;espace autant que la pierre.</p>
   </div>
   <div class="split-img" id="img-2">
     <img src="../img/gloam/gloam-elektra-2.jpg" alt="Gloam — purple cavern with oval apertures and blue light accent">
@@ -256,8 +264,10 @@
 
 <!-- PULL QUOTE -->
 <div class="pull-quote">
-  <blockquote>We're made for the light of a cave and for twilight. Twilight is the time we see best. When we dim the light down, and the pupil opens, feeling comes out of the eye like touch.</blockquote>
-  <div class="attribution">James Turrell</div>
+  <blockquote class="x-en">We're made for the light of a cave and for twilight. Twilight is the time we see best. When we dim the light down, and the pupil opens, feeling comes out of the eye like touch.</blockquote>
+  <blockquote class="x-fr">Nous sommes faits pour la lumière d&rsquo;une caverne et pour le crépuscule. Le crépuscule est le moment où nous voyons le mieux. Quand la lumière baisse et que la pupille s&rsquo;ouvre, la sensation sort de l&rsquo;œil comme un toucher.</blockquote>
+  <div class="attribution x-en">James Turrell</div>
+  <div class="attribution x-fr">James Turrell (traduction libre)</div>
 </div>
 
 <!-- DUO: Two complementary cave views -->
@@ -272,9 +282,12 @@
 
 <!-- TEXT BLOCK: The sublime -->
 <div class="intro-block">
-  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Digital Sublime</h2>
-  <p>The project takes its name from the French expression <em>entre chien et loup</em>, the moment between dog and wolf, when twilight makes the familiar strange. It is the threshold between the known and the unknowable, the domestic and the wild. In this liminal light, the cave becomes something more than a space: it becomes an experience of the sublime.</p>
-  <p>Edmund Burke defined the sublime as an aesthetic experience born from vastness, obscurity, and the interplay of darkness and light. Gloam is a direct translation of these ideas into spatial form. A space designed to evoke wonder through scale, through the slow revelation of form by moving light, and through the irreducible strangeness of inhabiting architecture that could not exist in the physical world: a digital landscape that magnifies the mind's movement through infinite terrain.</p>
+  <h2 class="x-en" style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">The Digital Sublime</h2>
+  <h2 class="x-fr" style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Le sublime numérique</h2>
+  <p class="x-en">The project takes its name from the French expression <em>entre chien et loup</em>, the moment between dog and wolf, when twilight makes the familiar strange. It is the threshold between the known and the unknowable, the domestic and the wild. In this liminal light, the cave becomes something more than a space: it becomes an experience of the sublime.</p>
+  <p class="x-fr">Le projet emprunte son nom à l&rsquo;expression <em>entre chien et loup</em>, cette heure où le crépuscule rend étrange ce qui est familier, où l&rsquo;on ne distingue plus le chien du loup. C&rsquo;est le seuil entre le connu et l&rsquo;inconnaissable, le domestique et le sauvage. Dans cette lumière liminale, la caverne devient plus qu&rsquo;un espace : elle devient une expérience du sublime.</p>
+  <p class="x-en">Edmund Burke defined the sublime as an aesthetic experience born from vastness, obscurity, and the interplay of darkness and light. Gloam is a direct translation of these ideas into spatial form. A space designed to evoke wonder through scale, through the slow revelation of form by moving light, and through the irreducible strangeness of inhabiting architecture that could not exist in the physical world: a digital landscape that magnifies the mind's movement through infinite terrain.</p>
+  <p class="x-fr">Edmund Burke définissait le sublime comme une expérience esthétique née de l&rsquo;immensité, de l&rsquo;obscurité et du jeu entre l&rsquo;ombre et la lumière. Gloam est une traduction directe de ces idées en forme spatiale. Un espace conçu pour susciter l&rsquo;émerveillement par l&rsquo;échelle, par la lente révélation des formes sous la lumière mouvante, et par l&rsquo;étrangeté irréductible qu&rsquo;il y a à habiter une architecture qui ne pourrait exister dans le monde physique : un paysage numérique qui amplifie le mouvement de l&rsquo;esprit à travers un terrain infini.</p>
 </div>
 
 <!-- STANDALONE: The eclipse — totally different mood, needs to breathe -->
@@ -286,8 +299,10 @@
 
 <!-- PULL QUOTE 2 -->
 <div class="pull-quote">
-  <blockquote>A holy space within reality, animated by the sun's slow, imperceptible passage.</blockquote>
-  <div class="attribution">Samuel Arsenault-Brassard, studio notebooks</div>
+  <blockquote class="x-en">A holy space within reality, animated by the sun's slow, imperceptible passage.</blockquote>
+  <blockquote class="x-fr">Un espace sacré au sein du réel, animé par le passage lent et imperceptible du soleil.</blockquote>
+  <div class="attribution x-en">Samuel Arsenault-Brassard, studio notebooks</div>
+  <div class="attribution x-fr">Samuel Arsenault-Brassard, cahiers d&rsquo;atelier</div>
 </div>
 
 <!-- TEXT + IMAGE SPLIT (reversed): Process -->
@@ -296,9 +311,12 @@
     <img src="../img/gloam/gloam-4.jpg" alt="Gloam — ridged and folded surfaces in deep shadow, detail of hand-sculpted texture">
   </div>
   <div class="split-text">
-    <h2>Hand-Sculpted in VR</h2>
-    <p>Every surface in Gloam was shaped by hand using VR controllers, a process closer to clay sculpture than to digital modeling. The artist stands inside the space as it is built, working at full architectural scale with movements of the arm and wrist.</p>
-    <p>This produces a quality of surface impossible to achieve through algorithmic or parametric generation: organic, gestural, carrying the physical memory of the hand that made it. The forms read as implied and interrupted sculptures, masses half-revealed by shadow and the moving light. In a landscape flooding with generated imagery, Gloam is a radical assertion of craft.</p>
+    <h2 class="x-en">Hand-Sculpted in VR</h2>
+    <h2 class="x-fr">Sculpté à la main en VR</h2>
+    <p class="x-en">Every surface in Gloam was shaped by hand using VR controllers, a process closer to clay sculpture than to digital modeling. The artist stands inside the space as it is built, working at full architectural scale with movements of the arm and wrist.</p>
+    <p class="x-fr">Chaque surface de Gloam a été façonnée à la main à l&rsquo;aide de manettes VR, par un processus plus proche du modelage de l&rsquo;argile que de la modélisation numérique. L&rsquo;artiste se tient à l&rsquo;intérieur de l&rsquo;espace pendant qu&rsquo;il se construit, travaillant à pleine échelle architecturale par des mouvements du bras et du poignet.</p>
+    <p class="x-en">This produces a quality of surface impossible to achieve through algorithmic or parametric generation: organic, gestural, carrying the physical memory of the hand that made it. The forms read as implied and interrupted sculptures, masses half-revealed by shadow and the moving light. In a landscape flooding with generated imagery, Gloam is a radical assertion of craft.</p>
+    <p class="x-fr">Il en résulte une qualité de surface impossible à obtenir par génération algorithmique ou paramétrique : organique, gestuelle, portant la mémoire physique de la main qui l&rsquo;a faite. Les formes se lisent comme des sculptures suggérées et interrompues, des masses à demi révélées par l&rsquo;ombre et la lumière en mouvement. Dans un paysage submergé d&rsquo;images générées, Gloam est une affirmation radicale du geste artisanal.</p>
   </div>
 </div>
 
@@ -317,31 +335,47 @@
 
 <!-- FINAL TEXT: Exhibition -->
 <div class="intro-block" style="padding-bottom: 2rem;">
-  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Exhibition Format</h2>
-  <p>In VR, the viewer inhabits the cave at full scale, walking through the space at 1:1 with no controllers, looking up into the vaulted ceiling, experiencing the light cycle from inside the architecture.</p>
-  <p>For gallery contexts, the work becomes a multi-channel synchronized video installation. Four to ten screens surround the viewer in a darkened room, each showing a different angle of the same light cycle playing in perfect sync. Because the cycle runs from full darkness to full brightness and back, the entire room plunges into black every few minutes as night falls across all screens at once. Then slowly, dawn returns. The gallery itself becomes the architecture. The audience sits inside the light.</p>
+  <h2 class="x-en" style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Exhibition Format</h2>
+  <h2 class="x-fr" style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Format d&rsquo;exposition</h2>
+  <p class="x-en">In VR, the viewer inhabits the cave at full scale, walking through the space at 1:1 with no controllers, looking up into the vaulted ceiling, experiencing the light cycle from inside the architecture.</p>
+  <p class="x-fr">En VR, le visiteur habite la caverne à pleine échelle, parcourant l&rsquo;espace à l&rsquo;échelle 1:1 sans manette, levant les yeux vers la voûte, éprouvant le cycle de lumière depuis l&rsquo;intérieur de l&rsquo;architecture.</p>
+  <p class="x-en">For gallery contexts, the work becomes a multi-channel synchronized video installation. Four to ten screens surround the viewer in a darkened room, each showing a different angle of the same light cycle playing in perfect sync. Because the cycle runs from full darkness to full brightness and back, the entire room plunges into black every few minutes as night falls across all screens at once. Then slowly, dawn returns. The gallery itself becomes the architecture. The audience sits inside the light.</p>
+  <p class="x-fr">En contexte de galerie, l&rsquo;œuvre devient une installation vidéo multicanal synchronisée. De quatre à dix écrans entourent le visiteur dans une salle obscure, chacun montrant un angle différent du même cycle de lumière, en synchronisation parfaite. Comme le cycle va de l&rsquo;obscurité totale à la pleine clarté puis revient, toute la salle plonge dans le noir toutes les quelques minutes, la nuit tombant sur tous les écrans à la fois. Puis lentement, l&rsquo;aube revient. La galerie elle-même devient l&rsquo;architecture. Le public est assis à l&rsquo;intérieur de la lumière.</p>
 </div>
 
 <!-- TECHNICAL SPECIFICATIONS -->
 <div class="intro-block" style="padding-top: 0;">
-  <h2 style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Technical Specifications</h2>
-  <p style="font-size: 0.85rem; color: var(--dim); line-height: 1.9;">
+  <h2 class="x-en" style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Technical Specifications</h2>
+  <h2 class="x-fr" style="font-size: 1.4rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;">Fiche technique</h2>
+  <p class="x-en" style="font-size: 0.85rem; color: var(--dim); line-height: 1.9;">
     <strong style="color: var(--text); font-weight: 400;">Platform:</strong> Unity 6, PC-VR (any OpenXR headset, PC-tethered)<br>
     <strong style="color: var(--text); font-weight: 400;">Lighting:</strong> 16,020 offline-rendered 8K lightmaps across ~800 frames of a full day-night cycle, played back at 90fps<br>
     <strong style="color: var(--text); font-weight: 400;">Geometry:</strong> Hand-sculpted in VR using controllers (Oculus Medium, Adobe Medium), 21,837,004 triangles<br>
     <strong style="color: var(--text); font-weight: 400;">Light cycle:</strong> Full solar simulation — sunrise through night, continuous loop
   </p>
-  <p style="font-size: 0.85rem; color: var(--dim); line-height: 1.9; margin-top: 1.5rem;">
+  <p class="x-fr" style="font-size: 0.85rem; color: var(--dim); line-height: 1.9;">
+    <strong style="color: var(--text); font-weight: 400;">Plateforme :</strong> Unity 6, PC-VR (tout casque OpenXR, relié à un PC)<br>
+    <strong style="color: var(--text); font-weight: 400;">Éclairage :</strong> 16&nbsp;020 lightmaps 8K rendus hors ligne sur environ 800 images d&rsquo;un cycle jour-nuit complet, restitués à 90&nbsp;ips<br>
+    <strong style="color: var(--text); font-weight: 400;">Géométrie :</strong> Sculptée à la main en VR à l&rsquo;aide de manettes (Oculus Medium, Adobe Medium), 21&nbsp;837&nbsp;004 triangles<br>
+    <strong style="color: var(--text); font-weight: 400;">Cycle de lumière :</strong> Simulation solaire complète — du lever du soleil à la nuit, en boucle continue
+  </p>
+  <p class="x-en" style="font-size: 0.85rem; color: var(--dim); line-height: 1.9; margin-top: 1.5rem;">
     <strong style="color: var(--accent); font-weight: 400;">VR presentation:</strong> PC-VR: any OpenXR headset tethered to a dedicated PC. Room-scale, no controllers and no hand-tracking. The visitor simply walks through the space.<br>
     <strong style="color: var(--accent); font-weight: 400;">Gallery presentation:</strong> Multi-channel synchronized video installation (4&ndash;10 screens/projectors). Darkened room. All channels play the same light cycle in perfect sync. The room itself becomes the architecture.
+  </p>
+  <p class="x-fr" style="font-size: 0.85rem; color: var(--dim); line-height: 1.9; margin-top: 1.5rem;">
+    <strong style="color: var(--accent); font-weight: 400;">Présentation VR :</strong> PC-VR : tout casque OpenXR relié à un PC dédié. À l&rsquo;échelle de la pièce, sans manette ni suivi des mains. Le visiteur marche, simplement.<br>
+    <strong style="color: var(--accent); font-weight: 400;">Présentation en galerie :</strong> Installation vidéo multicanal synchronisée (4&ndash;10 écrans/projecteurs). Salle obscure. Tous les canaux diffusent le même cycle de lumière en synchronisation parfaite. La salle elle-même devient l&rsquo;architecture.
   </p>
 </div>
 
 <!-- BACK NAV -->
 <div class="page-footer">
-  <a href="../digital-architecture.html" class="back-link">&larr; Back to Digital Architecture</a>
+  <a href="../digital-architecture.html" class="back-link x-en">&larr; Back to Digital Architecture</a>
+  <a href="../digital-architecture.html" class="back-link x-fr">&larr; Retour à Architecture numérique</a>
   <span style="margin: 0 1.5rem; color: var(--dim);">|</span>
-  <a href="../about.html" class="back-link">About &amp; Contact &rarr;</a>
+  <a href="../about.html" class="back-link x-en">About &amp; Contact &rarr;</a>
+  <a href="../about.html" class="back-link x-fr">À propos et contact &rarr;</a>
 </div>
 
 <!-- LIGHTBOX -->

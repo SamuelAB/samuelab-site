@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>try{var l=localStorage.getItem('siteLang');if(l!=='en'&&l!=='fr'){l='en';var L=navigator.languages||[navigator.language||''];for(var i=0;i<L.length;i++){var t=(''+L[i]).toLowerCase();if(t.indexOf('fr')===0){l='fr';break}if(t.indexOf('en')===0)break}}document.documentElement.lang=l}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Samuel Arsenault-Brassard | VR Architect &amp; XR Artist</title>
 <meta name="description" content="Samuel Arsenault-Brassard — VR architect, XR artist, and photographer based in Montreal. Pioneers VR architecture and AR architecture, hand-sculpting monumental immersive environments. 8.5 years architecture training, 10+ years VR practice.">
@@ -26,23 +27,6 @@
     margin-bottom: 1.2rem;
   }
   .statement-section p em { font-style: italic; }
-  .statement-toggle {
-    display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem;
-  }
-  .statement-toggle button {
-    background: none; border: 1px solid #333; color: var(--dim);
-    padding: 0.5rem 1.5rem; font-size: 0.75rem; letter-spacing: 0.1em;
-    text-transform: uppercase; cursor: pointer; transition: all 0.3s;
-    font-family: inherit;
-  }
-  .statement-toggle button.active {
-    border-color: var(--accent); color: var(--accent);
-  }
-  .statement-toggle button:hover {
-    border-color: var(--text); color: var(--text);
-  }
-  .statement-lang { display: none; }
-  .statement-lang.active { display: block; }
   .cv-section {
     max-width: 780px; margin: 0 auto;
     padding: 0 2rem;
@@ -88,39 +72,57 @@
 
 <section style="padding-top: 100px;">
   <div class="section-header">
-    <h2>About</h2>
+    <h2 class="x-en">About</h2>
+    <h2 class="x-fr">&Agrave; propos</h2>
     <div class="section-divider"></div>
   </div>
   <div class="about-grid">
     <div>
       <div class="stats">
-        <div class="stat"><div class="num">10+</div><div class="label">Years Exhibiting</div></div>
-        <div class="stat"><div class="num">30+</div><div class="label">Lectures</div></div>
-        <div class="stat"><div class="num">15</div><div class="label">Shows Curated</div></div>
+        <div class="stat"><div class="num">10+</div><div class="label x-en">Years Exhibiting</div><div class="label x-fr">Ann&eacute;es d&rsquo;exposition</div></div>
+        <div class="stat"><div class="num">30+</div><div class="label x-en">Lectures</div><div class="label x-fr">Conf&eacute;rences</div></div>
+        <div class="stat"><div class="num">15</div><div class="label x-en">Shows Curated</div><div class="label x-fr">Expositions en commissariat</div></div>
       </div>
     </div>
     <div class="bio">
-      <p>Samuel Arsenault-Brassard is an XR artist, architect, and photographer based in Montreal.
+      <p class="x-en">Samuel Arsenault-Brassard is an XR artist, architect, and photographer based in Montreal.
       After 8.5 years studying architecture at Carleton University and Algonquin College, he developed
       an artistic practice centered on VR sculpture, speculative architecture, and the mastery of light
       as a primary material.</p>
+      <p class="x-fr">Samuel Arsenault-Brassard est un artiste XR, architecte et photographe bas&eacute; &agrave; Montr&eacute;al.
+      Apr&egrave;s 8,5 ans d&rsquo;&eacute;tudes en architecture &agrave; l&rsquo;Universit&eacute; Carleton et au Coll&egrave;ge Algonquin, il a d&eacute;velopp&eacute;
+      une pratique artistique centr&eacute;e sur la sculpture VR, l&rsquo;architecture sp&eacute;culative et la ma&icirc;trise de la lumi&egrave;re
+      comme mat&eacute;riau premier.</p>
 
-      <p>His environments, entirely hand-sculpted in VR using controllers, explore the interactions
+      <p class="x-en">His environments, entirely hand-sculpted in VR using controllers, explore the interactions
       between light, space, and materiality, drawing on Louis Kahn's natural light, James Turrell's
       light installations, and Edmund Burke's philosophy of the sublime.</p>
+      <p class="x-fr">Ses environnements, enti&egrave;rement sculpt&eacute;s &agrave; la main en VR &agrave; l&rsquo;aide de manettes, explorent les interactions
+      entre la lumi&egrave;re, l&rsquo;espace et la mat&eacute;rialit&eacute;, puisant dans la lumi&egrave;re naturelle de Louis Kahn, les
+      installations lumineuses de James Turrell et la philosophie du sublime d&rsquo;Edmund Burke.</p>
 
-      <p>In parallel, his photographic practice documents the hidden architecture of sexual spaces
+      <p class="x-en">In parallel, his photographic practice documents the hidden architecture of sexual spaces
       and the archetypes of Montreal's kink communities, using the same Baroque lighting language
       that defines his virtual worlds: saturated color emerging from deep darkness, revealing form
       through light.</p>
+      <p class="x-fr">Parall&egrave;lement, sa pratique photographique documente l&rsquo;architecture cach&eacute;e des espaces sexuels
+      et les arch&eacute;types des communaut&eacute;s kink de Montr&eacute;al, avec le m&ecirc;me langage d&rsquo;&eacute;clairage baroque
+      qui d&eacute;finit ses mondes virtuels : une couleur satur&eacute;e qui &eacute;merge d&rsquo;une obscurit&eacute; profonde, r&eacute;v&eacute;lant la forme
+      par la lumi&egrave;re.</p>
 
-      <p>He has exhibited at <a href="projects/ellephant.html">Galerie ELLEPHANT</a> (<a href="https://elektramontreal.ca" target="_blank">ELEKTRA</a> Festival), <a href="https://artmur.com" target="_blank">Galerie Art M&ucirc;r</a>, <a href="https://museumor.com" target="_blank">Museum of Other Realities</a>,
+      <p class="x-en">He has exhibited at <a href="projects/ellephant.html">Galerie ELLEPHANT</a> (<a href="https://elektramontreal.ca" target="_blank">ELEKTRA</a> Festival), <a href="https://artmur.com" target="_blank">Galerie Art M&ucirc;r</a>, <a href="https://museumor.com" target="_blank">Museum of Other Realities</a>,
       and <a href="https://muralfestival.com" target="_blank">MURAL Festival</a>. As a curator, he programmed 15 VR/AR exhibitions at Galerie Art M&ucirc;r, Galerie ELLEPHANT, and MURAL Festival (2020&ndash;2022).
       He has delivered over 30 lectures at <a href="https://uqam.ca" target="_blank">UQAM</a>, <a href="https://www.hesge.ch/head/" target="_blank">HEAD Gen&egrave;ve</a>, University of Tennessee, <a href="https://mutek.org" target="_blank">Mutek</a>, Art Toronto,
       and Papier Art Fair.</p>
+      <p class="x-fr">Il a expos&eacute; &agrave; la <a href="projects/ellephant.html">Galerie ELLEPHANT</a> (festival <a href="https://elektramontreal.ca" target="_blank">ELEKTRA</a>), &agrave; la <a href="https://artmur.com" target="_blank">Galerie Art M&ucirc;r</a>, au <a href="https://museumor.com" target="_blank">Museum of Other Realities</a>
+      et au <a href="https://muralfestival.com" target="_blank">Festival MURAL</a>. Comme commissaire, il a programm&eacute; 15 expositions VR/AR &agrave; la Galerie Art M&ucirc;r, &agrave; la Galerie ELLEPHANT et au Festival MURAL (2020&ndash;2022).
+      Il a donn&eacute; plus de 30 conf&eacute;rences &agrave; l&rsquo;<a href="https://uqam.ca" target="_blank">UQAM</a>, &agrave; la <a href="https://www.hesge.ch/head/" target="_blank">HEAD Gen&egrave;ve</a>, &agrave; l&rsquo;University of Tennessee, &agrave; <a href="https://mutek.org" target="_blank">Mutek</a>, &agrave; Art Toronto
+      et &agrave; la foire Papier.</p>
 
-      <p class="note">Currently completing <em>Gloam</em>, an unprecedented approach to lighting in VR:
+      <p class="note x-en">Currently completing <em>Gloam</em>, an unprecedented approach to lighting in VR:
       ~16,000 lightmaps simulating a full solar cycle inside hand-sculpted virtual architecture.</p>
+      <p class="note x-fr">Ach&egrave;ve actuellement <em>Gloam</em>, une approche sans pr&eacute;c&eacute;dent de l&rsquo;&eacute;clairage en VR :
+      environ 16&nbsp;000 lightmaps simulant un cycle solaire complet dans une architecture virtuelle sculpt&eacute;e &agrave; la main.</p>
     </div>
   </div>
 </section>
@@ -128,16 +130,12 @@
 <!-- ARTIST STATEMENT -->
 <section style="background: var(--section-bg); max-width: none; padding: 5rem 2rem;">
   <div class="section-header">
-    <h2>Artist Statement</h2>
+    <h2 class="x-en">Artist Statement</h2>
+    <h2 class="x-fr">D&eacute;marche artistique</h2>
     <div class="section-divider"></div>
   </div>
   <div class="statement-section">
-    <div class="statement-toggle">
-      <button class="active" onclick="showLang('en', this)">English</button>
-      <button onclick="showLang('fr', this)">Fran&ccedil;ais</button>
-    </div>
-
-    <div id="statement-en" class="statement-lang active">
+    <div class="x-en">
       <p>My practice is built on a single obsession: the way light transforms space into feeling. I treat architecture as a pinball machine for photons, shaping form so that light bounces, pools, and becomes visible.</p>
       <p>I sculpt architecture by hand in virtual reality: vast, cave-like structures shaped gesture by gesture with VR controllers, the way a potter works clay. These are not modeled on a screen with a mouse. Each form is an emotional trace, a record of where my body moved as it carved, closer to dance than to drawing. The resulting environments are too complex, too organic, too large to exist in the physical world. They exist only as places you can enter and inhabit. My work blends the physical rules of architecture with the freedoms of the virtual, then asks how that hybrid space acts on the people inside it.</p>
       <p>My flagship work, <em>Gloam</em> (Entre chien et loup), pushes this practice to its limit. A monumental VR installation, it simulates a full cycle of natural light across a hand-sculpted cave architecture using approximately 16,000 lightmaps rendered at 8K resolution — an unprecedented approach to lighting in VR. The light does not illuminate the space; it <em>is</em> the space.</p>
@@ -145,11 +143,11 @@
       <p>In VR, I build impossible refuges flooded with impossible light. In photography, I document real refuges shaped by real darkness. The thread between them is the architecture of intimacy, rendered in light.</p>
     </div>
 
-    <div id="statement-fr" class="statement-lang">
+    <div class="x-fr">
       <p>Ma pratique repose sur une seule obsession : la mani&egrave;re dont la lumi&egrave;re transforme l'espace en sensation. Je con&ccedil;ois l'architecture comme une machine &agrave; pinball pour les photons : des formes con&ccedil;ues pour faire rebondir la lumi&egrave;re et la rendre visible.</p>
       <p>Je sculpte de l'architecture &agrave; la main en r&eacute;alit&eacute; virtuelle : de vastes structures organiques, semblables &agrave; des cavernes, fa&ccedil;onn&eacute;es geste par geste avec des contr&ocirc;leurs VR, comme un potier travaille l'argile. Ces formes ne sont pas mod&eacute;lis&eacute;es &agrave; l'&eacute;cran avec une souris. Chaque forme est une trace &eacute;motionnelle, le registre du mouvement de mon corps qui sculpte, plus proche de la danse que du dessin. Mon travail fond les r&egrave;gles physiques de l'architecture et les libert&eacute;s du virtuel, puis observe comment cet espace hybride agit sur ceux qui l'habitent.</p>
       <p>Mon oeuvre phare, <em>Gloam</em> (Entre chien et loup), pousse cette pratique &agrave; ses limites. Installation monumentale en r&eacute;alit&eacute; virtuelle, elle simule un cycle complet de lumi&egrave;re naturelle &agrave; travers une architecture cavernaire sculpt&eacute;e &agrave; la main, utilisant environ 16 000 lightmaps rendues en r&eacute;solution 8K — une approche sans pr&eacute;c&eacute;dent de l'&eacute;clairage en VR. La lumi&egrave;re n'illumine pas l'espace; elle <em>est</em> l'espace.</p>
-      <p>Parall&egrave;lement &agrave; ma pratique num&eacute;rique, je photographie les architectures cach&eacute;es de l'intimit&eacute; (espaces BDSM, saunas, donjons) et les personnes qui les habitent. Ce sont des espaces r&eacute;els o&ugrave; la lumi&egrave;re, l'obscurit&eacute;, la dissimulation et la r&eacute;v&eacute;lation fa&ccedil;onnent l'exp&eacute;rience humaine aussi puissamment que n'importe quelle cath&eacute;drale.</p>
+      <p>Parall&egrave;lement &agrave; ma pratique num&eacute;rique, je photographie les architectures cach&eacute;es de l'intimit&eacute; (espaces BDSM, saunas, donjons) et les personnes qui les habitent. Ce sont des espaces r&eacute;els o&ugrave; la lumi&egrave;re, l'obscurit&eacute;, la dissimulation et la r&eacute;v&eacute;lation fa&ccedil;onnent l'exp&eacute;rience humaine aussi puissamment que n'importe quelle cath&eacute;drale. La photographie n'est pas s&eacute;par&eacute;e du travail en VR. Les deux explorent la m&ecirc;me question : comment l'architecture d'un lieu, sa lumi&egrave;re, son &eacute;chelle, son obscurit&eacute;, agit-elle sur le corps et sur la psych&eacute; ?</p>
       <p>En VR, je construis des refuges impossibles inond&eacute;s d'une lumi&egrave;re impossible. En photographie, je documente des refuges r&eacute;els fa&ccedil;onn&eacute;s par une obscurit&eacute; r&eacute;elle. Le fil conducteur est l'architecture de l'intimit&eacute;, rendue en lumi&egrave;re.</p>
     </div>
   </div>
@@ -163,50 +161,72 @@
   </div>
   <div class="cv-section">
 
-    <h3>Solo & Group Exhibitions</h3>
+    <h3 class="x-en">Solo & Group Exhibitions</h3>
+    <h3 class="x-fr">Expositions solos et collectives</h3>
     <ul>
-      <li><em>Gloam</em> (Entre chien et loup), immersive VR installation, in development, 2022&ndash;present</li>
-      <li><a href="projects/ellephant.html">ELLEPHANT Gallery</a>, group shows, Montreal, 2019&ndash;2021</li>
-      <li><a href="https://museumor.com" target="_blank">Museum of Other Realities</a>, VR sculptures, 2017&ndash;2019</li>
-      <li>Infinity: VR Art Gallery, VR sculptures, 2017</li>
-      <li>CULTVRAL Art Gallery, founder, VR sculpture & architecture, 2015&ndash;2017</li>
-      <li>Cube Gallery, <em>Candela</em> lighting group show, Ottawa, 2012</li>
+      <li class="x-en"><em>Gloam</em> (Entre chien et loup), immersive VR installation, in development, 2022&ndash;present</li>
+      <li class="x-fr"><em>Gloam</em> (Entre chien et loup), installation VR immersive, en d&eacute;veloppement, 2022&ndash;aujourd&rsquo;hui</li>
+      <li class="x-en"><a href="projects/ellephant.html">ELLEPHANT Gallery</a>, group shows, Montreal, 2019&ndash;2021</li>
+      <li class="x-fr"><a href="projects/ellephant.html">Galerie ELLEPHANT</a>, expositions collectives, Montr&eacute;al, 2019&ndash;2021</li>
+      <li class="x-en"><a href="https://museumor.com" target="_blank">Museum of Other Realities</a>, VR sculptures, 2017&ndash;2019</li>
+      <li class="x-fr"><a href="https://museumor.com" target="_blank">Museum of Other Realities</a>, sculptures VR, 2017&ndash;2019</li>
+      <li class="x-en">Infinity: VR Art Gallery, VR sculptures, 2017</li>
+      <li class="x-fr">Infinity: VR Art Gallery, sculptures VR, 2017</li>
+      <li class="x-en">CULTVRAL Art Gallery, founder, VR sculpture & architecture, 2015&ndash;2017</li>
+      <li class="x-fr">CULTVRAL Art Gallery, fondateur, sculpture et architecture VR, 2015&ndash;2017</li>
+      <li class="x-en">Cube Gallery, <em>Candela</em> lighting group show, Ottawa, 2012</li>
+      <li class="x-fr">Cube Gallery, <em>Candela</em>, exposition collective sur la lumi&egrave;re, Ottawa, 2012</li>
       <li>Fall Down Gallery, Ottawa, 2011&ndash;2012</li>
       <li>La Petite Mort Gallery, Ottawa, 2010&ndash;2011</li>
     </ul>
 
-    <h3>Curation (15 exhibitions)</h3>
+    <h3 class="x-en">Curation (15 exhibitions)</h3>
+    <h3 class="x-fr">Commissariat (15 expositions)</h3>
     <ul>
-      <li><strong><a href="https://artmur.com" target="_blank">Galerie Art M&ucirc;r</a>, Montreal (2021&ndash;2022)</strong> &mdash; 11 VR/AR exhibitions</li>
+      <li class="x-en"><strong><a href="https://artmur.com" target="_blank">Galerie Art M&ucirc;r</a>, Montreal (2021&ndash;2022)</strong> &mdash; 11 VR/AR exhibitions</li>
+      <li class="x-fr"><strong><a href="https://artmur.com" target="_blank">Galerie Art M&ucirc;r</a>, Montr&eacute;al (2021&ndash;2022)</strong> &mdash; 11 expositions VR/AR</li>
       <li>Katerine DM, Baron Lanteigne, <a href="https://saraludy.com" target="_blank">Sara Ludy</a>, <a href="https://auriea.org" target="_blank">Auriea Harvey</a>, <a href="https://inesalpha.com" target="_blank">Ines Alpha</a>, <a href="https://giantswan.com" target="_blank">Giant Swan</a>, Lucas Aguirre, Matthieu Vanier, Samuel Walker, Sebastian Millar</li>
-      <li><strong><a href="projects/ellephant.html">Galerie ELLEPHANT</a>, Montreal (2020)</strong> &mdash; 2 VR exhibitions</li>
+      <li class="x-en"><strong><a href="projects/ellephant.html">Galerie ELLEPHANT</a>, Montreal (2020)</strong> &mdash; 2 VR exhibitions</li>
+      <li class="x-fr"><strong><a href="projects/ellephant.html">Galerie ELLEPHANT</a>, Montr&eacute;al (2020)</strong> &mdash; 2 expositions VR</li>
       <li>Connor Bell, Vladimir Storm</li>
-      <li><strong><a href="https://muralfestival.com" target="_blank">MURAL Festival</a>, Montreal (2021&ndash;2022)</strong> &mdash; 2 AR exhibitions</li>
+      <li class="x-en"><strong><a href="https://muralfestival.com" target="_blank">MURAL Festival</a>, Montreal (2021&ndash;2022)</strong> &mdash; 2 AR exhibitions</li>
+      <li class="x-fr"><strong><a href="https://muralfestival.com" target="_blank">MURAL Festival</a>, Montr&eacute;al (2021&ndash;2022)</strong> &mdash; 2 expositions AR</li>
       <li>Cryote &amp; Waxhead (2021), AlienDope &amp; Melissalikesushi (2022)</li>
     </ul>
 
-    <h3>Lectures & Presentations (30+)</h3>
+    <h3 class="x-en">Lectures & Presentations (30+)</h3>
+    <h3 class="x-fr">Conf&eacute;rences et pr&eacute;sentations (30+)</h3>
     <ul>
       <li>University of Tennessee, HEAD Gen&egrave;ve, UQAM, Carleton University, Algonquin College</li>
-      <li>Papier Art Fair, RealTime Conference, Art Toronto, Mutek, Mint MTL</li>
-      <li>Vertical Crypto Art Mentorship, Cohorts 1&ndash;6, 2021&ndash;2023</li>
-      <li>MUTEK, Collection Immersive, VR consultant to artist teams, 2021&ndash;2022</li>
+      <li class="x-en">Papier Art Fair, RealTime Conference, Art Toronto, Mutek, Mint MTL</li>
+      <li class="x-fr">Foire Papier, RealTime Conference, Art Toronto, Mutek, Mint MTL</li>
+      <li class="x-en">Vertical Crypto Art Mentorship, Cohorts 1&ndash;6, 2021&ndash;2023</li>
+      <li class="x-fr">Vertical Crypto Art Mentorship, cohortes 1&ndash;6, 2021&ndash;2023</li>
+      <li class="x-en">MUTEK, Collection Immersive, VR consultant to artist teams, 2021&ndash;2022</li>
+      <li class="x-fr">MUTEK, Collection Immersive, consultant VR aupr&egrave;s des &eacute;quipes d&rsquo;artistes, 2021&ndash;2022</li>
     </ul>
 
-    <h3>Education</h3>
+    <h3 class="x-en">Education</h3>
+    <h3 class="x-fr">Formation</h3>
     <ul>
-      <li>Architecture Undergraduate Studies, Carleton University, Ottawa, 2012&ndash;2016</li>
-      <li>Architectural Technology Advanced Diploma, Algonquin College, Ottawa, 2007&ndash;2010</li>
+      <li class="x-en">Architecture Undergraduate Studies, Carleton University, Ottawa, 2012&ndash;2016</li>
+      <li class="x-fr">&Eacute;tudes de premier cycle en architecture, Universit&eacute; Carleton, Ottawa, 2012&ndash;2016</li>
+      <li class="x-en">Architectural Technology Advanced Diploma, Algonquin College, Ottawa, 2007&ndash;2010</li>
+      <li class="x-fr">Dipl&ocirc;me d&rsquo;&eacute;tudes sup&eacute;rieures en technologie de l&rsquo;architecture, Coll&egrave;ge Algonquin, Ottawa, 2007&ndash;2010</li>
     </ul>
 
-    <h3>Media & Press</h3>
+    <h3 class="x-en">Media & Press</h3>
+    <h3 class="x-fr">M&eacute;dias et presse</h3>
     <ul class="press-list">
       <li><em>Liminul Magazine</em>, "Samuel Arsenault-Brassard Creates Art in The Liminal Space of Virtual Reality," 2022</li>
-      <li><em>La Presse</em>, "Le monde de l'art m&eacute;dus&eacute;," interview, 2021</li>
-      <li><em>Radio-Canada / Question d'int&eacute;r&ecirc;t</em>, discussion with G&eacute;rald Fillion and Luc Courchesne, 2021</li>
+      <li class="x-en"><em>La Presse</em>, "Le monde de l'art m&eacute;dus&eacute;," interview, 2021</li>
+      <li class="x-fr"><em>La Presse</em>, &laquo;&nbsp;Le monde de l'art m&eacute;dus&eacute;&nbsp;&raquo;, entrevue, 2021</li>
+      <li class="x-en"><em>Radio-Canada / Question d'int&eacute;r&ecirc;t</em>, discussion with G&eacute;rald Fillion and Luc Courchesne, 2021</li>
+      <li class="x-fr"><em>Radio-Canada / Question d'int&eacute;r&ecirc;t</em>, discussion avec G&eacute;rald Fillion et Luc Courchesne, 2021</li>
       <li><em>CG Garage Podcast (Chaos)</em>, "NFTs and Architecture," 2021</li>
       <li><em>Museum of Other Realities Blog</em>, "To Build A Museum: Designing the MOR's VR Architecture," 2019</li>
-      <li><em>Lignes de Fuite Volume 3</em>, "3D Meta Love" creative direction & photography, 2022</li>
+      <li class="x-en"><em>Lignes de Fuite Volume 3</em>, "3D Meta Love" creative direction & photography, 2022</li>
+      <li class="x-fr"><em>Lignes de Fuite Volume 3</em>, &laquo;&nbsp;3D Meta Love&nbsp;&raquo;, direction cr&eacute;ative et photographie, 2022</li>
     </ul>
 
   </div>
@@ -225,7 +245,8 @@
       <a href="https://samuelab.com" target="_blank">SamuelAB.com</a>
     </div>
   </div>
-  <p class="availability">Available for exhibitions, commissions, and gallery collaborations.</p>
+  <p class="availability x-en">Available for exhibitions, commissions, and gallery collaborations.</p>
+  <p class="availability x-fr">Disponible pour des expositions, des commandes et des collaborations avec les galeries.</p>
 </section>
 
 <div class="site-footer">
@@ -238,13 +259,5 @@
 </div>
 
 <script src="shared.js"></script>
-<script>
-function showLang(lang, btn) {
-  document.querySelectorAll('.statement-lang').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.statement-toggle button').forEach(b => b.classList.remove('active'));
-  document.getElementById('statement-' + lang).classList.add('active');
-  if (btn) btn.classList.add('active');
-}
-</script>
 </body>
 </html>
