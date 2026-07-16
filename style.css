@@ -350,7 +350,11 @@ body .per-hero img    { object-position: center top; }
 html[lang="en"] .x-fr,
 html[lang="fr"] .x-en { display: none; }
 
-.lang-switch { display: inline-flex; align-items: center; gap: 0.1rem; margin-left: 0.4rem; }
+/* The switch is a direct child of <nav>, NOT of .links, so that it survives the
+   mobile collapse — see shared.js inject(). .links takes the free space, leaving
+   the switch pinned to the right of the bar. */
+nav .links { margin-left: auto; }
+.lang-switch { display: inline-flex; align-items: center; gap: 0.1rem; margin-left: 1.75rem; }
 .lang-switch button {
   background: none; border: none; cursor: pointer; font: inherit;
   color: var(--dim);
@@ -360,3 +364,16 @@ html[lang="fr"] .x-en { display: none; }
 .lang-switch button:hover { color: var(--text); }
 .lang-switch button.active { color: var(--accent); }
 .lang-switch .sep { color: var(--dim); opacity: 0.5; font-size: 0.68rem; }
+
+/* Mobile placement for the switch. This block MUST stay after the .lang-switch
+   rules above: the earlier max-width:768px block sits higher in the file, so at
+   equal specificity those base rules would win and silently undo it. */
+@media (max-width: 768px) {
+  nav .logo { order: 1; }
+  nav .lang-switch { order: 2; margin-left: auto; margin-right: 0.25rem; }
+  nav .hamburger { order: 3; }
+  nav .links { order: 4; margin-left: 0; }
+  /* 44px minimum touch target (WCAG 2.5.5 / Apple HIG). */
+  .lang-switch button { font-size: 0.8rem; padding: 0.75rem 0.5rem; }
+  .lang-switch .sep { font-size: 0.75rem; }
+}

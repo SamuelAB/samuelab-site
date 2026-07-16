@@ -70,6 +70,12 @@ function buildGrid(containerId, images, openFn) {
 // Page prose carries both languages inline via .x-en / .x-fr (hidden/shown by CSS).
 // Here we only handle the SHARED chrome (nav + footer labels) + the toggle control,
 // so individual pages never need their nav edited.
+//
+// The inline <head> script is the source of truth for the initial language: it runs
+// before first paint (so there is no flash of the wrong language), resolving a stored
+// choice first and otherwise falling back to the browser's own language preference.
+// We read the result off <html lang> rather than re-deriving it here, so the detection
+// rule lives in exactly one place.
 (function () {
   var FR = {
     'Digital Architecture': 'Architecture numérique',
@@ -79,7 +85,11 @@ function buildGrid(containerId, images, openFn) {
     'Email': 'Courriel',
     'About & Contact': 'À propos et contact'
   };
-  function getLang() { try { return localStorage.getItem('siteLang') || 'en'; } catch (e) { return 'en'; } }
+  var LABEL = {
+    en: 'Voir ce site en français',
+    fr: 'View this site in English'
+  };
+  function getLang() { return document.documentElement.lang === 'fr' ? 'fr' : 'en'; }
   function store(l) { try { localStorage.setItem('siteLang', l); } catch (e) {} }
   function swapChrome(lang) {
     document.querySelectorAll('nav .links a, .site-footer .footer-links a, .footer-links a').forEach(function (a) {
@@ -92,19 +102,26 @@ function buildGrid(containerId, images, openFn) {
     document.documentElement.lang = lang;
     swapChrome(lang);
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.dataset.set === lang);
+      var on = b.dataset.set === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
   }
   function inject() {
-    var links = document.querySelector('nav .links');
-    if (!links || links.querySelector('.lang-switch')) return;
+    var nav = document.querySelector('nav');
+    if (!nav || nav.querySelector('.lang-switch')) return;
     var s = document.createElement('div');
     s.className = 'lang-switch';
-    s.innerHTML = '<button data-set="en">EN</button><span class="sep">/</span><button data-set="fr">FR</button>';
+    // Sits in the nav bar itself, not inside .links — .links collapses behind the
+    // hamburger on mobile, which would bury the switch exactly where a francophone
+    // visitor is least likely to hunt for it.
+    s.innerHTML = '<button data-set="en" title="' + LABEL.fr + '">EN</button>' +
+                  '<span class="sep" aria-hidden="true">/</span>' +
+                  '<button data-set="fr" title="' + LABEL.en + '">FR</button>';
     s.querySelectorAll('button').forEach(function (b) {
       b.addEventListener('click', function () { store(b.dataset.set); apply(b.dataset.set); });
     });
-    links.appendChild(s);
+    nav.appendChild(s);
   }
   document.addEventListener('DOMContentLoaded', function () { inject(); apply(getLang()); });
 })();
